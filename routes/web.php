@@ -39,7 +39,7 @@ Route::post('/admin', [HomeController::class, 'index_admin_conteo'])->middleware
 
 Route::get('/registrar', function () {
     return view('admin.register');
-})->middleware('auth')->name('registrar');
+})->name('registrar');
 
 Auth::routes();
 
@@ -76,3 +76,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //Envio de correos
 Route::post('/contactMail', [HomeController::class, 'contacMail'])->name('contact.mail');
 
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

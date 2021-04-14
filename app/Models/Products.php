@@ -13,6 +13,6 @@ class Products extends Model
 
     public function meter()
     {
-        return $this->hasMany('App\Meter','products_id');
+        return $this->hasMany('App\Models\Meter','products_id');
     }
 }

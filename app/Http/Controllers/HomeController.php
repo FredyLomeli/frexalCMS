@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Information;
 use App\Models\Carousel;
 use App\Models\Category;
-use App\Meter;
+use App\Models\Meter;
 use App\Mail\ContactForm;
-use App\Products;
+use App\Models\Products;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
@@ -59,7 +59,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('index'),
         ]);
-        return view('remaq.index', compact('informacion','carouseles','categorys'));
+        return view('page.index', compact('informacion','carouseles','categorys'));
     }
 
     /**
@@ -123,7 +123,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('show.products',['busqueda' => $busqueda]),
         ]);
-        return view('remaq.products', compact('informacion','categorys','productos', 'busqueda'));
+        return view('page.products', compact('informacion','categorys','productos', 'busqueda'));
     }
 
         /**
@@ -165,7 +165,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('show_all.products'),
         ]);
-        return view('remaq.products', compact('informacion','categorys','productos', 'busqueda'));
+        return view('page.products', compact('informacion','categorys','productos', 'busqueda'));
     }
 
     /**

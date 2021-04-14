@@ -13,11 +13,11 @@ class Category extends Model
 
     public function products()
     {
-        return $this->hasMany('App\products','categoria');
+        return $this->hasMany('App\Models\Products','categoria');
     }
 
     public function meter()
     {
-        return $this->hasMany('App\Meter','category_id');
+        return $this->hasMany('App\Models\Meter','category_id');
     }
 }
