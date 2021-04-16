@@ -32,6 +32,9 @@ class Information extends Model
             case 'valores':
                 $branding['name'] = 'Valores';
                 break;
+            case 'nosotros':
+                $branding['name'] = 'Nosotros';
+                break;
             default:
                 # code...
                 break;

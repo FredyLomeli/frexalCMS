@@ -16,13 +16,23 @@
                 {{ method_field('PUT') }} {{csrf_field()}}
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="name" class="col-sm-3 col-form-label">Titulo:</label>
+                        <label for="name" class="col-sm-2 col-form-label">Nombre:</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" name="name"
                                 value="{{ old('name',$category->name) }}" id="name"
-                                placeholder="Nombre Empresa" required>
+                                placeholder="Categoria" required>
                             @if ($errors->has('name'))
                                 <small class="text-center text-danger">{{ $errors->first('name') }}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="description" class="col-sm-2 col-form-label">Descripción:</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="description" rows="4" cols="50" id="description"
+                                 required>{{ old('description', $category->description) }}</textarea>
+                            @if ($errors->has('description'))
+                                <small class="text-center text-danger">{{ $errors->first('description') }}</small>
                             @endif
                         </div>
                     </div>

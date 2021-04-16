@@ -19,7 +19,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categorys = category::withCount('meter')->get();
+        $categorys = Category::withCount('meter')->get();
         return view('category.list', compact('categorys'));
     }
 
@@ -42,7 +42,8 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $data = request()->validate([
-            'name' => 'required|string|max:500',
+            'name' => 'required|string|max:254',
+            'description' => 'required|string|max:254',
         ]);
         // Si se eligio archivo
         if(isset($request->file_img)){
@@ -51,7 +52,7 @@ class CategoryController extends Controller
             $files = new Files;
             // Validacion Imagen
             $files->validatorImgFile($img, $extension)->validate();
-            $category = category::create($data);
+            $category = Category::create($data);
             $file_name = '/'. $category->id .'_' . Str::random(8) . '.' . $extension;
             $files->uploadFile('/portfolio' . $file_name, $img);
             $category->img_name = $file_name;
@@ -64,7 +65,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\category  $category
+     * @param  \App\Models\category  $category
      * @return \Illuminate\Http\Response
      */
     public function show(category $category)
@@ -75,10 +76,10 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\category  $category
+     * @param  \App\Models\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(category $category)
+    public function edit(Category $category)
     {
         return view('category.edit', compact('category'));
     }
@@ -87,15 +88,16 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\category  $category
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, category $category)
+    public function update(Request $request, Category $category)
     {
         //dd($request->all());
         // validacion texto
         $data = request()->validate([
             'name' => 'required|string|max:500',
+            'description' => 'required|string|max:254',
         ]);
         // Si se eligio archivo
         if(isset($request->file_img)){
@@ -117,10 +119,10 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\category  $category
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(category $category)
+    public function destroy(Category $category)
     {
         $files = new Files;
         $files->destroyFile('/portfolio' . $category->img_name);
@@ -136,10 +138,10 @@ class CategoryController extends Controller
      */
     public function show_all()
     {
-        //$productos = products::where('categoria','=',$category->id)->paginate(9);
+        //$productos = products::where('categoria','=',$Category->id)->paginate(9);
         //$productos = products::paginate(9);
         //$carouseles = carousel::all();
-        $categorys = category::withCount('products')->paginate(9);
+        $categorys = Category::withCount('products')->paginate(9);
         $informacion = [
             'nombre' => information::where('name','nombre')->value('value'),
             'telefono' => information::where('name','telefono')->value('value'),

@@ -7,6 +7,7 @@ use App\Models\Information;
 use App\Models\Carousel;
 use App\Models\Category;
 use App\Models\Meter;
+use App\Models\Ask;
 use App\Mail\ContactForm;
 use App\Models\Products;
 use Illuminate\Support\Facades\Mail;
@@ -30,28 +31,37 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $carouseles = carousel::all();
-        $categorys = category::withCount('products')->get();
+        //$carouseles = carousel::all();
+        $categorys = Category::withCount('products')->get();
+        $asks = Ask::get();
         $informacion = [
-            'nombre' => information::where('name','nombre')->value('value'),
-            'telefono' => information::where('name','telefono')->value('value'),
-            'horario' => information::where('name','horario')->value('value'),
-            'email' => information::where('name','email')->value('value'),
-            'direccion' => information::where('name','direccion')->value('value'),
-            'municipio' => information::where('name','municipio')->value('value'),
-            'estado' => information::where('name','estado')->value('value'),
-            'no_whatsapp' => information::where('name','no_whatsapp')->value('value'),
-            'facebook' => information::where('name','facebook')->value('value'),
-            'instagram' => information::where('name','instagram')->value('value'),
-            'descripcion_empresa' => information::where('name','descripcion_empresa')->value('value'),
-            'informacion_footer' => information::where('name','informacion_footer')->value('value'),
-            'mision' => information::where('name','mision')->value('value'),
-            'vision' => information::where('name','vision')->value('value'),
-            'valores' => explode("°", information::where('name','valores')->value('value')),
-            'img_mision' => information::where('name','img_mision')->value('value'),
-            'img_vision' => information::where('name','img_vision')->value('value'),
-            'img_valores' => information::where('name','img_valores')->value('value'),
-            'telefono_oficina' => information::where('name','telefono_oficina')->value('value'),
+            'nombre' => Information::where('name','nombre')->value('value'),
+            'telefono' => Information::where('name','telefono')->value('value'),
+            'horario' => Information::where('name','horario')->value('value'),
+            'email' => Information::where('name','email')->value('value'),
+            'direccion' => Information::where('name','direccion')->value('value'),
+            'municipio' => Information::where('name','municipio')->value('value'),
+            'estado' => Information::where('name','estado')->value('value'),
+            'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
+            'facebook' => Information::where('name','facebook')->value('value'),
+            'instagram' => Information::where('name','instagram')->value('value'),
+            'descripcion_empresa' => Information::where('name','descripcion_empresa')->value('value'),
+            'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
+            'mision' => Information::where('name','mision')->value('value'),
+            'vision' => Information::where('name','vision')->value('value'),
+            'valores' => explode("°", Information::where('name','valores')->value('value')),
+            'img_mision' => Information::where('name','img_mision')->value('value'),
+            'img_vision' => Information::where('name','img_vision')->value('value'),
+            'img_valores' => Information::where('name','img_valores')->value('value'),
+            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
+            'welcome_title' => Information::where('name','welcome_title')->value('value'),
+            'welcome_description' => Information::where('name','welcome_description')->value('value'),
+            'welcome_link' => Information::where('name','welcome_link')->value('value'),
+            'welcome_boton' => Information::where('name','welcome_boton')->value('value'),
+            'img_welcome' => Information::where('name','img_welcome')->value('value'),
+            'nosotros' => Information::where('name','nosotros')->value('value'),
+            'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
+            'img_asks' => Information::where('name','img_asks')->value('value'),
         ];
         Meter::create([
             'tipo' => 'inicio',
@@ -59,7 +69,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('index'),
         ]);
-        return view('page.index', compact('informacion','carouseles','categorys'));
+        return view('page.index', compact('informacion','categorys','asks'));
     }
 
     /**
@@ -79,7 +89,7 @@ class HomeController extends Controller
             'no_pieza' => '',
             'message' => 'required|string',
         ]);
-        Mail::to(information::where('name','email')->value('value'), 'contactos')
+        Mail::to(Information::where('name','email')->value('value'), 'contactos')
             ->send( new ContactForm($data));
         Session::flash('info', 'Se ha enviado su solicitud con exito.');
         return redirect()->route('index');
@@ -93,29 +103,29 @@ class HomeController extends Controller
      */
     public function products(Request $request, $busqueda)
     {
-        $productos = products::where('name','like','%'.$busqueda.'%')->paginate(9);
+        $productos = Products::where('name','like','%'.$busqueda.'%')->paginate(9);
         //$carouseles = carousel::all();
-        $categorys = category::withCount('products')->get();
+        $categorys = Category::withCount('products')->get();
         $informacion = [
-            'nombre' => information::where('name','nombre')->value('value'),
-            'telefono' => information::where('name','telefono')->value('value'),
-            'horario' => information::where('name','horario')->value('value'),
-            'email' => information::where('name','email')->value('value'),
-            'direccion' => information::where('name','direccion')->value('value'),
-            'municipio' => information::where('name','municipio')->value('value'),
-            'estado' => information::where('name','estado')->value('value'),
-            'no_whatsapp' => information::where('name','no_whatsapp')->value('value'),
-            'facebook' => information::where('name','facebook')->value('value'),
-            'instagram' => information::where('name','instagram')->value('value'),
-            'descripcion_empresa' => information::where('name','descripcion_empresa')->value('value'),
-            'informacion_footer' => information::where('name','informacion_footer')->value('value'),
-            //'mision' => information::where('name','mision')->value('value'),
-            //'vision' => information::where('name','vision')->value('value'),
-            //'valores' => explode("°", information::where('name','valores')->value('value')),
-            //'img_mision' => information::where('name','img_mision')->value('value'),
-            //'img_vision' => information::where('name','img_vision')->value('value'),
-            //'img_valores' => information::where('name','img_valores')->value('value'),
-            'telefono_oficina' => information::where('name','telefono_oficina')->value('value'),
+            'nombre' => Information::where('name','nombre')->value('value'),
+            'telefono' => Information::where('name','telefono')->value('value'),
+            'horario' => Information::where('name','horario')->value('value'),
+            'email' => Information::where('name','email')->value('value'),
+            'direccion' => Information::where('name','direccion')->value('value'),
+            'municipio' => Information::where('name','municipio')->value('value'),
+            'estado' => Information::where('name','estado')->value('value'),
+            'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
+            'facebook' => Information::where('name','facebook')->value('value'),
+            'instagram' => Information::where('name','instagram')->value('value'),
+            'descripcion_empresa' => Information::where('name','descripcion_empresa')->value('value'),
+            'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
+            //'mision' => Information::where('name','mision')->value('value'),
+            //'vision' => Information::where('name','vision')->value('value'),
+            //'valores' => explode("°", Information::where('name','valores')->value('value')),
+            //'img_mision' => Information::where('name','img_mision')->value('value'),
+            //'img_vision' => Information::where('name','img_vision')->value('value'),
+            //'img_valores' => Information::where('name','img_valores')->value('value'),
+            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
         ];
         Meter::create([
             'tipo' => 'busqueda',
@@ -135,29 +145,29 @@ class HomeController extends Controller
     public function products_all()
     {
         $busqueda = null;
-        $productos = products::paginate(9);
+        $productos = Products::paginate(9);
         //$carouseles = carousel::all();
-        $categorys = category::withCount('products')->get();
+        $categorys = Category::withCount('products')->get();
         $informacion = [
-            'nombre' => information::where('name','nombre')->value('value'),
-            'telefono' => information::where('name','telefono')->value('value'),
-            'horario' => information::where('name','horario')->value('value'),
-            'email' => information::where('name','email')->value('value'),
-            'direccion' => information::where('name','direccion')->value('value'),
-            'municipio' => information::where('name','municipio')->value('value'),
-            'estado' => information::where('name','estado')->value('value'),
-            'no_whatsapp' => information::where('name','no_whatsapp')->value('value'),
-            'facebook' => information::where('name','facebook')->value('value'),
-            'instagram' => information::where('name','instagram')->value('value'),
-            'descripcion_empresa' => information::where('name','descripcion_empresa')->value('value'),
-            'informacion_footer' => information::where('name','informacion_footer')->value('value'),
-            //'mision' => information::where('name','mision')->value('value'),
-            //'vision' => information::where('name','vision')->value('value'),
-            //'valores' => explode("°", information::where('name','valores')->value('value')),
-            //'img_mision' => information::where('name','img_mision')->value('value'),
-            //'img_vision' => information::where('name','img_vision')->value('value'),
-            //'img_valores' => information::where('name','img_valores')->value('value'),
-            'telefono_oficina' => information::where('name','telefono_oficina')->value('value'),
+            'nombre' => Information::where('name','nombre')->value('value'),
+            'telefono' => Information::where('name','telefono')->value('value'),
+            'horario' => Information::where('name','horario')->value('value'),
+            'email' => Information::where('name','email')->value('value'),
+            'direccion' => Information::where('name','direccion')->value('value'),
+            'municipio' => Information::where('name','municipio')->value('value'),
+            'estado' => Information::where('name','estado')->value('value'),
+            'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
+            'facebook' => Information::where('name','facebook')->value('value'),
+            'instagram' => Information::where('name','instagram')->value('value'),
+            'descripcion_empresa' => Information::where('name','descripcion_empresa')->value('value'),
+            'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
+            //'mision' => Information::where('name','mision')->value('value'),
+            //'vision' => Information::where('name','vision')->value('value'),
+            //'valores' => explode("°", Information::where('name','valores')->value('value')),
+            //'img_mision' => Information::where('name','img_mision')->value('value'),
+            //'img_vision' => Information::where('name','img_vision')->value('value'),
+            //'img_valores' => Information::where('name','img_valores')->value('value'),
+            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
         ];
         Meter::create([
             'tipo' => 'Todos los productos',

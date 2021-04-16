@@ -65,7 +65,7 @@
           <img src="{{ asset('img/user_icon.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"></a>
+          <a href="#" class="d-block">{{ Auth()->user()->name }}</a>
         </div>
       </div>
 
@@ -78,6 +78,18 @@
                 <a href="{{ route('informacion') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Informacion General</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('edit.welcome') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Mensaje Bienvenida</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('save.branding', ['branding' => 'nosotros']) }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Nosotros</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -114,6 +126,12 @@
                 <a href="{{ route('productos') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Productos</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('asks') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Preguntas Frecuentes</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -166,7 +184,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; REMAQ</a>.</strong> Todos los derechos reservados.
+    <strong>Copyright &copy; MH</a>.</strong> Todos los derechos reservados.
   </footer>
 
   <!-- Control Sidebar -->

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\information;
+use App\Models\Information;
 use App\Clases\Files;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -18,19 +18,19 @@ class InformationController extends Controller
     public function index()
     {
         $informacion = [
-            'nombre' => information::where('name','nombre')->value('value'),
-            'telefono' => information::where('name','telefono')->value('value'),
-            'horario' => information::where('name','horario')->value('value'),
-            'email' => information::where('name','email')->value('value'),
-            'direccion' => information::where('name','direccion')->value('value'),
-            'municipio' => information::where('name','municipio')->value('value'),
-            'estado' => information::where('name','estado')->value('value'),
-            'no_whatsapp' => information::where('name','no_whatsapp')->value('value'),
-            'facebook' => information::where('name','facebook')->value('value'),
-            'instagram' => information::where('name','instagram')->value('value'),
-            'descripcion_empresa' => information::where('name','descripcion_empresa')->value('value'),
-            'informacion_footer' => information::where('name','informacion_footer')->value('value'),
-            'telefono_oficina' => information::where('name','telefono_oficina')->value('value'),
+            'nombre' => Information::where('name','nombre')->value('value'),
+            'telefono' => Information::where('name','telefono')->value('value'),
+            'horario' => Information::where('name','horario')->value('value'),
+            'email' => Information::where('name','email')->value('value'),
+            'direccion' => Information::where('name','direccion')->value('value'),
+            'municipio' => Information::where('name','municipio')->value('value'),
+            'estado' => Information::where('name','estado')->value('value'),
+            'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
+            'facebook' => Information::where('name','facebook')->value('value'),
+            'instagram' => Information::where('name','instagram')->value('value'),
+            'descripcion_empresa' => Information::where('name','descripcion_empresa')->value('value'),
+            'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
+            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
         ];
         return view('admin.informacion', compact('informacion'));
     }
@@ -43,12 +43,11 @@ class InformationController extends Controller
     public function branding($branding_tipe)
     {
         if($branding_tipe === 'mision' || $branding_tipe === 'vision' ||
-            $branding_tipe === 'valores'){
-            $informacion = new information;
+            $branding_tipe === 'valores' || $branding_tipe === 'nosotros'){
+            $informacion = new Information;
             $branding = $informacion->consultarBranding($branding_tipe);
             return view('admin.branding', compact('branding'));
         }else abort(404);
-
     }
 
     /**
@@ -84,7 +83,7 @@ class InformationController extends Controller
             'informacion_footer' => 'required|string|between:1,499',
             'telefono_oficina' => 'required|string|between:1,499',
         ]);
-        $informacion = new information;
+        $informacion = new Information;
         $informacion->actualizarInformacion('nombre', $data['nombre']);
         $informacion->actualizarInformacion('telefono', $data['telefono']);
         $informacion->actualizarInformacion('horario', $data['horario']);
@@ -113,10 +112,10 @@ class InformationController extends Controller
         //dd($request->all());
         // validacion texto
         $data = request()->validate([
-            'ban' => 'required|string|in:mision,vision,valores',
+            'ban' => 'required|string|in:mision,vision,valores,nosotros',
             'branding' => 'required|string|max:500',
         ]);
-        $informacion = new information;
+        $informacion = new Information;
         // Si se eligio archivo
         if(isset($request->file_img)){
             $img = $request->file_img;
@@ -126,7 +125,7 @@ class InformationController extends Controller
             $files->validatorImgFile($img, $extension)->validate();
             $file_name = '/'. $data['ban'] .'_' . Str::random(8) . '.' . $extension;
             $files->uploadFile('/about' . $file_name, $img);
-            $img_db = information::where('name', 'img_' . $data['ban'])->value('value');
+            $img_db = Information::where('name', 'img_' . $data['ban'])->value('value');
             $files->destroyFile('/about' . $img_db);
             $informacion->actualizarInformacion('img_' . $data['ban'], $file_name);
         }
@@ -139,10 +138,10 @@ class InformationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\information  $information
+     * @param  \App\Models\Information  $Information
      * @return \Illuminate\Http\Response
      */
-    public function show(information $information)
+    public function show(Information $Information)
     {
         //
     }
@@ -150,33 +149,132 @@ class InformationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\information  $information
+     * @param  \App\Models\Information  $Information
      * @return \Illuminate\Http\Response
      */
-    public function edit(information $information)
+    public function edit(Information $Information)
     {
         //
+    }
+    
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Information  $Information
+     * @return \Illuminate\Http\Response
+     */
+    public function editWelcome()
+    {
+        $informacion = new Information;
+        $data = [
+            'title' => information::where('name','welcome_title')->value('value'),
+            'description' => information::where('name','welcome_description')->value('value'),
+            'link' => information::where('name','welcome_link')->value('value'),
+            'boton' => information::where('name','welcome_boton')->value('value'),
+            'img' => information::where('name', 'img_welcome')->value('value'),
+        ];
+        return view('admin.welcome', compact('data'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Information  $Information
+     * @return \Illuminate\Http\Response
+     */
+    public function editImgAsks()
+    {
+        $informacion = new Information;
+        $img = information::where('name', 'img_asks')->value('value');
+        return view('ask.img', compact('img'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\information  $information
+     * @param  \App\Models\Information  $Information
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, information $information)
+    public function update(Request $request, Information $Information)
     {
         //
     }
 
     /**
-     * Remove the specified resource from storage.
+    * Update the specified resource in storage.
      *
-     * @param  \App\information  $information
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Information  $Information
      * @return \Illuminate\Http\Response
      */
-    public function destroy(information $information)
+    public function updateWelcome(Request $request)
+    {
+        //dd($request->all());
+        // validacion texto
+        $data = request()->validate([
+            "title" => 'required|string|max:500',
+            "description" => 'required|string|max:500',
+            "link" => 'required|string|max:500',
+            "boton" => 'required|string|max:500',
+        ]);
+        $informacion = new Information;
+        // Si se eligio archivo
+        if(isset($request->file_img)){
+            $img = $request->file_img;
+            $extension = strtolower($request->file_img->getClientOriginalExtension());
+            $files = new Files;
+            // Validacion Imagen
+            $files->validatorImgFile($img, $extension)->validate();
+            $file_name = '/welcome_' . Str::random(8) . '.' . $extension;
+            $files->uploadFile('/about' . $file_name, $img);
+            $img_db = Information::where('name', 'img_welcome')->value('value');
+            $files->destroyFile('/about' . $img_db);
+            $informacion->actualizarInformacion('img_welcome', $file_name);
+        }
+        // Guarda el texto
+        $informacion->actualizarInformacion('welcome_title', $data['title']);
+        $informacion->actualizarInformacion('welcome_description', $data['description']);
+        $informacion->actualizarInformacion('welcome_boton', $data['boton']);
+        $informacion->actualizarInformacion('welcome_link', $data['link']);
+        Session::flash('info', 'Se ha guardado la informacion con exito.');
+        return redirect()->route('edit.welcome');
+    }
+
+        /**
+    * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Information  $Information
+     * @return \Illuminate\Http\Response
+     */
+    public function updateImgAsks(Request $request)
+    {
+        $informacion = new Information;
+        // Si se eligio archivo
+        if(isset($request->file_img)){
+            $img = $request->file_img;
+            $extension = strtolower($request->file_img->getClientOriginalExtension());
+            $files = new Files;
+            // Validacion Imagen
+            $files->validatorImgFile($img, $extension)->validate();
+            $file_name = '/asks' . Str::random(8) . '.' . $extension;
+            $files->uploadFile('/about' . $file_name, $img);
+            $img_db = Information::where('name', 'img_asks')->value('value');
+            $files->destroyFile('/about' . $img_db);
+            $informacion->actualizarInformacion('img_asks', $file_name);
+            Session::flash('info', 'Se ha guardado la informacion con exito.');
+        }
+        return redirect()->route('edit.imgasks');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Information  $Information
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Information $Information)
     {
         //
     }
