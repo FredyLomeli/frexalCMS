@@ -45,15 +45,18 @@ class HomeController extends Controller
             'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
             'facebook' => Information::where('name','facebook')->value('value'),
             'instagram' => Information::where('name','instagram')->value('value'),
-            'descripcion_empresa' => Information::where('name','descripcion_empresa')->value('value'),
+            'twitter' => Information::where('name','twitter')->value('value'),
+            'youtube' => Information::where('name','youtube')->value('value'),
+            'linkedin' => Information::where('name','linkedin')->value('value'),
+            //'descripcion_ubicacion' => Information::where('name','descripcion_ubicacion')->value('value'),
             'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
-            'mision' => Information::where('name','mision')->value('value'),
-            'vision' => Information::where('name','vision')->value('value'),
-            'valores' => explode("°", Information::where('name','valores')->value('value')),
-            'img_mision' => Information::where('name','img_mision')->value('value'),
-            'img_vision' => Information::where('name','img_vision')->value('value'),
-            'img_valores' => Information::where('name','img_valores')->value('value'),
-            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
+            //'mision' => Information::where('name','mision')->value('value'),
+            //'vision' => Information::where('name','vision')->value('value'),
+            //'valores' => explode("°", Information::where('name','valores')->value('value')),
+            //'img_mision' => Information::where('name','img_mision')->value('value'),
+            //'img_vision' => Information::where('name','img_vision')->value('value'),
+            //'img_valores' => Information::where('name','img_valores')->value('value'),
+            //'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
             'welcome_title' => Information::where('name','welcome_title')->value('value'),
             'welcome_description' => Information::where('name','welcome_description')->value('value'),
             'welcome_link' => Information::where('name','welcome_link')->value('value'),
@@ -62,6 +65,8 @@ class HomeController extends Controller
             'nosotros' => Information::where('name','nosotros')->value('value'),
             'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
             'img_asks' => Information::where('name','img_asks')->value('value'),
+            'img_logo' => Information::where('name','img_logo')->value('value'),
+            'page' => 'inicio',
         ];
         Meter::create([
             'tipo' => 'inicio',
@@ -70,6 +75,106 @@ class HomeController extends Controller
             'url' => route('index'),
         ]);
         return view('page.index', compact('informacion','categorys','asks'));
+    }
+
+        /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function contacto()
+    {
+        $informacion = [
+            'nombre' => Information::where('name','nombre')->value('value'),
+            'telefono' => Information::where('name','telefono')->value('value'),
+            'horario' => Information::where('name','horario')->value('value'),
+            'email' => Information::where('name','email')->value('value'),
+            'direccion' => Information::where('name','direccion')->value('value'),
+            'municipio' => Information::where('name','municipio')->value('value'),
+            'estado' => Information::where('name','estado')->value('value'),
+            'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
+            'facebook' => Information::where('name','facebook')->value('value'),
+            'instagram' => Information::where('name','instagram')->value('value'),
+            'twitter' => Information::where('name','twitter')->value('value'),
+            'youtube' => Information::where('name','youtube')->value('value'),
+            'linkedin' => Information::where('name','linkedin')->value('value'),
+            'descripcion_ubicacion' => Information::where('name','descripcion_ubicacion')->value('value'),
+            'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
+            //'mision' => Information::where('name','mision')->value('value'),
+            //'vision' => Information::where('name','vision')->value('value'),
+            //'valores' => explode("°", Information::where('name','valores')->value('value')),
+            //'img_mision' => Information::where('name','img_mision')->value('value'),
+            //'img_vision' => Information::where('name','img_vision')->value('value'),
+            //'img_valores' => Information::where('name','img_valores')->value('value'),
+            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
+            //'welcome_title' => Information::where('name','welcome_title')->value('value'),
+            //'welcome_description' => Information::where('name','welcome_description')->value('value'),
+            //'welcome_link' => Information::where('name','welcome_link')->value('value'),
+            //'welcome_boton' => Information::where('name','welcome_boton')->value('value'),
+            //'img_welcome' => Information::where('name','img_welcome')->value('value'),
+            //'nosotros' => Information::where('name','nosotros')->value('value'),
+            //'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
+            //'img_asks' => Information::where('name','img_asks')->value('value'),
+            'img_logo' => Information::where('name','img_logo')->value('value'),
+            'page' => 'contacto',
+        ];
+        Meter::create([
+            'tipo' => 'inicio',
+            'products_id' => '0',
+            'category_id' => '0',
+            'url' => route('index'),
+        ]);
+        return view('page.contact', compact('informacion'));
+    }
+
+        /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function nosotros()
+    {
+        $informacion = [
+            'nombre' => Information::where('name','nombre')->value('value'),
+            'telefono' => Information::where('name','telefono')->value('value'),
+            'horario' => Information::where('name','horario')->value('value'),
+            'email' => Information::where('name','email')->value('value'),
+            'direccion' => Information::where('name','direccion')->value('value'),
+            'municipio' => Information::where('name','municipio')->value('value'),
+            'estado' => Information::where('name','estado')->value('value'),
+            'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
+            'facebook' => Information::where('name','facebook')->value('value'),
+            'instagram' => Information::where('name','instagram')->value('value'),
+            'twitter' => Information::where('name','twitter')->value('value'),
+            'youtube' => Information::where('name','youtube')->value('value'),
+            'linkedin' => Information::where('name','linkedin')->value('value'),
+            //'descripcion_ubicacion' => Information::where('name','descripcion_ubicacion')->value('value'),
+            'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
+            'mision' => Information::where('name','mision')->value('value'),
+            'vision' => Information::where('name','vision')->value('value'),
+            'valores' => explode("°", Information::where('name','valores')->value('value')),
+            'img_mision' => Information::where('name','img_mision')->value('value'),
+            'img_vision' => Information::where('name','img_vision')->value('value'),
+            'img_valores' => Information::where('name','img_valores')->value('value'),
+            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
+            //'welcome_title' => Information::where('name','welcome_title')->value('value'),
+            //'welcome_description' => Information::where('name','welcome_description')->value('value'),
+            //'welcome_link' => Information::where('name','welcome_link')->value('value'),
+            //'welcome_boton' => Information::where('name','welcome_boton')->value('value'),
+            //'img_welcome' => Information::where('name','img_welcome')->value('value'),
+            'nosotros' => Information::where('name','nosotros')->value('value'),
+            'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
+            //'img_asks' => Information::where('name','img_asks')->value('value'),
+            'img_logo' => Information::where('name','img_logo')->value('value'),
+            'page' => 'nosotros',
+        ];
+        Meter::create([
+            'tipo' => 'inicio',
+            'products_id' => '0',
+            'category_id' => '0',
+            'url' => route('index'),
+        ]);
+        return view('page.about', compact('informacion'));
     }
 
     /**
@@ -83,16 +188,15 @@ class HomeController extends Controller
         $data = request()->validate([
             'name' => 'required|string|max:500',
             'telefono' => 'required|string|min:10',
-            'email' => 'required|string|max:100',
-            'no_serie' => 'required|string',
-            'mod_maquina' => 'required|string',
-            'no_pieza' => '',
+            'email' => 'required|string|max:254|email',
+            'asunto' => 'required|string|max:254',
             'message' => 'required|string',
         ]);
-        Mail::to(Information::where('name','email')->value('value'), 'contactos')
+        //Mail::to(Information::where('name','email')->value('value'), 'contactos')
+        Mail::to('ing.lomeli@gmail.com', 'contactos')
             ->send( new ContactForm($data));
         Session::flash('info', 'Se ha enviado su solicitud con exito.');
-        return redirect()->route('index');
+        return redirect()->route('contacto');
     }
 
     /**
@@ -117,7 +221,7 @@ class HomeController extends Controller
             'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
             'facebook' => Information::where('name','facebook')->value('value'),
             'instagram' => Information::where('name','instagram')->value('value'),
-            'descripcion_empresa' => Information::where('name','descripcion_empresa')->value('value'),
+            //'descripcion_ubicacion' => Information::where('name','descripcion_ubicacion')->value('value'),
             'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
             //'mision' => Information::where('name','mision')->value('value'),
             //'vision' => Information::where('name','vision')->value('value'),
@@ -144,10 +248,11 @@ class HomeController extends Controller
      */
     public function products_all()
     {
-        $busqueda = null;
-        $productos = Products::paginate(9);
+        //$busqueda = null;
+        $productos = Products::with('category')->get();
+        //$productos = Products::paginate(9);
         //$carouseles = carousel::all();
-        $categorys = Category::withCount('products')->get();
+        $categorys = Category::get();
         $informacion = [
             'nombre' => Information::where('name','nombre')->value('value'),
             'telefono' => Information::where('name','telefono')->value('value'),
@@ -159,7 +264,10 @@ class HomeController extends Controller
             'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
             'facebook' => Information::where('name','facebook')->value('value'),
             'instagram' => Information::where('name','instagram')->value('value'),
-            'descripcion_empresa' => Information::where('name','descripcion_empresa')->value('value'),
+            'twitter' => Information::where('name','twitter')->value('value'),
+            'youtube' => Information::where('name','youtube')->value('value'),
+            'linkedin' => Information::where('name','linkedin')->value('value'),
+            'descripcion_ubicacion' => Information::where('name','descripcion_ubicacion')->value('value'),
             'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
             //'mision' => Information::where('name','mision')->value('value'),
             //'vision' => Information::where('name','vision')->value('value'),
@@ -167,7 +275,17 @@ class HomeController extends Controller
             //'img_mision' => Information::where('name','img_mision')->value('value'),
             //'img_vision' => Information::where('name','img_vision')->value('value'),
             //'img_valores' => Information::where('name','img_valores')->value('value'),
-            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
+            //'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
+            //'welcome_title' => Information::where('name','welcome_title')->value('value'),
+            //'welcome_description' => Information::where('name','welcome_description')->value('value'),
+            //'welcome_link' => Information::where('name','welcome_link')->value('value'),
+            //'welcome_boton' => Information::where('name','welcome_boton')->value('value'),
+            //'img_welcome' => Information::where('name','img_welcome')->value('value'),
+            //'nosotros' => Information::where('name','nosotros')->value('value'),
+            //'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
+            //'img_asks' => Information::where('name','img_asks')->value('value'),
+            'img_logo' => Information::where('name','img_logo')->value('value'),
+            'page' => 'producto',
         ];
         Meter::create([
             'tipo' => 'Todos los productos',
@@ -175,7 +293,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('show_all.products'),
         ]);
-        return view('page.products', compact('informacion','categorys','productos', 'busqueda'));
+        return view('page.portfolio', compact('informacion','categorys','productos'));
     }
 
     /**

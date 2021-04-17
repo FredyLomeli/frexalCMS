@@ -34,7 +34,7 @@
                         <div class="col-lg-2">
                             <div class="brand">
                                 <a href="index.html">
-                                    <img src="{{ asset('img/logo.png') }}" alt="Logo">
+                                    <img src="{{ asset('img/' . $informacion['img_logo']) }}" alt="Logo">
                                 </a>
                             </div>
                         </div>
@@ -48,11 +48,11 @@
                                 </div>
                                 <div class="topbar-col">
                                     <div class="topbar-social">
-                                        <a href="{{ $informacion['facebook']}}"><i class="fab fa-twitter"></i></a>
+                                        <a href="{{ $informacion['twitter']}}"><i class="fab fa-twitter"></i></a>
                                         <a href="{{ $informacion['facebook']}}"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="{{ $informacion['facebook']}}"><i class="fab fa-youtube"></i></a>
+                                        <a href="{{ $informacion['youtube']}}"><i class="fab fa-youtube"></i></a>
                                         <a href="{{ $informacion['instagram']}}"><i class="fab fa-instagram"></i></a>
-                                        <a href="{{ $informacion['instagram']}}"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="{{ $informacion['linkedin']}}"><i class="fab fa-linkedin-in"></i></a>
                                         <a href="{{ $informacion['no_whatsapp']}}"><i class="fab fa-whatsapp"></i></a>
                                     </div>
                                 </div>
@@ -65,11 +65,11 @@
 
                                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                     <div class="navbar-nav ml-auto">
-                                        <a href="{{route('index')}}" class="nav-item nav-link active">Inicio</a>
-                                        <a href="{{route('index')}}" class="nav-item nav-link">Nosotros</a>
-                                        <a href="{{route('index')}}" class="nav-item nav-link">Servicios</a>
-                                        <a href="{{route('index')}}" class="nav-item nav-link">Productos</a>
-                                        <a href="{{route('index')}}" class="nav-item nav-link">Contactanos</a>
+                                        <a href="{{route('index')}}" class="nav-item nav-link{{ ($informacion['page'] == 'inicio' ? ' active' : '') }}">Inicio</a>
+                                        <a href="{{route('nosotros')}}" class="nav-item nav-link{{ ($informacion['page'] == 'nosotros' ? ' active' : '') }}">Nosotros</a>
+                                        <a href="{{route('show_categorys')}}" class="nav-item nav-link{{ ($informacion['page'] == 'servicio' ? ' active' : '') }}">Servicios</a>
+                                        <a href="{{route('show_all.products')}}" class="nav-item nav-link{{ ($informacion['page'] == 'producto' ? ' active' : '') }}">Productos</a>
+                                        <a href="{{route('contacto')}}" class="nav-item nav-link{{ ($informacion['page'] == 'contacto' ? ' active' : '') }}">Contactanos</a>
                                     </div>
                                 </div>
                             </div>
@@ -87,36 +87,39 @@
                     <div class="row">
                         <div class="col-md-5">
                             <div class="footer-about">
-                                <h2>Quienes somos</h2>
-                                <p>
-                                    {{ $informacion['descripcion_empresa']}}
-                                </p>
+                                <h2>{{ $informacion['nombre'] }}</h2>
+                                <p>{{ $informacion['informacion_footer']}}</p>
                                 <br>
-                                <p><i class="fa fa-map-marker-alt"></i>{{ $informacion['direccion']}}</p>
-                                <p><i class="fa fa-phone-alt"></i>{{ $informacion['telefono']}}</p>
-                                <p><i class="fa fa-envelope"></i>{{ $informacion['email']}}</p>
+                                <a href="{{ $informacion['twitter'] }}" class="footer-social-link"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="{{ $informacion['facebook'] }}" class="footer-social-link"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="{{ $informacion['youtube'] }}" class="footer-social-link"><i class="fab fa-youtube fa-lg"></i></a>
+                                <a href="{{ $informacion['instagram'] }}" class="footer-social-link"><i class="fab fa-instagram fa-lg"></i></a>
+                                <a href="{{ $informacion['linkedin'] }}" class="footer-social-link"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                                <a href="{{ $informacion['no_whatsapp'] }}" class="footer-social-link"><i class="fab fa-whatsapp fa-lg"></i></a>
+                                
                             </div>
                         </div>
                         <div class="col-md-7">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="footer-link">
-                                        <h2>Acesos del Sitio</h2>
-                                        <a href="">Conocenos</a>
-                                        <a href="">Servicios</a>
-                                        <a href="">Productos</a>
-                                        <a href="">Contactanos</a>
+                                    <div class="footer-about">
+                                        <div class="footer-link">
+                                            <h2>Empresa</h2>
+                                            <p><i class="fa fa-phone-alt"></i>{{ $informacion['telefono']}}</p>
+                                            <p><i class="fa fa-envelope"></i>{{ $informacion['email']}}</p>
+                                            <p><i class="fa fa-clock"></i>{{ $informacion['horario']}}</p>
+                                            <p><i class="fa fa-map-marker-alt"></i>{{ $informacion['direccion']}}</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="footer-link">
-                                        <h2>Useful Link</h2>
-                                        <a href="">Our Clients</a>
-                                        <a href="">Clients Review</a>
-                                        <a href="">Ongoing Customer</a>
-                                        <a href="">Customer Support</a>
-                                        <a href="">FAQs</a>
-                                        <a href="">Site Map</a>
+                                        <h2>Acesos del Sitio</h2>
+                                        <a href="{{ route('index') }}">Inicio</a>
+                                        <a href="{{route('nosotros')}}">Conocenos</a>
+                                        <a href="{{route('show_categorys')}}">Servicios</a>
+                                        <a href="{{route('show_all.products')}}">Productos</a>
+                                        <a href="{{route('contacto')}}">Contactanos</a>
                                     </div>
                                 </div>
                             </div>

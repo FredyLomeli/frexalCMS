@@ -7,220 +7,102 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>About Us</h2>
+                <h2>Acerca de nosotros</h2>
             </div>
             <div class="col-12">
-                <a href="">Home</a>
-                <a href="">About Us</a>
+                <a href="{{route('index')}}">Inicio</a>
+                <a href="{{route('nosotros')}}">Nosotros</a>
             </div>
         </div>
     </div>
 </div>
 <!-- Page Header End -->
 
-
-<!-- About Start -->
-<div class="about">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <img src="img/poster.jpg" alt="Image">
-            </div>
-            <div class="col-md-6">
-                <h2 class="section-title">Learn About Us</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
-                </p>
-                <a class="btn" href="">Learn More</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End -->
+@include('page.nosotros')
 
 
 <!-- Story Start -->
 <div class="story">
     <div class="container-fluid">
         <div class="section-header">
-            <h2>Our Story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium ornare velit non</p>
+            <h2>Misión Visión y Valores</h2>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="story-container">
-                    <div class="story-end">
-                        <p>Now</p>
-                    </div>
-                    <div class="story-continue">
+    </div>
+</div>
 
-                        <div class="row story-right">
-                            <div class="col-md-6">
-                                <p class="story-date">
-                                    01 Jun 2020
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="story-box">
-                                    <div class="story-icon">
-                                        <i class="fa fa-gift"></i>
-                                    </div>
-                                    <div class="story-text">
-                                        <h3>Lorem ipsum dolor</h3>
-                                        <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row story-left">
-                            <div class="col-md-6 d-md-none d-block">
-                                <p class="story-date">
-                                    01 Jan 2020
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="story-box">
-                                    <div class="story-icon d-md-none d-block">
-                                        <i class="fa fa-business-time"></i>
-                                    </div>
-                                    <div class="story-text">
-                                        <h3>Lorem ipsum dolor</h3>
-                                        <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                    </div>
-                                    <div class="story-icon d-md-block d-none">
-                                        <i class="fa fa-business-time"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 d-md-block d-none">
-                                <p class="story-date">
-                                    01 Jan 2020
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="story-year">
-                                    <p>2020</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row story-right">
-                            <div class="col-md-6">
-                                <p class="story-date">
-                                    01 Dec 2019
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="story-box">
-                                    <div class="story-icon">
-                                        <i class="fa fa-briefcase"></i>
-                                    </div>
-                                    <div class="story-text">
-                                        <h3>Lorem ipsum dolor</h3>
-                                        <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row story-left">
-                            <div class="col-md-6 d-md-none d-block">
-                                <p class="story-date">
-                                    01 Sep  2019
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="story-box">
-                                    <div class="story-icon d-md-none d-block">
-                                        <i class="fa fa-cogs"></i>
-                                    </div>
-                                    <div class="story-text">
-                                        <h3>Lorem ipsum dolor</h3>
-                                        <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                    </div>
-                                    <div class="story-icon d-md-block d-none">
-                                        <i class="fa fa-cogs"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 d-md-block d-none">
-                                <p class="story-date">
-                                    01 Sep  2019
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="row story-right">
-                            <div class="col-md-6">
-                                <p class="story-date">
-                                    01 Jun 2019
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="story-box">
-                                    <div class="story-icon">
-                                        <i class="fa fa-running"></i>
-                                    </div>
-                                    <div class="story-text">
-                                        <h3>Lorem ipsum dolor</h3>
-                                        <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row story-left">
-                            <div class="col-md-6 d-md-none d-block">
-                                <p class="story-date">
-                                    01 Mar 2019
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="story-box">
-                                    <div class="story-icon d-md-none d-block">
-                                        <i class="fa fa-home"></i>
-                                    </div>
-                                    <div class="story-text">
-                                        <h3>Lorem ipsum dolor</h3>
-                                        <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                    </div>
-                                    <div class="story-icon d-md-block d-none">
-                                        <i class="fa fa-home"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 d-md-block d-none">
-                                <p class="story-date">
-                                    01 Mar 2019
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-start">
-                        <p>Launch</p>
-                    </div>
-                    <div class="story-launch">
-                        <div class="story-box">
-                            <div class="story-text">
-                                <h3>Launched our company on 01 Jan 2019</h3>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                        </div>
-                    </div>
+<!-- Service Row Start -->
+<div class="service-row">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 d-md-none d-block">
+                <div class="service-row-img">
+                    <img src="{{ asset('img/about/'.$informacion['img_mision']) }}" alt="mision">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-row-text">
+                    <h2 class="section-title">Misión</h2>
+                    <p>{{ $informacion['mision'] }}</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-md-block d-none">
+                <div class="service-row-img">
+                    <img src="{{ asset('img/about/'.$informacion['img_mision']) }}" alt="mision">
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Story End -->
+<!-- Service Row End -->
 
+<!-- Service Row Start -->
+<div class="service-row">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="service-row-img">
+                    <img src="{{ asset('img/about/'.$informacion['img_vision']) }}" alt="vision">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-row-text">
+                    <h2 class="section-title">Visión</h2>
+                    <p>{{ $informacion['vision'] }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service Row End -->
+
+<!-- Service Row Start -->
+<div class="service-row">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 d-md-none d-block">
+                <div class="service-row-img">
+                    <img src="{{ asset('img/about/'.$informacion['img_valores']) }}" alt="valores">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-row-text">
+                    <h2 class="section-title">Valores</h2>
+                    @for ($i = 0; $i < sizeof($informacion['valores']); $i++)
+                    @if ($informacion['valores'][$i] != null)
+                    <p><i class="fa fa-check"></i> {{$informacion['valores'][$i]}}</p>
+                    @endif
+                    @endfor
+                </div>
+            </div>
+            <div class="col-md-6 d-md-block d-none">
+                <div class="service-row-img">
+                    <img src="{{ asset('img/about/'.$informacion['img_valores']) }}" alt="valores">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service Row End -->
 
 <!-- Team Start -->
 <div class="team">

@@ -1885,3 +1885,8 @@ a:focus {
         text-align: center;
     }
 }
+
+a.footer-social-link {
+    color: #999999;
+    padding: 0 10px;
+}

@@ -95,13 +95,13 @@
             <li class="nav-item">
                 <a href="{{ route('save.branding', ['branding' => 'mision']) }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Mision</p>
+                <p>Misión</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('save.branding', ['branding' => 'vision']) }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Vision</p>
+                <p>Visión</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -110,12 +110,12 @@
                 <p>Valores</p>
                 </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a href="{{ route('carrusel') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Carrusel</p>
                 </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
                 <a href="{{ route('category') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>

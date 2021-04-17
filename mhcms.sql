@@ -11,7 +11,7 @@
  Target Server Version : 100417
  File Encoding         : 65001
 
- Date: 16/04/2021 00:52:22
+ Date: 16/04/2021 02:05:55
 */
 
 SET NAMES utf8mb4;
@@ -23,9 +23,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `asks`;
 CREATE TABLE `asks`  (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `question` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `question` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `answer` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `img_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -34,9 +33,9 @@ CREATE TABLE `asks`  (
 -- ----------------------------
 -- Records of asks
 -- ----------------------------
-INSERT INTO `asks` VALUES (1, 'Esta es la primera pregunta', 'Esta es la respuesta de la primera pregunta y de muchas mas', NULL, '2021-04-16 05:31:20', '2021-04-16 05:31:20');
-INSERT INTO `asks` VALUES (2, 'Pregunta frecuente numero 2', 'Esta es la respues de la pregunta frecuente numero 2', NULL, '2021-04-16 05:36:09', '2021-04-16 05:36:09');
-INSERT INTO `asks` VALUES (3, 'Pregunta 3', 'Esta es la respues de la pregunta frecuente numero tres', NULL, '2021-04-16 05:36:35', '2021-04-16 05:36:35');
+INSERT INTO `asks` VALUES (1, 'Esta es la primera pregunta', 'Esta es la respuesta de la primera pregunta y de muchas mas', '2021-04-16 05:31:20', '2021-04-16 05:31:20');
+INSERT INTO `asks` VALUES (2, 'Pregunta frecuente numero 2', 'Esta es la respues de la pregunta frecuente numero 2', '2021-04-16 05:36:09', '2021-04-16 05:36:09');
+INSERT INTO `asks` VALUES (3, 'Pregunta 3', 'Esta es la respues de la pregunta frecuente numero tres', '2021-04-16 05:36:35', '2021-04-16 05:36:35');
 
 -- ----------------------------
 -- Table structure for carousels
@@ -63,7 +62,7 @@ DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories`  (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `img_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
@@ -141,7 +140,7 @@ INSERT INTO `information` VALUES (23, 'welcome_link', 'http://localhost/phpmyadm
 INSERT INTO `information` VALUES (24, 'welcome_boton', 'Conoce mas aqui', NULL, '2021-04-16 03:21:42');
 INSERT INTO `information` VALUES (25, 'nosotros', 'Aqui mismo nos vamos a poner a escribir algo sobre nosotrs para poder hacer que nos conozcan un poco mas de lo que ya sabes de nosotros gracias', NULL, '2021-04-16 03:42:07');
 INSERT INTO `information` VALUES (26, 'img_nosotros', '/nosotros_rmw6EbSW.jpg', NULL, '2021-04-16 03:42:07');
-INSERT INTO `information` VALUES (27, 'img_asks', 'Esta imagen para las preguntas', NULL, NULL);
+INSERT INTO `information` VALUES (27, 'img_asks', '/asks0xghP5Te.png', NULL, '2021-04-16 06:12:41');
 
 -- ----------------------------
 -- Table structure for meters
@@ -156,54 +155,11 @@ CREATE TABLE `meters`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 44 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of meters
 -- ----------------------------
-INSERT INTO `meters` VALUES (1, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 02:35:21', '2021-04-14 02:35:21');
-INSERT INTO `meters` VALUES (2, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 03:12:43', '2021-04-14 03:12:43');
-INSERT INTO `meters` VALUES (3, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 03:20:15', '2021-04-14 03:20:15');
-INSERT INTO `meters` VALUES (4, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 03:21:07', '2021-04-14 03:21:07');
-INSERT INTO `meters` VALUES (5, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:33:48', '2021-04-14 04:33:48');
-INSERT INTO `meters` VALUES (6, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:36:06', '2021-04-14 04:36:06');
-INSERT INTO `meters` VALUES (7, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:37:19', '2021-04-14 04:37:19');
-INSERT INTO `meters` VALUES (8, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:43:27', '2021-04-14 04:43:27');
-INSERT INTO `meters` VALUES (9, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:44:03', '2021-04-14 04:44:03');
-INSERT INTO `meters` VALUES (10, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:44:12', '2021-04-14 04:44:12');
-INSERT INTO `meters` VALUES (11, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:44:30', '2021-04-14 04:44:30');
-INSERT INTO `meters` VALUES (12, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:48:24', '2021-04-14 04:48:24');
-INSERT INTO `meters` VALUES (13, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:49:15', '2021-04-14 04:49:15');
-INSERT INTO `meters` VALUES (14, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:52:52', '2021-04-14 04:52:52');
-INSERT INTO `meters` VALUES (15, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 04:53:15', '2021-04-14 04:53:15');
-INSERT INTO `meters` VALUES (16, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 05:09:28', '2021-04-14 05:09:28');
-INSERT INTO `meters` VALUES (17, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 05:09:54', '2021-04-14 05:09:54');
-INSERT INTO `meters` VALUES (18, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 05:10:00', '2021-04-14 05:10:00');
-INSERT INTO `meters` VALUES (19, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 05:10:05', '2021-04-14 05:10:05');
-INSERT INTO `meters` VALUES (20, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-14 05:10:30', '2021-04-14 05:10:30');
-INSERT INTO `meters` VALUES (21, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-14 05:10:36', '2021-04-14 05:10:36');
-INSERT INTO `meters` VALUES (22, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-14 05:10:55', '2021-04-14 05:10:55');
-INSERT INTO `meters` VALUES (23, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-14 05:11:03', '2021-04-14 05:11:03');
-INSERT INTO `meters` VALUES (24, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-14 05:11:07', '2021-04-14 05:11:07');
-INSERT INTO `meters` VALUES (25, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-14 05:12:27', '2021-04-14 05:12:27');
-INSERT INTO `meters` VALUES (26, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-14 05:12:52', '2021-04-14 05:12:52');
-INSERT INTO `meters` VALUES (27, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-14 05:27:31', '2021-04-14 05:27:31');
-INSERT INTO `meters` VALUES (28, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 02:06:10', '2021-04-16 02:06:10');
-INSERT INTO `meters` VALUES (29, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-16 02:12:34', '2021-04-16 02:12:34');
-INSERT INTO `meters` VALUES (30, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 03:21:48', '2021-04-16 03:21:48');
-INSERT INTO `meters` VALUES (31, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 03:36:07', '2021-04-16 03:36:07');
-INSERT INTO `meters` VALUES (32, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 03:37:40', '2021-04-16 03:37:40');
-INSERT INTO `meters` VALUES (33, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 03:41:39', '2021-04-16 03:41:39');
-INSERT INTO `meters` VALUES (34, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 03:42:18', '2021-04-16 03:42:18');
-INSERT INTO `meters` VALUES (35, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 03:44:01', '2021-04-16 03:44:01');
-INSERT INTO `meters` VALUES (36, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 04:47:39', '2021-04-16 04:47:39');
-INSERT INTO `meters` VALUES (37, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 04:48:24', '2021-04-16 04:48:24');
-INSERT INTO `meters` VALUES (38, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 04:49:34', '2021-04-16 04:49:34');
-INSERT INTO `meters` VALUES (39, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 04:50:04', '2021-04-16 04:50:04');
-INSERT INTO `meters` VALUES (40, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 04:51:43', '2021-04-16 04:51:43');
-INSERT INTO `meters` VALUES (41, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 04:52:26', '2021-04-16 04:52:26');
-INSERT INTO `meters` VALUES (42, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 04:53:41', '2021-04-16 04:53:41');
-INSERT INTO `meters` VALUES (43, 'inicio', '0', '0', 'http://127.0.0.1:8000', '2021-04-16 04:54:50', '2021-04-16 04:54:50');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -214,7 +170,7 @@ CREATE TABLE `migrations`  (
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of migrations
@@ -227,13 +183,14 @@ INSERT INTO `migrations` VALUES (5, '2021_04_13_033300_create_categories_table',
 INSERT INTO `migrations` VALUES (6, '2021_04_13_033318_create_information_table', 1);
 INSERT INTO `migrations` VALUES (7, '2021_04_13_033330_create_meters_table', 1);
 INSERT INTO `migrations` VALUES (8, '2021_04_13_033356_create_products_table', 1);
+INSERT INTO `migrations` VALUES (9, '2021_04_16_045733_create_asks_table', 1);
 
 -- ----------------------------
 -- Table structure for password_resets
 -- ----------------------------
 DROP TABLE IF EXISTS `password_resets`;
 CREATE TABLE `password_resets`  (
-  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp(0) NULL DEFAULT NULL,
   INDEX `password_resets_email_index`(`email`) USING BTREE

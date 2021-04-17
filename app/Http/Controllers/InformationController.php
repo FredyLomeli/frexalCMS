@@ -26,11 +26,15 @@ class InformationController extends Controller
             'municipio' => Information::where('name','municipio')->value('value'),
             'estado' => Information::where('name','estado')->value('value'),
             'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
+            'twitter' => Information::where('name','twitter')->value('value'),
+            'youtube' => Information::where('name','youtube')->value('value'),
+            'linkedin' => Information::where('name','linkedin')->value('value'),
             'facebook' => Information::where('name','facebook')->value('value'),
             'instagram' => Information::where('name','instagram')->value('value'),
-            'descripcion_empresa' => Information::where('name','descripcion_empresa')->value('value'),
+            'descripcion_ubicacion' => Information::where('name','descripcion_ubicacion')->value('value'),
             'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
             'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
+            'img_logo' => Information::where('name','img_logo')->value('value'),
         ];
         return view('admin.informacion', compact('informacion'));
     }
@@ -79,11 +83,27 @@ class InformationController extends Controller
             'no_whatsapp' => 'required|string|between:1,499',
             'facebook' => 'required|string|between:1,499',
             'instagram' => 'required|string|between:1,499',
-            'descripcion_empresa' => 'required|string|between:1,499',
+            'twitter' => 'required|string|between:1,499',
+            'youtube' => 'required|string|between:1,499',
+            'linkedin' => 'required|string|between:1,499',
+            'descripcion_ubicacion' => 'required|string|between:1,499',
             'informacion_footer' => 'required|string|between:1,499',
             'telefono_oficina' => 'required|string|between:1,499',
         ]);
         $informacion = new Information;
+        // Si se eligio archivo
+        if(isset($request->file_img)){
+            $img = $request->file_img;
+            $extension = strtolower($request->file_img->getClientOriginalExtension());
+            $files = new Files;
+            // Validacion Imagen
+            $files->validatorImgFile($img, $extension)->validate();
+            $file_name = '/logo_' . Str::random(8) . '.' . $extension;
+            $files->uploadFile($file_name, $img);
+            $img_db = Information::where('name', 'img_logo')->value('value');
+            $files->destroyFile($img_db);
+            $informacion->actualizarInformacion('img_logo', $file_name);
+        }
         $informacion->actualizarInformacion('nombre', $data['nombre']);
         $informacion->actualizarInformacion('telefono', $data['telefono']);
         $informacion->actualizarInformacion('horario', $data['horario']);
@@ -94,7 +114,10 @@ class InformationController extends Controller
         $informacion->actualizarInformacion('no_whatsapp', $data['no_whatsapp']);
         $informacion->actualizarInformacion('facebook', $data['facebook']);
         $informacion->actualizarInformacion('instagram', $data['instagram']);
-        $informacion->actualizarInformacion('descripcion_empresa', $data['descripcion_empresa']);
+        $informacion->actualizarInformacion('twitter', $data['twitter']);
+        $informacion->actualizarInformacion('youtube', $data['youtube']);
+        $informacion->actualizarInformacion('linkedin', $data['linkedin']);
+        $informacion->actualizarInformacion('descripcion_ubicacion', $data['descripcion_ubicacion']);
         $informacion->actualizarInformacion('informacion_footer', $data['informacion_footer']);
         $informacion->actualizarInformacion('telefono_oficina', $data['telefono_oficina']);
         Session::flash('info', 'Se ha guardado la informacion con exito.');

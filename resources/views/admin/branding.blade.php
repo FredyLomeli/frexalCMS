@@ -16,7 +16,7 @@
                 @csrf
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="branding" class="col-sm-2 col-form-label">{{$branding['name']}}:</label>
+                        <label for="branding" class="col-sm-2 col-form-label">{{($branding['name'] === 'Valores' ? '°' : '')}}{{$branding['name']}}:</label>
                         <div class="col-sm-10">
                             <textarea class="form-control" name="branding" rows="4" cols="50" id="branding"
                                  required>{{ old('branding', $branding['value']) }}</textarea>

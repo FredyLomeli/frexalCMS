@@ -11,7 +11,8 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <form class="form-horizontal" method="post" action="{{ route('save.info') }}">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data" 
+                action="{{ route('save.info') }}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group row">
@@ -42,6 +43,15 @@
                                 id="telefono_oficina" placeholder="telefono de oficina" required>
                             @if ($errors->has('telefono_oficina'))
                                 <small class="text-center text-danger">{{ $errors->first('telefono_oficina') }}</small>
+                            @endif
+                        </div>
+                        <label for="no_whatsapp" class="col-sm-2 col-form-label"># Whast App:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="no_whatsapp"
+                                value="{{ old('no_whatsapp', $informacion['no_whatsapp']) }}"
+                                id="no_whatsapp" placeholder="# Whast App" required>
+                            @if ($errors->has('no_whatsapp'))
+                                <small class="text-center text-danger">{{ $errors->first('no_whatsapp') }}</small>
                             @endif
                         </div>
                     </div>
@@ -95,13 +105,33 @@
                                 <small class="text-center text-danger">{{ $errors->first('estado') }}</small>
                             @endif
                         </div>
-                        <label for="no_whatsapp" class="col-sm-2 col-form-label"># Whast App:</label>
+                        <label for="linkedin" class="col-sm-2 col-form-label">Linkedin :</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="no_whatsapp"
-                                value="{{ old('no_whatsapp', $informacion['no_whatsapp']) }}"
-                                id="no_whatsapp" placeholder="# Whast App" required>
-                            @if ($errors->has('no_whatsapp'))
-                                <small class="text-center text-danger">{{ $errors->first('no_whatsapp') }}</small>
+                            <input type="text" class="form-control" name="linkedin"
+                                value="{{ old('linkedin', $informacion['linkedin']) }}"
+                                id="linkedin" placeholder="Dirección Linkedin" required>
+                            @if ($errors->has('linkedin'))
+                                <small class="text-center text-danger">{{ $errors->first('linkedin') }}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="twitter" class="col-sm-2 col-form-label">Twitter:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="twitter"
+                                value="{{ old('twitter', $informacion['twitter']) }}"
+                                id="twitter" placeholder="Dirección twitter" required>
+                            @if ($errors->has('twitter'))
+                                <small class="text-center text-danger">{{ $errors->first('twitter') }}</small>
+                            @endif
+                        </div>
+                        <label for="youtube" class="col-sm-2 col-form-label">You Tube:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="youtube"
+                                value="{{ old('youtube', $informacion['youtube']) }}"
+                                id="youtube" placeholder="Dirección youtube" required>
+                            @if ($errors->has('youtube'))
+                                <small class="text-center text-danger">{{ $errors->first('youtube') }}</small>
                             @endif
                         </div>
                     </div>
@@ -126,12 +156,12 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="descripcion_empresa" class="col-sm-2 col-form-label">Descripción:</label>
+                        <label for="descripcion_ubicacion" class="col-sm-2 col-form-label">Descripción Ubicación:</label>
                         <div class="col-sm-4">
-                            <textarea class="form-control" name="descripcion_empresa" rows="4" cols="50" id="descripcion_empresa"
-                                 required>{{ old('descripcion_empresa', $informacion['descripcion_empresa']) }}</textarea>
-                            @if ($errors->has('descripcion_empresa'))
-                                <small class="text-center text-danger">{{ $errors->first('descripcion_empresa') }}</small>
+                            <textarea class="form-control" name="descripcion_ubicacion" rows="4" cols="50" id="descripcion_ubicacion"
+                                 required>{{ old('descripcion_ubicacion', $informacion['descripcion_ubicacion']) }}</textarea>
+                            @if ($errors->has('descripcion_ubicacion'))
+                                <small class="text-center text-danger">{{ $errors->first('descripcion_ubicacion') }}</small>
                             @endif
                         </div>
                         <label for="informacion_footer" class="col-sm-2 col-form-label">Información:</label>
@@ -141,6 +171,23 @@
                             @if ($errors->has('informacion_footer'))
                                 <small class="text-center text-danger">{{ $errors->first('informacion_footer') }}</small>
                             @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="file_img" class="col-sm-3 col-form-label">Seleciona el logo: (Se recomienda 550px x 340px)</label>
+                        <div class="col-sm-6">
+                            <input type="file" class="form-control" name="file_img"
+                                value="{{ old('file_img') }}"
+                                id="file_img" placeholder="Selecciona una imagen">
+                            @if ($errors->has('file_img'))
+                                <small class="text-center text-danger">{{ $errors->first('file_img') }}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label for="file_img" class="col-sm-3 col-form-label">Logo actual:</label>
+                            <img src="{{ asset('img/' . $informacion['img_logo']) }}" style="width: 50%;" >
                         </div>
                     </div>
                 </div>

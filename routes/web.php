@@ -21,14 +21,16 @@ use App\Http\Controllers\AskController;
 
 //pagina de inicio
 Route::get('/', [HomeController::class, 'index'])->name('index');
+//pagina de inicio
+Route::get('/nosotros', [HomeController::class, 'nosotros'])->name('nosotros');
 // Pagina que muestra todos los productos
 Route::get('/articulos', [HomeController::class, 'products_all'])->name('show_all.products');
 // Verifica que tipo de productos mostrara
 Route::post('/products', [HomeController::class, 'products_route'])->name('products_route');
 // Muesta los articulos por filtro de nombre
-Route::get('/articulos/{busqueda}', [HomeController::class, 'products'])->name('show.products');
+//Route::get('/articulos/{busqueda}', [HomeController::class, 'products'])->name('show.products');
 // Muestra el detalle de un producto
-Route::get('/articulo/{products}', [ProductsController::class, 'show'])->name('show.product');
+Route::get('/articulo/{product}', [ProductsController::class, 'show'])->name('show.product');
 // Muesta el listado de productos por categoria
 Route::get('/categoria/{category}/articulos', [ProductsController::class, 'products_category'])->name('show.products_by_category');
 // Muesta el listado General de categorias
@@ -90,6 +92,8 @@ Route::post('/admin/preguntaImagen}', [InformationController::class, 'updateImgA
 //Controller de inicio
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 //Envio de correos
+//Controller de inicio
+Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
 Route::post('/contactMail', [HomeController::class, 'contacMail'])->name('contact.mail');
 
 

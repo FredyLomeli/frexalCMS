@@ -32,6 +32,6 @@ class ContactForm extends Mailable
     public function build()
     {
         return $this->markdown('mail.contact')
-            ->subject('Solicitud via REMAQ de los Altos.com');
+            ->subject( $this->data['name'] . ' via mhglobalbsupport.com');
     }
 }
