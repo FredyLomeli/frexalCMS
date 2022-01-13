@@ -1,9 +1,100 @@
 @extends('layouts.front')
-@section('title', "Mirella Hernandez - ")
+@section('title', "Inicio - ")
+@section('styles')
+<link type="text/css" rel="stylesheet" href="{{ asset('lib/carousel/style.css') }}" />
+<link type="text/css" rel="stylesheet" href="{{ asset('lib/carousel/responsive.css') }}" />
+@endsection
 @section('content')
 
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+    <!-- Indicators -->
+    @foreach ($carouseles as $carousel)
+        @if ($loop->index == 0)
+        <li data-target="#demo" data-slide-to="{{$loop->index}}" class="active"></li>
+        @else
+        <li data-target="#demo" data-slide-to="{{$loop->index}}"></li>
+        @endif
+    @endforeach
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+    @foreach ($carouseles as $carousel)
+        @if ($loop->index == 0 && $carousel->video == 0)
+        <div class="carousel-item active">
+            <img class="slider_img" src="{{ asset('/img/slider' . $carousel->img_name) }}" alt="{{$carousel->title}}">
+            <div class="carousel-caption">
+                <div class="slider_text">
+                    <h2>{{$carousel->titulo}}</h2>
+                    <p>{{$carousel->descripcion}}</p>
+                    @isset($carousel->texto)
+                    <a href="{{$carousel->link}}" class="custom_btn">{{$carousel->texto}}</a>
+                    @endisset
+                </div>
+            </div>
+        </div>
+        @elseif($loop->index == 0 && $carousel->video == 1)
+        <div class="carousel-item active">
+            <div class="embed-responsive embed-responsive-21by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/"{{$carousel->img_name}}></iframe>
+            </div>
+            <div class="carousel-caption">
+                <div class="slider_text">
+                    <h2>{{$carousel->titulo}}</h2>
+                    <p>{{$carousel->descripcion}}</p>
+                    @isset($carousel->texto)
+                    <a href="{{$carousel->link}}" class="custom_btn">{{$carousel->texto}}</a>
+                    @endisset
+                </div>
+            </div>
+        </div>
+        @elseif($loop->index != 0 && $carousel->video == 0)
+        <div class="carousel-item">
+            <img class="slider_img" src="{{ asset('/img/slider' . $carousel->img_name) }}" alt="{{$carousel->title}}">
+            <div class="carousel-caption">
+                <div class="slider_text">
+                    <h2>{{$carousel->titulo}}</h2>
+                    <p>{{$carousel->descripcion}}</p>
+                    @isset($carousel->texto)
+                    <a href="{{$carousel->link}}" class="custom_btn">{{$carousel->texto}}</a>
+                    @endisset
+                </div>
+            </div>
+        </div>
+        @elseif($loop->index != 0 && $carousel->video == 1)
+        <div class="carousel-item">
+            <div class="embed-responsive embed-responsive-21by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/"{{$carousel->img_name}}></iframe>
+            </div>
+            <div class="carousel-caption">
+                <div class="slider_text">
+                    <h2>{{$carousel->titulo}}</h2>
+                    <p>{{$carousel->descripcion}}</p>
+                    @isset($carousel->texto)
+                    <a href="{{$carousel->link}}" class="custom_btn">{{$carousel->texto}}</a>
+                    @endisset
+                </div>
+            </div>
+        </div>
+        @endif
+    @endforeach
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+</div>
+
+
+
+
 <!-- Hero Start -->
-<div class="hero">
+<!--<div class="hero">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-6">
@@ -54,4 +145,7 @@
 </div>
 <!-- FAQs End -->
 
+@endsection
+
+@section('script')
 @endsection

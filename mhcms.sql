@@ -11,7 +11,7 @@
  Target Server Version : 100417
  File Encoding         : 65001
 
- Date: 16/04/2021 02:05:55
+ Date: 27/04/2021 16:47:42
 */
 
 SET NAMES utf8mb4;
@@ -28,14 +28,11 @@ CREATE TABLE `asks`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of asks
 -- ----------------------------
-INSERT INTO `asks` VALUES (1, 'Esta es la primera pregunta', 'Esta es la respuesta de la primera pregunta y de muchas mas', '2021-04-16 05:31:20', '2021-04-16 05:31:20');
-INSERT INTO `asks` VALUES (2, 'Pregunta frecuente numero 2', 'Esta es la respues de la pregunta frecuente numero 2', '2021-04-16 05:36:09', '2021-04-16 05:36:09');
-INSERT INTO `asks` VALUES (3, 'Pregunta 3', 'Esta es la respues de la pregunta frecuente numero tres', '2021-04-16 05:36:35', '2021-04-16 05:36:35');
 
 -- ----------------------------
 -- Table structure for carousels
@@ -46,14 +43,19 @@ CREATE TABLE `carousels`  (
   `titulo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `img_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `video` tinyint(4) NOT NULL DEFAULT 0,
+  `texto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of carousels
 -- ----------------------------
+INSERT INTO `carousels` VALUES (1, 'Titulos', 'Descripciones', 'https://www.youtube.com/watch?v=H4tBuQWucPc', 1, NULL, NULL, '2021-04-27 21:04:07', '2021-04-27 21:05:46');
+INSERT INTO `carousels` VALUES (2, 'Titulo 2', 'Descripcion 2', '/2_eoYrSR7p.jpg', 0, 'Boton', 'Link', '2021-04-27 21:35:37', '2021-04-27 21:35:37');
 
 -- ----------------------------
 -- Table structure for categories
@@ -67,16 +69,11 @@ CREATE TABLE `categories`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of categories
 -- ----------------------------
-INSERT INTO `categories` VALUES (1, 'categoria 1', 'Esta es la categoria 1', '/1_kFMWiaBF.jpg', '2021-04-16 04:38:20', '2021-04-16 04:38:20');
-INSERT INTO `categories` VALUES (2, 'categoria 2', 'Esta es la descripci[on de la categoria 2', '/2_u1rd5sbz.jpg', '2021-04-16 04:40:32', '2021-04-16 04:40:32');
-INSERT INTO `categories` VALUES (3, 'categoria 3', 'Descripci[on Categoria 3', '/3_Odftlh0v.png', '2021-04-16 04:41:24', '2021-04-16 04:41:24');
-INSERT INTO `categories` VALUES (4, 'categoria 4', 'Descripcion de la Categoria 4', '/4_uUp2cZvS.png', '2021-04-16 04:54:20', '2021-04-16 04:54:20');
-INSERT INTO `categories` VALUES (5, 'categoria 5', 'Descripcion de la categoria 5 ya son muchas', '/5_1rQs2M1j.jpg', '2021-04-16 04:54:47', '2021-04-16 04:54:47');
 
 -- ----------------------------
 -- Table structure for failed_jobs
@@ -109,30 +106,30 @@ CREATE TABLE `information`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 28 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of information
 -- ----------------------------
-INSERT INTO `information` VALUES (1, 'nombre', 'Nombre', NULL, NULL);
-INSERT INTO `information` VALUES (2, 'telefono', 'Telefono', NULL, NULL);
-INSERT INTO `information` VALUES (3, 'horario', 'Horario', NULL, NULL);
-INSERT INTO `information` VALUES (4, 'email', 'Email', NULL, NULL);
-INSERT INTO `information` VALUES (5, 'direccion', 'Direccion', NULL, NULL);
-INSERT INTO `information` VALUES (6, 'municipio', 'Municipio', NULL, NULL);
-INSERT INTO `information` VALUES (7, 'estado', 'Estado', NULL, NULL);
-INSERT INTO `information` VALUES (8, 'no_whatsapp', 'no_whatsapp', NULL, NULL);
-INSERT INTO `information` VALUES (9, 'facebook', 'Facebook', NULL, NULL);
-INSERT INTO `information` VALUES (10, 'instagram', 'Instagram', NULL, NULL);
-INSERT INTO `information` VALUES (11, 'descripcion_empresa', 'Descripcion de la Empresa', NULL, NULL);
-INSERT INTO `information` VALUES (12, 'informacion_footer', 'Informacion del Footer', NULL, NULL);
-INSERT INTO `information` VALUES (13, 'mision', 'Mision', NULL, NULL);
-INSERT INTO `information` VALUES (14, 'vision', 'Vision', NULL, NULL);
-INSERT INTO `information` VALUES (15, 'valores', 'Valores', NULL, NULL);
-INSERT INTO `information` VALUES (16, 'img_mision', 'Img Mision', NULL, NULL);
-INSERT INTO `information` VALUES (17, 'img_vision', 'Img Vision', NULL, NULL);
-INSERT INTO `information` VALUES (18, 'img_valores', 'Img Valores', NULL, NULL);
-INSERT INTO `information` VALUES (19, 'telefono_oficina', 'Telefono de Oficina', NULL, NULL);
+INSERT INTO `information` VALUES (1, 'nombre', 'Mireya Hernandez', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (2, 'telefono', 'Telefono', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (3, 'horario', 'Horario', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (4, 'email', 'ventas@mhglobalbsupport.com', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (5, 'direccion', 'Direccion', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (6, 'municipio', 'Municipio', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (7, 'estado', 'Estado', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (8, 'no_whatsapp', 'no_whatsapp', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (9, 'facebook', 'https://es-la.facebook.com/', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (10, 'instagram', 'Instagram', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (11, 'descripcion_ubicacion', 'descripcion_ubicacion', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (12, 'informacion_footer', 'Informacion del Footer', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (13, 'mision', 'Esta es la misi[on de la empresa en la que laboramos', NULL, '2021-04-16 19:38:53');
+INSERT INTO `information` VALUES (14, 'vision', 'Esta es la visi[on de la empresa', NULL, '2021-04-16 19:39:22');
+INSERT INTO `information` VALUES (15, 'valores', '°Valores\r\n°valores 2\r\n°Valores 3\r\n°Valores 4', NULL, '2021-04-16 19:42:39');
+INSERT INTO `information` VALUES (16, 'img_mision', '/mision_3JFzqe7c.jpg', NULL, '2021-04-16 19:38:53');
+INSERT INTO `information` VALUES (17, 'img_vision', '/vision_OadpB6Ag.jpg', NULL, '2021-04-16 19:39:22');
+INSERT INTO `information` VALUES (18, 'img_valores', '/valores_L0C82olT.png', NULL, '2021-04-16 19:42:39');
+INSERT INTO `information` VALUES (19, 'telefono_oficina', 'Telefono de Oficina', NULL, '2021-04-27 21:45:54');
 INSERT INTO `information` VALUES (20, 'welcome_title', 'Este es el titulo de bienvenida', NULL, '2021-04-16 03:21:42');
 INSERT INTO `information` VALUES (21, 'welcome_description', 'estas es la descripci[on de bienvenida', NULL, '2021-04-16 03:21:42');
 INSERT INTO `information` VALUES (22, 'img_welcome', '/welcome_LAe0lw6V.jpg', NULL, '2021-04-16 03:05:21');
@@ -141,6 +138,10 @@ INSERT INTO `information` VALUES (24, 'welcome_boton', 'Conoce mas aqui', NULL, 
 INSERT INTO `information` VALUES (25, 'nosotros', 'Aqui mismo nos vamos a poner a escribir algo sobre nosotrs para poder hacer que nos conozcan un poco mas de lo que ya sabes de nosotros gracias', NULL, '2021-04-16 03:42:07');
 INSERT INTO `information` VALUES (26, 'img_nosotros', '/nosotros_rmw6EbSW.jpg', NULL, '2021-04-16 03:42:07');
 INSERT INTO `information` VALUES (27, 'img_asks', '/asks0xghP5Te.png', NULL, '2021-04-16 06:12:41');
+INSERT INTO `information` VALUES (28, 'twitter', 'pagina de twiter', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (29, 'youtube', 'pagina de youtube', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (30, 'linkedin', 'pagina de linkedin', NULL, '2021-04-27 21:45:54');
+INSERT INTO `information` VALUES (31, 'img_logo', '/logo_Bn7Hzoo1.png', NULL, '2021-04-16 18:25:18');
 
 -- ----------------------------
 -- Table structure for meters
@@ -155,11 +156,28 @@ CREATE TABLE `meters`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of meters
 -- ----------------------------
+INSERT INTO `meters` VALUES (1, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 20:56:39', '2021-04-27 20:56:39');
+INSERT INTO `meters` VALUES (2, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:03:38', '2021-04-27 21:03:38');
+INSERT INTO `meters` VALUES (3, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:31:44', '2021-04-27 21:31:44');
+INSERT INTO `meters` VALUES (4, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:32:11', '2021-04-27 21:32:11');
+INSERT INTO `meters` VALUES (5, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:32:37', '2021-04-27 21:32:37');
+INSERT INTO `meters` VALUES (6, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:33:01', '2021-04-27 21:33:01');
+INSERT INTO `meters` VALUES (7, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:33:15', '2021-04-27 21:33:15');
+INSERT INTO `meters` VALUES (8, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:34:29', '2021-04-27 21:34:29');
+INSERT INTO `meters` VALUES (9, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:35:13', '2021-04-27 21:35:13');
+INSERT INTO `meters` VALUES (10, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:35:40', '2021-04-27 21:35:40');
+INSERT INTO `meters` VALUES (11, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:36:10', '2021-04-27 21:36:10');
+INSERT INTO `meters` VALUES (12, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:36:16', '2021-04-27 21:36:16');
+INSERT INTO `meters` VALUES (13, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:37:10', '2021-04-27 21:37:10');
+INSERT INTO `meters` VALUES (14, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:37:12', '2021-04-27 21:37:12');
+INSERT INTO `meters` VALUES (15, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:39:59', '2021-04-27 21:39:59');
+INSERT INTO `meters` VALUES (16, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:46:24', '2021-04-27 21:46:24');
+INSERT INTO `meters` VALUES (17, 'inicio', '0', '0', 'http://localhost:8000', '2021-04-27 21:46:40', '2021-04-27 21:46:40');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -170,7 +188,7 @@ CREATE TABLE `migrations`  (
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of migrations
@@ -184,6 +202,7 @@ INSERT INTO `migrations` VALUES (6, '2021_04_13_033318_create_information_table'
 INSERT INTO `migrations` VALUES (7, '2021_04_13_033330_create_meters_table', 1);
 INSERT INTO `migrations` VALUES (8, '2021_04_13_033356_create_products_table', 1);
 INSERT INTO `migrations` VALUES (9, '2021_04_16_045733_create_asks_table', 1);
+INSERT INTO `migrations` VALUES (10, '2021_04_27_030850_create_posts_table', 1);
 
 -- ----------------------------
 -- Table structure for password_resets
@@ -201,6 +220,25 @@ CREATE TABLE `password_resets`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for posts
+-- ----------------------------
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE `posts`  (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `brief` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img_post` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp(0) NULL DEFAULT NULL,
+  `updated_at` timestamp(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of posts
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for products
 -- ----------------------------
 DROP TABLE IF EXISTS `products`;
@@ -208,7 +246,6 @@ CREATE TABLE `products`  (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `categoria` int(11) NULL DEFAULT NULL,
   `img_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
@@ -234,11 +271,12 @@ CREATE TABLE `users`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `users_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES (1, 'Fredy', 'ing.lomeli@gmail.com', NULL, '$2y$10$8TeJpDwcfUDGEnHFKZ.BYuoFP.IZRUVpgqeMOHkosrR3N8JtnSIje', NULL, '2021-04-14 05:09:28', '2021-04-14 05:09:28');
+INSERT INTO `users` VALUES (2, 'Lucero', 'ventas@mhglobalbsupport.com', NULL, '$2y$10$kTqroC6IbY7Dl3ZN7ixRZ.ykhkXVaujKxuxpRlX35j8ZqyyRWFu6u', NULL, '2021-04-27 21:46:20', '2021-04-27 21:46:20');
 
 SET FOREIGN_KEY_CHECKS = 1;

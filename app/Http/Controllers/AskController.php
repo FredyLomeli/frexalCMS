@@ -82,8 +82,8 @@ class AskController extends Controller
         //dd($request->all());
         // validacion texto
         $data = request()->validate([
-            'titulo' => 'required|string|max:500',
-            'descripcion' => 'required|string|max:500',
+            'question' => 'required|string|max:500',
+            'answer' => 'required|string|max:500',
         ]);
         $ask->update($data);
         Session::flash('info', 'Se ha guardado la informacion con exito.');

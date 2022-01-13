@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="mx">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   @yield('styles')
 </head>
-<body class="hold-transition sidebar-mini layout-boxed">
+<body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
@@ -54,7 +54,7 @@
       <img src="{{ asset('img/AdminLTELogo.png') }}"
            class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin REMAQ</span>
+      <span class="brand-text font-weight-light">Admin MH</span>
     </a>
 
     <!-- Sidebar -->
@@ -80,12 +80,12 @@
                 <p>Informacion General</p>
                 </a>
             </li>
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a href="{{ route('edit.welcome') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Mensaje Bienvenida</p>
                 </a>
-            </li>
+            </li>-->
             <li class="nav-item">
                 <a href="{{ route('save.branding', ['branding' => 'nosotros']) }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -110,22 +110,22 @@
                 <p>Valores</p>
                 </a>
             </li>
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                 <a href="{{ route('carrusel') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Carrusel</p>
                 </a>
-            </li> --}}
-            <li class="nav-item">
+            </li>
+            <!--<li class="nav-item">
                 <a href="{{ route('category') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Categorias</p>
                 </a>
-            </li>
+            </li>-->
             <li class="nav-item">
                 <a href="{{ route('productos') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Productos</p>
+                <p>Servicios</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -140,6 +140,12 @@
                 <p>Registrar usuario</p>
                 </a>
             </li>
+            <li class="nav-item">
+              <a href="{{ route('posts') }}" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Noticias</p>
+              </a>
+          </li>
             <li class="nav-item">
                 <a href="{{ route('logout') }}" class="nav-link"
                     onclick="event.preventDefault();document.getElementById('logout-form').submit();">

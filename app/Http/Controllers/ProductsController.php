@@ -46,7 +46,7 @@ class ProductsController extends Controller
         $data = request()->validate([
             'name' => 'required|string|max:500',
             'descripcion' => 'required|string|max:500',
-            'categoria' => 'required|integer',
+            //'categoria' => 'required|integer',
         ]);
         // Si se eligio archivo
         if(isset($request->file_img)){
@@ -185,7 +185,7 @@ class ProductsController extends Controller
         $data = request()->validate([
             'name' => 'required|string|max:500',
             'descripcion' => 'required|string|max:500',
-            'categoria' => 'required|integer',
+            //'categoria' => 'required|integer',
         ]);
         // Si se eligio archivo
         if(isset($request->file_img)){

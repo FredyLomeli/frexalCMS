@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-<h1>Nuevo Producto</h1>
+<h1>Nuevo Servicio</h1>
 @endsection
 
 @section('content')
@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <div class="form-group row">
                         <label for="name" class="col-sm-2 col-form-label">Nombre:</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" name="name"
                                 value="{{ old('name') }}" id="name"
                                 placeholder="Nombre producto" required>
@@ -25,25 +25,10 @@
                                 <small class="text-center text-danger">{{ $errors->first('name') }}</small>
                             @endif
                         </div>
-                        <label for="categoria" class="col-sm-2 col-form-label">Categoria:</label>
-                        <div class="col-sm-4">
-                            <select class="form-control" id="categoria" name="categoria" required>
-                                <option value=""></option>>
-                                @foreach($categorias as $categoria)
-                                    <option value="{{ $categoria->id }}" @if(old('categoria') == $categoria->id)
-                                        {{ 'selected' }} @endif>{{ $categoria->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        @if ($errors->has('categoria'))
-                            <span class="help-block">
-                            <strong>{{ $errors->first('categoria') }}</strong>
-                        </span>
-                        @endif
                     </div>
                     <div class="form-group row">
-                        <label for="descripcion" class="col-sm-3 col-form-label">Descripcion:</label>
-                        <div class="col-sm-9">
+                        <label for="descripcion" class="col-sm-2 col-form-label">Descripcion:</label>
+                        <div class="col-sm-10">
                             <textarea class="form-control" name="descripcion" rows="4" cols="50" id="descripcion"
                                  required>{{ old('descripcion') }}</textarea>
                             @if ($errors->has('descripcion'))

@@ -136,7 +136,7 @@ class InformationController extends Controller
         // validacion texto
         $data = request()->validate([
             'ban' => 'required|string|in:mision,vision,valores,nosotros',
-            'branding' => 'required|string|max:500',
+            'branding' => 'required|string|max:1000',
         ]);
         $informacion = new Information;
         // Si se eligio archivo

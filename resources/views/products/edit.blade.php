@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-<h1>Editando Producto: {{ $products->id }}</h1>
+<h1>Editando Servicio: {{ $products->id }}</h1>
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
                 {{ method_field('PUT') }} {{csrf_field()}}
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label">Nombre:</label>
+                        <label for="name" class="col-sm-3 col-form-label">Nombre:</label>
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="name"
                                 value="{{ old('name',$products->name) }}" id="name"
@@ -25,22 +25,6 @@
                                 <small class="text-center text-danger">{{ $errors->first('name') }}</small>
                             @endif
                         </div>
-                        <label for="categoria" class="col-sm-2 col-form-label">Categoria:</label>
-                        <div class="col-sm-4">
-                            <select class="form-control" id="categoria" name="categoria" required>
-                                @foreach($categorias as $categoria)
-                                <option value="{{ $categoria->id }}" {{ old('categoria') != null ?
-                                    (old('categoria') == $categoria->id ? 'selected' : '') :
-                                    ($products->categoria == $categoria->id ? 'selected' : '')}}> {{ $categoria->name }}
-                                </option>
-                                @endforeach
-                            </select>
-                        </div>
-                        @if ($errors->has('categoria'))
-                            <span class="help-block">
-                            <strong>{{ $errors->first('categoria') }}</strong>
-                        </span>
-                        @endif
                     </div>
                     <div class="form-group row">
                         <label for="descripcion" class="col-sm-3 col-form-label">Descripcion:</label>

@@ -31,8 +31,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //$carouseles = carousel::all();
-        $categorys = Category::withCount('products')->get();
+        $carouseles = carousel::orderBy('id', 'desc')->get();
+        //$categorys = Category::get();
+        $productos = Products::with('category')->get();
         $asks = Ask::get();
         $informacion = [
             'nombre' => Information::where('name','nombre')->value('value'),
@@ -74,7 +75,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('index'),
         ]);
-        return view('page.index', compact('informacion','categorys','asks'));
+        return view('page.index', compact('informacion','productos','asks','carouseles'));
     }
 
         /**
@@ -192,8 +193,8 @@ class HomeController extends Controller
             'asunto' => 'required|string|max:254',
             'message' => 'required|string',
         ]);
-        //Mail::to(Information::where('name','email')->value('value'), 'contactos')
-        Mail::to('ing.lomeli@gmail.com', 'contactos')
+        Mail::to(Information::where('name','email')->value('value'), 'contactos')
+        //Mail::to('ing.lomeli@gmail.com', 'contactos')
             ->send( new ContactForm($data));
         Session::flash('info', 'Se ha enviado su solicitud con exito.');
         return redirect()->route('contacto');
@@ -252,7 +253,7 @@ class HomeController extends Controller
         $productos = Products::with('category')->get();
         //$productos = Products::paginate(9);
         //$carouseles = carousel::all();
-        $categorys = Category::get();
+        //$categorys = Category::get();
         $informacion = [
             'nombre' => Information::where('name','nombre')->value('value'),
             'telefono' => Information::where('name','telefono')->value('value'),
@@ -285,7 +286,7 @@ class HomeController extends Controller
             //'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
             //'img_asks' => Information::where('name','img_asks')->value('value'),
             'img_logo' => Information::where('name','img_logo')->value('value'),
-            'page' => 'producto',
+            'page' => 'servicio',
         ];
         Meter::create([
             'tipo' => 'Todos los productos',
@@ -293,7 +294,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('show_all.products'),
         ]);
-        return view('page.portfolio', compact('informacion','categorys','productos'));
+        return view('page.portfolio', compact('informacion','productos'));
     }
 
     /**

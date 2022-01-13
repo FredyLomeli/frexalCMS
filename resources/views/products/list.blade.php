@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-<h1>Listado de Productos</h1>
+<h1>Listado de Servicios</h1>
 @endsection
 
 @section('links')
@@ -26,7 +26,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Categoria</th>
                     <th>Descripcion</th>
                     <th>Opciones</th>
                 </tr>
@@ -36,7 +35,6 @@
                     <tr>
                         <td>{{ $products->id }}</td>
                         <td>{{ substr($products->name,0,15) }}...</td>
-                        <td>{{ $products->categoria }}</td>
                         <td>{{ substr($products->descripcion,0,20) }}...</td>
                         <td>
                             {{$products->meter_count}} &nbsp;<i class="fas fa-eye"></i>&nbsp;&nbsp;

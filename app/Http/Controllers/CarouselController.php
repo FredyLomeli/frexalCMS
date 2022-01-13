@@ -39,12 +39,16 @@ class CarouselController extends Controller
      */
     public function store(Request $request)
     {
+        //dd(request()->all());
         $data = request()->validate([
             'titulo' => 'required|string|max:500',
             'descripcion' => 'required|string|max:500',
+            'video' => 'nullable|integer|between:0,1',
+            'texto' => 'nullable|string|between:1,254',
+            'link' => 'nullable|string|between:1,254',
         ]);
         // Si se eligio archivo
-        if(isset($request->file_img)){
+        if(isset($request->file_img) && !isset($data['video'])){
             $img = $request->file_img;
             $extension = strtolower($request->file_img->getClientOriginalExtension());
             $files = new Files;
@@ -55,6 +59,13 @@ class CarouselController extends Controller
             $files->uploadFile('/slider' . $file_name, $img);
             $carousel->img_name = $file_name;
             $carousel->update();
+        }else if(isset($data['video'])){
+            $youtube_code = Str::of($request->file_img)->replace('https://www.youtube.com/watch?v=', '');
+            $youtube_code = Str::of($youtube_code)->replace('https://www.youtube.com/embed/', '');
+            $youtube_code = Str::of($youtube_code)->replace('https://youtu.be/', '');
+            //dd($youtube_code);
+            $data['img_name'] = $youtube_code;
+            $carousel = carousel::create($data);
         }
         Session::flash('info', 'Se ha guardado la informacion con exito.');
         return redirect()->route('carrusel.edit', $carousel);
@@ -96,9 +107,12 @@ class CarouselController extends Controller
         $data = request()->validate([
             'titulo' => 'required|string|max:500',
             'descripcion' => 'required|string|max:500',
+            'video' => 'nullable|integer|between:0,1',
+            'texto' => 'nullable|string|between:1,254',
+            'link' => 'nullable|string|between:1,254',
         ]);
         // Si se eligio archivo
-        if(isset($request->file_img)){
+        if(isset($request->file_img) && !isset($data['video'])){
             $img = $request->file_img;
             $extension = strtolower($request->file_img->getClientOriginalExtension());
             $files = new Files;
@@ -108,6 +122,15 @@ class CarouselController extends Controller
             $files->uploadFile('/slider' . $file_name, $img);
             $files->destroyFile('/slider' . $carousel->img_name);
             $carousel->img_name = $file_name;
+            $data['video'] = 0;
+        }else if(isset($data['video'])){
+            $files = new Files;
+            $youtube_code = Str::of($request->file_img)->replace('https://www.youtube.com/watch?v=', '');
+            $youtube_code = Str::of($youtube_code)->replace('https://www.youtube.com/embed/', '');
+            $youtube_code = Str::of($youtube_code)->replace('https://youtu.be/', '');
+            //dd($youtube_code);
+            $files->destroyFile('/slider' . $carousel->img_name);
+            $carousel->img_name = $request->file_img;
         }
         $carousel->update($data);
         Session::flash('info', 'Se ha guardado la informacion con exito.');
