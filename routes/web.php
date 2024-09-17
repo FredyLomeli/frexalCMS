@@ -19,6 +19,9 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/testing', function () {
+    return view('layouts.testing.main');
+})->middleware('auth')->name('registrar');
 
 //pagina de inicio
 Route::get('/', [HomeController::class, 'index'])->name('index');
