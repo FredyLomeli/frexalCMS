@@ -4,9 +4,8 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900" rel="stylesheet">
 <meta name="robots" content="max-image-preview:large">
 <script>
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/garantiwebdesign.com\/wordpress\/secutech\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.1"}};
-
-!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+    window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/garantiwebdesign.com\/wordpress\/secutech\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.1"}};
+    !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
 </script>
 <style id="wp-emoji-styles-inline-css">
 	img.wp-smiley, img.emoji {
@@ -40,7 +39,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel="stylesheet" id="swiper-css" href="{{ asset('secutech/swiper.min.css') }}" media="all">
 <link rel="stylesheet" id="bootstrap-css" href="{{ asset('secutech/bootstrap.min.css') }}" media="all">
 <link rel="stylesheet" id="odometer-css" href="{{ asset('secutech/odometer.min.css') }}" media="all">
-<link rel="stylesheet" id="flaticon-css" href="{{ asset('secutech/flaticon.css') }}" media="all">
 <link rel="stylesheet" id="custom-css" href="{{ asset('secutech/custom.css') }}" media="all">
 <script src="{{ asset('secutech/jquery.min.js') }}" id="jquery-js"></script>
 <script src="{{ asset('secutech/YouTubePopUp.jquery.js') }}" id="oba_youtubepopup_plugin-js"></script>
@@ -59,522 +57,643 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel="stylesheet" href="{{ asset('secutech/app.css') }}" media="all">
 <title>ISSI - Home - Ingeniería en Sistemas de Seguridad Inteligente</title>
 <link rel="shortcut icon" type="image/png" href="{{ asset('img/secutech-favicion.png') }}">
+<!-- Frexal Icon -->
+<link rel="stylesheet" id="contact-form-7-css" href="{{ asset('lib/frexalicon/styles.css') }}" media="all">
 <meta name="description" content="Home, Office, Workplace, Store, Warehouse, Site, Shop camera and security systems.">
 <script src="{{ asset('secutech/wp-emoji-release.min.js') }}" defer=""></script></head>
 
 <body class="page-loaded">
-<div class="page-transition"></div>
-<aside class="side-widget">
-<div class="inner">
-<!-- Logo Menu Mobile -->
-    <div class="logo"> <a href={{route('index')}}><img src="{{ asset('secutech/logo.png') }}" alt="Image"></a> </div>
-    <div class="hide-mobile">
-    <div class="or">
-        <h2 class="h2-baslik-hizmetler-2"> Contact Information </h2>
-    </div>
-    <div class="bosluksv"></div>
-    <div class="iconsv"><i class="flaticon-call"></i></div>
-    <address class="address">
-
-        
-        +1 (234) 567 89 10
-        
-        <div class="bosluksv"></div>
-
-
-        <div class="iconsv"><i class="flaticon-email"></i></div>
-
-        
-        example@example.com
-        
-        <div class="bosluksv"></div>
-        <div class="iconsv"><i class="flaticon-location"></i></div>
-
-        
-        New Jersey, USA
-        
-        <div class="bosluksv"></div>
-        <div class="or">
-
-                    <a href="https://garantiwebdesign.com/wordpress/secutech/#"><i class="icon-social-facebook iconsocia"></i></a>
-         
-
-                    <a href="https://garantiwebdesign.com/wordpress/secutech/#"><i class="icon-social-instagram iconsociai"></i></a>
-         
-
-                    <a href="https://garantiwebdesign.com/wordpress/secutech/#"><i class="icon-social-twitter iconsocia"></i></a>
-           
-
-        </div>
-    </address>
-    </div>
-    <div class="show-mobile">
-    <div class="site-menu">
-        <div class="menu">
-
-        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul id="menu-mobile-menu" class="nav navbar-nav" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement"><li id="menu-item-1240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active menu-item-1240 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/" class="nav-link" aria-current="page"><span itemprop="name">Home</span></a></li>
-<li id="menu-item-3210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3210 nav-item" style="opacity: 1;"><a href="https://garantiwebdesign.com/wordpress/secutech/#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-3210"><span itemprop="name">About</span></a>
-<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-3210">
-	<li id="menu-item-6202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6202 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/about-us/" class="dropdown-item"><span itemprop="name">About Us</span></a></li>
-	<li id="menu-item-7959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7959 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/comments/" class="dropdown-item"><span itemprop="name">Comments</span></a></li>
-	<li id="menu-item-3213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3213 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/our-team/" class="dropdown-item"><span itemprop="name">Our Team</span></a></li>
-	<li id="menu-item-7958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7958 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/faq/" class="dropdown-item"><span itemprop="name">FAQ</span></a></li>
-	<li id="menu-item-3214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3214 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/why-choose-us/" class="dropdown-item"><span itemprop="name">Why Choose Us?</span></a></li>
-</ul>
-</li>
-<li id="menu-item-1242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1242 nav-item" style="opacity: 1;"><a href="https://garantiwebdesign.com/wordpress/secutech/#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-1242"><span itemprop="name">Services</span></a>
-<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-1242">
-	<li id="menu-item-2077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2077 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/home-security/" class="dropdown-item"><span itemprop="name">Home Security</span></a></li>
-	<li id="menu-item-2076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2076 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/camera-systems/" class="dropdown-item"><span itemprop="name">Camera Systems</span></a></li>
-	<li id="menu-item-2075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2075 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/" class="dropdown-item"><span itemprop="name">Alarm Systems</span></a></li>
-	<li id="menu-item-2074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2074 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/" class="dropdown-item"><span itemprop="name">Barrier Systems</span></a></li>
-	<li id="menu-item-1256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1256 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/all-services/" class="dropdown-item"><span itemprop="name">All Services</span></a></li>
-</ul>
-</li>
-<li id="menu-item-8198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8198 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/references/" class="nav-link"><span itemprop="name">References</span></a></li>
-<li id="menu-item-1259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1259 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/blog/" class="nav-link"><span itemprop="name">Blog</span></a></li>
-<li id="menu-item-1260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/contact/" class="nav-link"><span itemprop="name">Contact</span></a></li>
-</ul></div>        </div>
-        </div>
-    </div>
-    <small>
-            © 2024 Secutech - All Rights Reserved.        
-    </small> </div>
-</aside>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-<div class="container">
-<!-- Logo Menu Desktop -->
-    <div class="logo"> <a href="https://garantiwebdesign.com/wordpress/secutech/">
-                 <img src="{{ asset('secutech/secutech-logo.png') }}" alt="Image">
-        
-    </a> 
-    </div>
-        <div class="site-menu">
-        <div class="menueffect">
-        <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse"><ul id="menu-main-menu" class="nav navbar-nav" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement"><li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active menu-item-322 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/" class="nav-link" aria-current="page"><span itemprop="name">Home</span></a></li>
-<li id="menu-item-3197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3197 nav-item" style="opacity: 1;"><a href="https://garantiwebdesign.com/wordpress/secutech/#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-3197"><span itemprop="name">About</span></a>
-<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-3197">
-	<li id="menu-item-6203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6203 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/about-us/" class="dropdown-item"><span itemprop="name">About Us</span></a></li>
-	<li id="menu-item-7736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7736 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/comments/" class="dropdown-item"><span itemprop="name">Comments</span></a></li>
-	<li id="menu-item-3205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3205 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/our-team/" class="dropdown-item"><span itemprop="name">Our Team</span></a></li>
-	<li id="menu-item-7735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7735 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/faq/" class="dropdown-item"><span itemprop="name">FAQ</span></a></li>
-	<li id="menu-item-3206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/why-choose-us/" class="dropdown-item"><span itemprop="name">Why Choose Us?</span></a></li>
-</ul>
-</li>
-<li id="menu-item-980" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-980 nav-item" style="opacity: 1;"><a href="https://garantiwebdesign.com/wordpress/secutech/#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-980"><span itemprop="name">Services</span></a>
-<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-980">
-	<li id="menu-item-2072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2072 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/home-security/" class="dropdown-item"><span itemprop="name">Home Security</span></a></li>
-	<li id="menu-item-2071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2071 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/camera-systems/" class="dropdown-item"><span itemprop="name">Camera Systems</span></a></li>
-	<li id="menu-item-2070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2070 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/" class="dropdown-item"><span itemprop="name">Alarm Systems</span></a></li>
-	<li id="menu-item-2069" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2069 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/" class="dropdown-item"><span itemprop="name">Barrier Systems</span></a></li>
-	<li id="menu-item-364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/all-services/" class="dropdown-item"><span itemprop="name">All Services</span></a></li>
-</ul>
-</li>
-<li id="menu-item-8197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8197 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/references/" class="nav-link"><span itemprop="name">References</span></a></li>
-<li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/blog/" class="nav-link"><span itemprop="name">Blog</span></a></li>
-<li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353 nav-item" style="opacity: 1;"><a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/contact/" class="nav-link"><span itemprop="name">Contact</span></a></li>
-</ul></div>        </div>
-        </div>
-        <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
-
-        <div class="navbar-button"> <div class="btn-1" onclick="location.href=&#39;https://garantiwebdesign.com/wordpress/secutech/get-a-quote/&#39;;" style="cursor:pointer;"><i class="flaticon-cctv iconp"></i><p class="asdas">Get A Quote →</p></div></div>
-
-    </div>
-</nav>
-
-<!-- Slider -->
-<header class="slider">
-<div class="main-slider swiper-container-fade swiper-container-horizontal">
-<div class="swiper-wrapper" style="transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="width: 1528px; transition-duration: 0ms; opacity: 0; transform: translate3d(0px, 0px, 0px);">
-            <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-5.jpg" style="background: url(&quot;https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-5.jpg&quot;); visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"></div>
-                <div class="container ff">
-                <h1>Best Personnel <br>
-                Tracking Systems </h1>
-                <p>Control the entrances and exits of your employees. </p>
-                <div class="bosluk44"></div>
-                <a href="https://garantiwebdesign.com/wordpress/secutech/#" class="btn-3"><span class="btnn3">Learn more</span></a>
-            </div>
-        </div>
-        
-                <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1528px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1528px, 0px, 0px);">
-            <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-3.jpg" style="background: url(&quot;https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-3.jpg&quot;); visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"></div>
-                <div class="container ff">
-                <h1>Best Camera <br>
-                Security Systems </h1>
-                <p>We provide fast installation with our expert staff. </p>
-                <div class="bosluk44"></div>
-                <a href="https://garantiwebdesign.com/wordpress/secutech/#" class="btn-3"><span class="btnn3">Learn More</span></a>
-            </div>
-        </div>
-                <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 1528px; transition-duration: 0ms; opacity: 0; transform: translate3d(-3056px, 0px, 0px);">
-            <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-5.jpg" style="background: url(&quot;https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-5.jpg&quot;); visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"></div>
-                <div class="container ff">
-                <h1>Best Personnel <br>
-                Tracking Systems </h1>
-                <p>Control the entrances and exits of your employees. </p>
-                <div class="bosluk44"></div>
-                <a href="https://garantiwebdesign.com/wordpress/secutech/#" class="btn-3"><span class="btnn3">Learn more</span></a>
-            </div>
-        </div>
-          
-      
-    <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1528px; transition-duration: 0ms; opacity: 1; transform: translate3d(-4584px, 0px, 0px);">
-            <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-3.jpg" style="background: url(&quot;https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-3.jpg&quot;); visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"></div>
-                <div class="container ff">
-                <h1>Best Camera <br>
-                Security Systems </h1>
-                <p>We provide fast installation with our expert staff. </p>
-                <div class="bosluk44"></div>
-                <a href="https://garantiwebdesign.com/wordpress/secutech/#" class="btn-3"><span class="btnn3">Learn More</span></a>
-            </div>
-        </div></div>
-</div> 
-    <div class="button-prev"><p class="dz">❮</p></div>
-    <div class="button-next"><p class="dz">❯</p></div>
-</header>
-<!-- Info Services Section -->
-<section class="info-featured">
-    <div class="container">
-        <div class="row ff">
-                        <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: zoomIn;">
-        <div class="dep">
-            <div class="or56">
-                <div class="iconwr or56"><p class="dzv"><i class="flaticon-control-panel"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl">Home Security</h3>
-                        <h4 class="infostextgl">Our home camera systems have high resolution and remote monitoring features.</h4>
-                        <a class="btn-3" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Read More</p></a>
+    <div class="page-transition"></div>
+    <aside class="side-widget">
+        <div class="inner">
+            <!-- Logo Menu Mobile -->
+            <div class="logo"> <a href={{route('index')}}><img src="{{ asset('secutech/logo.png') }}"  alt="Image" style="max-width: 40%;"></a> </div>
+            <div class="hide-mobile">
+                <div class="or">
+                    <h2 class="h2-baslik-hizmetler-2"> Contact Information </h2>
                 </div>
-            </div>
-        </div>
-                <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: zoomIn;">
-        <div class="dep">
-            <div class="or56">
-                <div class="iconwr or56"><p class="dzv"><i class="flaticon-notification"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl">Camera Systems</h3>
-                        <h4 class="infostextgl">Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.</h4>
-                        <a class="btn-3" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Read More</p></a>
+                <div class="bosluksv"></div>
+                <div class="icon"><i class="fx-telephone"></i></div>
+                    <address class="address">
+                        +1 (234) 567 89 10
+                        <div class="bosluksv"></div>
+                        <div class="icon"><i class="fx-mail"></i></div>
+                        example@example.com
+                        <div class="bosluksv"></div>
+                        <div class="icon"><i class="fx-map-punto"></i></div>
+                        New Jersey, USA
+                        <div class="bosluksv"></div>
+                            <div class="or">
+                                <a class="social-marg" href="https://garantiwebdesign.com/wordpress/secutech/#"><i class="fx-facebook iconsocia"></i></a>
+                                <a class="social-marg" href="https://garantiwebdesign.com/wordpress/secutech/#"><i class="fx-twitter-x iconsocia"></i></a>
+                                <a class="social-marg" href="https://garantiwebdesign.com/wordpress/secutech/#"><i class="fx-instagram-line iconsocia"></i></a>
+                            </div>
+                    </address>
                 </div>
-            </div>
-        </div>
-                <div class="col-lg-3 ds wow fadeInLeft" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInLeft;">
-        <div class="dep">
-            <div class="or56">
-                <div class="iconwr or56"><p class="dzv"><i class="flaticon-alarm-system"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl">Alarm Systems</h3>
-                        <h4 class="infostextgl">Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.</h4>
-                        <a class="btn-3" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Read More</p></a>
-                </div>
-            </div>
-        </div>
-                <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: zoomIn;">
-        <div class="dep">
-            <div class="or56">
-                <div class="iconwr or56"><p class="dzv"><i class="flaticon-barrier"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl">Barrier Systems</h3>
-                        <h4 class="infostextgl">Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.</h4>
-                        <a class="btn-3" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Read More</p></a>
-                </div>
-            </div>
-        </div>
+                <div class="show-mobile">
+                    <div class="site-menu">
+                        <div class="menu">
+
+                            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                                <ul id="menu-mobile-menu" class="nav navbar-nav" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                                    <li id="menu-item-1240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active menu-item-1240 nav-item" style="opacity: 1;">
+                                        <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/" class="nav-link" aria-current="page">
+                                            <span itemprop="name">Home</span>
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-3210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3210 nav-item" style="opacity: 1;">
+                                        <a href="https://garantiwebdesign.com/wordpress/secutech/#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-3210">
+                                            <span itemprop="name">About</span>
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-3210">
+                                            <li id="menu-item-6202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6202 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/about-us/" class="dropdown-item">
+                                                    <span itemprop="name">About Us</span>
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-7959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7959 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/comments/" class="dropdown-item">
+                                                    <span itemprop="name">Comments</span>
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-3213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3213 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/our-team/" class="dropdown-item">
+                                                    <span itemprop="name">Our Team</span>
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-7958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7958 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/faq/" class="dropdown-item">
+                                                    <span itemprop="name">FAQ</span>
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-3214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3214 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/why-choose-us/" class="dropdown-item">
+                                                    <span itemprop="name">Why Choose Us?</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-1242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1242 nav-item" style="opacity: 1;">
+                                        <a href="https://garantiwebdesign.com/wordpress/secutech/#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-1242">
+                                            <span itemprop="name">Services</span>
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-1242">
+                                            <li id="menu-item-2077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2077 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/home-security/" class="dropdown-item">
+                                                    <span itemprop="name">Home Security</span>
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-2076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2076 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/camera-systems/" class="dropdown-item">
+                                                    <span itemprop="name">Camera Systems</span>
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-2075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2075 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/" class="dropdown-item">
+                                                    <span itemprop="name">Alarm Systems</span>
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-2074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2074 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/" class="dropdown-item">
+                                                    <span itemprop="name">Barrier Systems</span>
+                                                </a>
+                                            </li>
+                                            <li id="menu-item-1256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1256 nav-item" style="opacity: 1;">
+                                                <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/all-services/" class="dropdown-item">
+                                                    <span itemprop="name">All Services</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-8198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8198 nav-item" style="opacity: 1;">
+                                        <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/references/" class="nav-link">
+                                            <span itemprop="name">References</span>
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-1259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1259 nav-item" style="opacity: 1;">
+                                        <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/blog/" class="nav-link">
+                                            <span itemprop="name">Blog</span>
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-1260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260 nav-item" style="opacity: 1;">
+                                        <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/contact/" class="nav-link">
+                                            <span itemprop="name">Contact</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>   
+
                         </div>
-    </div>
-</section>
-
-<!--About Info Alanı-->
-<section class="hakkimizda-bolumu-anasayfa">
-<div class="h-yazi-ozel h-yazi-margin-ozel">           
-</div>
-<div class="tablo">
-    <div class="tablo--1-ve-2">
-        <img class="galeri__gorsel--3ab shimmer zimage wow fadeInUp" data-wow-delay="0.5s" src="{{ asset('secutech/secutech-about-1.jpg') }}" alt="" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-    </div>         
-    <!--Galeri Görsel Alanı-->
-    <div class="tablo--1-ve-3 wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-        <h2 class="h2-baslik-anasayfa-ozel btw wow fadeInRight" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"> We Left A Quarter Century Behind In Camera Security Systems </h2>
-        <div class="bosluk333"></div>
-    <p class="paragraf wow fadeInRight" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-    </p><p><strong>We Intervene Instantly in Danger!</strong></p>
-<p>&nbsp;</p>
-<p>Our company has become one of the world’s leading companies in the industry with the knowledge, experience and experience it has gained since its establishment.</p>
-    <div class="bosluk3"></div>
+                    </div>
+                </div>
+                <small>© 2024 Secutech - All Rights Reserved.</small> 
+            </div>
+        </div>
+    </aside>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-            <div class="row">
-            <div class="dephh">
+            <!-- Logo Menu Desktop -->
+            <div class="logo"><a href="https://garantiwebdesign.com/wordpress/secutech/"><img src="{{ asset('secutech/logo.png') }}" alt="Image"></a></div>
+                <div class="site-menu">
+                    <div class="menueffect">
+                        <div id="bs-example-navbar-collapse-2" class="collapse navbar-collapse">
+                            <ul id="menu-main-menu" class="nav navbar-nav" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                                <li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active menu-item-322 nav-item" style="opacity: 1;">
+                                    <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/" class="nav-link" aria-current="page">
+                                        <span itemprop="name">Home</span>
+                                    </a>
+                                </li>
+                                <li id="menu-item-3197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3197 nav-item" style="opacity: 1;">
+                                    <a href="https://garantiwebdesign.com/wordpress/secutech/#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-3197">
+                                        <span itemprop="name">About</span>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-3197">
+                                        <li id="menu-item-6203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6203 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/about-us/" class="dropdown-item">
+                                                <span itemprop="name">About Us</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-7736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7736 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/comments/" class="dropdown-item">
+                                                <span itemprop="name">Comments</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-3205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3205 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/our-team/" class="dropdown-item">
+                                                <span itemprop="name">Our Team</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-7735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7735 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/faq/" class="dropdown-item">
+                                                <span itemprop="name">FAQ</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-3206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3206 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/why-choose-us/" class="dropdown-item">
+                                                <span itemprop="name">Why Choose Us?</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-980" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-980 nav-item" style="opacity: 1;">
+                                    <a href="https://garantiwebdesign.com/wordpress/secutech/#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-980">
+                                        <span itemprop="name">Services</span>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-980">
+                                        <li id="menu-item-2072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2072 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/home-security/" class="dropdown-item">
+                                                <span itemprop="name">Home Security</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-2071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2071 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/camera-systems/" class="dropdown-item">
+                                                <span itemprop="name">Camera Systems</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-2070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2070 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/" class="dropdown-item">
+                                                <span itemprop="name">Alarm Systems</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-2069" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2069 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/" class="dropdown-item">
+                                                <span itemprop="name">Barrier Systems</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-364 nav-item" style="opacity: 1;">
+                                            <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/all-services/" class="dropdown-item">
+                                                <span itemprop="name">All Services</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-8197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8197 nav-item" style="opacity: 1;">
+                                    <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/references/" class="nav-link">
+                                        <span itemprop="name">References</span>
+                                    </a>
+                                </li>
+                                <li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354 nav-item" style="opacity: 1;">
+                                    <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/blog/" class="nav-link">
+                                        <span itemprop="name">Blog</span>
+                                    </a>
+                                </li>
+                                <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353 nav-item" style="opacity: 1;">
+                                    <a itemprop="url" href="https://garantiwebdesign.com/wordpress/secutech/contact/" class="nav-link">
+                                        <span itemprop="name">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
+                <div class="navbar-button"> 
+                    <div class="btn-1" onclick="location.href=&#39;https://garantiwebdesign.com/wordpress/secutech/get-a-quote/&#39;;" style="cursor:pointer;">
+                        <i class="fx-camara-domo iconp"></i><p class="asdas">Get A Quote →</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slider -->
+    <header class="slider">
+        <div class="main-slider swiper-container-fade swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="width: 1528px; transition-duration: 0ms; opacity: 0; transform: translate3d(0px, 0px, 0px);">
+                <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-5.jpg" style="background: url(&quot;https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-5.jpg&quot;); visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"></div>
+                <div class="container ff">
+                    <h1>Best Personnel <br> Tracking Systems </h1>
+                    <p>Control the entrances and exits of your employees. </p>
+                    <div class="bosluk44"></div>
+                    <a href="https://garantiwebdesign.com/wordpress/secutech/#" class="btn-3">
+                        <span class="btnn3">Learn more</span>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1528px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1528px, 0px, 0px);">
+                <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-3.jpg" style="background: url(&quot;https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-3.jpg&quot;); visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"></div>
+                <div class="container ff">
+                    <h1>Best C  amera <br>
+                    Security Systems </h1>
+                    <p>We provide fast installation with our expert staff. </p>
+                    <div class="bosluk44"></div>
+                    <a href="https://garantiwebdesign.com/wordpress/secutech/#" class="btn-3">
+                        <span class="btnn3">Learn More</span>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 1528px; transition-duration: 0ms; opacity: 0; transform: translate3d(-3056px, 0px, 0px);">
+                <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-5.jpg" style="background: url(&quot;https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-5.jpg&quot;); visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"></div>
+                <div class="container ff">
+                    <h1>Best Personnel <br>
+                    Tracking Systems </h1>
+                    <p>Control the entrances and exits of your employees. </p>
+                    <div class="bosluk44"></div>
+                    <a href="https://garantiwebdesign.com/wordpress/secutech/#" class="btn-3">
+                        <span class="btnn3">Learn more</span>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1528px; transition-duration: 0ms; opacity: 1; transform: translate3d(-4584px, 0px, 0px);">
+                <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-3.jpg" style="background: url(&quot;https://garantiwebdesign.com/wordpress/secutech/wp-content/uploads/2022/11/slider-secutech-3.jpg&quot;); visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"></div>
+                <div class="container ff">
+                    <h1>Best Camera <br>
+                    Security Systems </h1>
+                    <p>We provide fast installation with our expert staff. </p>
+                    <div class="bosluk44"></div>
+                    <a href="https://garantiwebdesign.com/wordpress/secutech/#" class="btn-3">
+                        <span class="btnn3">Learn More</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="button-prev"><p class="dz">❮</p></div>
+        <div class="button-next"><p class="dz">❯</p></div>
+    </header>
+
+    <!-- Info Services Section -->
+    <section class="info-featured">
+        <div class="container">
+            <div class="row ff">
+                <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: zoomIn;">
+                    <div class="dep">
+                        <div class="or56">
+                            <div class="iconwr or56"><p class="dzv"><i class="flaticon-control-panel"></i></p></div>
+                            <div class="bosluk333"></div>
+                            <h3 class="prongl">Home Security</h3>
+                            <h4 class="infostextgl">Our home camera systems have high resolution and remote monitoring features.</h4>
+                            <a class="btn-3" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Read More</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: zoomIn;">
+                    <div class="dep">
+                        <div class="or56">
+                            <div class="iconwr or56"><p class="dzv"><i class="flaticon-notification"></i></p></div>
+                            <div class="bosluk333"></div>
+                            <h3 class="prongl">Camera Systems</h3>
+                            <h4 class="infostextgl">Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.</h4>
+                            <a class="btn-3" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Read More</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ds wow fadeInLeft" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInLeft;">
+                    <div class="dep">
+                        <div class="or56">
+                            <div class="iconwr or56"><p class="dzv"><i class="flaticon-alarm-system"></i></p></div>
+                            <div class="bosluk333"></div>
+                            <h3 class="prongl">Alarm Systems</h3>
+                            <h4 class="infostextgl">Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.</h4>
+                            <a class="btn-3" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Read More</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: zoomIn;">
+                    <div class="dep">
+                        <div class="or56">
+                            <div class="iconwr or56"><p class="dzv"><i class="flaticon-barrier"></i></p></div>
+                            <div class="bosluk333"></div>
+                            <h3 class="prongl">Barrier Systems</h3>
+                            <h4 class="infostextgl">Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.</h4>
+                            <a class="btn-3" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Read More</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--About Info Alanı-->
+    <section class="hakkimizda-bolumu-anasayfa">
+        <div class="h-yazi-ozel h-yazi-margin-ozel"></div>
+        <div class="tablo">
+            <div class="tablo--1-ve-2">
+                <img class="galeri__gorsel--3ab shimmer zimage wow fadeInUp" data-wow-delay="0.5s" src="{{ asset('secutech/secutech-about-1.jpg') }}" alt="" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+            </div>         
+            <!--Galeri Görsel Alanı-->
+            <div class="tablo--1-ve-3 wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                <h2 class="h2-baslik-anasayfa-ozel btw wow fadeInRight" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;"> We Left A Quarter Century Behind In Camera Security Systems </h2>
+                <div class="bosluk333"></div>
+                <p class="paragraf wow fadeInRight" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;"></p>
+                <p><strong>We Intervene Instantly in Danger!</strong></p>
+                <p>&nbsp;</p>
+                <p>Our company has become one of the world’s leading companies in the industry with the knowledge, experience and experience it has gained since its establishment.</p>
+                <div class="bosluk3"></div>
                 <div class="container">
                     <div class="row">
-                                                                    <div class="col-lg-12 lefthealtfooter">
-                            <div class="row yk" onclick="location.href=&#39;#&#39;;" style="cursor:pointer;">
-                                <div class="col-lg-3">
-                                    <div class="iconhh"><i class="flaticon-24-hours-support"></i></div>
-                                </div>
-                                <div class="col-lg-9">
-                                    <h4 class="services-kutu2--wt13 wow fade" style="visibility: hidden; animation-name: none;">Fast Communication</h4>
-                                    <h2 class="h2-baslik-anasayfa-wth2e wow fade" style="visibility: hidden; animation-name: none;">+123 456 78 90 01</h2>
+                        <div class="dephh">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 lefthealtfooter">
+                                        <div class="row yk" onclick="location.href=&#39;#&#39;;" style="cursor:pointer;">
+                                            <div class="col-lg-3">
+                                                <div class="iconhh"><i class="flaticon-24-hours-support"></i></div>
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <h4 class="services-kutu2--wt13 wow fade" style="visibility: hidden; animation-name: none;">Fast Communication</h4>
+                                                <h2 class="h2-baslik-anasayfa-wth2e wow fade" style="visibility: hidden; animation-name: none;">+123 456 78 90 01</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 lefthealtfooter">
+                                        <div class="row yk" onclick="location.href=&#39;#&#39;;" style="cursor:pointer;">
+                                            <div class="col-lg-3">
+                                                <div class="iconhh"><i class="flaticon-chat"></i></div>
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <h4 class="services-kutu2--wt13 wow fade" style="visibility: hidden; animation-name: none;">Get A Quick Quote</h4>
+                                                <h2 class="h2-baslik-anasayfa-wth2e wow fade" style="visibility: hidden; animation-name: none;">example@example.com</h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                                                <div class="col-lg-12 lefthealtfooter">
-                            <div class="row yk" onclick="location.href=&#39;#&#39;;" style="cursor:pointer;">
-                                <div class="col-lg-3">
-                                    <div class="iconhh"><i class="flaticon-chat"></i></div>
-                                </div>
-                                <div class="col-lg-9">
-                                    <h4 class="services-kutu2--wt13 wow fade" style="visibility: hidden; animation-name: none;">Get A Quick Quote</h4>
-                                    <h2 class="h2-baslik-anasayfa-wth2e wow fade" style="visibility: hidden; animation-name: none;">example@example.com</h2>
-                                </div>
-                            </div>
-                        </div>
-                           
-                         
                     </div>
                 </div>
-                </div>
+                <div class="bosluk12b"></div>
+                <a href="https://garantiwebdesign.com/wordpress/secutech/about-us/" class="btn-2 wow fadeInUp" data-wow-delay="0.8s" style="visibility: hidden; animation-delay: 0.8s; animation-name: none;"><p class="btnn2">Get to know us</p></a>
+                <div class="bosluk3rh"></div>
             </div>
         </div>
-        <div class="bosluk12b"></div>
-        <a href="https://garantiwebdesign.com/wordpress/secutech/about-us/" class="btn-2 wow fadeInUp" data-wow-delay="0.8s" style="visibility: hidden; animation-delay: 0.8s; animation-name: none;"><p class="btnn2">Get to know us</p></a>
-            <div class="bosluk3rh"></div>
-    </div>
-</div>
-</section>
-<div class="bosluk4"></div>
+    </section>
+    <div class="bosluk4"></div>
 
-<!--Services-->
-<section class="sectionbars">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-10">
-            <h2 class="h2-baslik-anasayfa-wtbb wow fade" style="visibility: hidden; animation-name: none;">Check Out Our High Security Camera Systems Services</h2>
-            <p class="services-kutu2--wtbb wow fade animated" style="visibility: hidden; animation-name: none;">
-            We produce professional solutions in camera systems.            </p>
-        </div>
-        <div class="col-lg-2">
-            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/all-services/"><p class="btnn2">All Services</p></a>
-        </div>
-    </div>
-</div>
-</section>
-<section class="serviceb-alani wow animated fadeInUp animated" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-<div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="carousel-classes swiper-container-horizontal">
-                <div class="swiper-wrapper" style="transform: translate3d(-1450px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="2" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
-                        </div>
-                    </div>
+    <!--Services-->
+    <section class="sectionbars">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h2 class="h2-baslik-anasayfa-wtbb wow fade" style="visibility: hidden; animation-name: none;">Check Out Our High Security Camera Systems Services</h2>
+                    <p class="services-kutu2--wtbb wow fade animated" style="visibility: hidden; animation-name: none;">We produce professional solutions in camera systems.</p>
                 </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="3" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
-                        </div>
-                    </div>
+                <div class="col-lg-2">
+                    <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/all-services/"><p class="btnn2">All Services</p></a>
                 </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="4" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-5.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        We have left behind a quarter of a century in the Fire and Engineering Services industry.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Fire Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate swiper-slide-prev" data-wow-delay="0.5s" data-swiper-slide-index="5" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-6.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        You can control the entrance and exit of your employees with fingerprint reader systems.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Fingerprint Reading</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div>
-                                                <div class="swiper-slide wow animated fadeInLeft swiper-slide-active" data-wow-delay="0.5s" data-swiper-slide-index="0" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-11.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Our home camera systems have high resolution and remote monitoring features.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/home-security/"><p class="btnn2">Home Security</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div>
-                                <div class="swiper-slide wow animated fadeInLeft swiper-slide-next" data-wow-delay="0.5s" data-swiper-slide-index="1" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-2.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/camera-systems/"><p class="btnn2">Camera Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div>
-                                <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s" data-swiper-slide-index="2" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div>
-                                <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s" data-swiper-slide-index="3" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div>
-                                <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s" data-swiper-slide-index="4" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-5.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        We have left behind a quarter of a century in the Fire and Engineering Services industry.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Fire Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div>
-                                <div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate-prev" data-wow-delay="0.5s" data-swiper-slide-index="5" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-6.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        You can control the entrance and exit of your employees with fingerprint reader systems.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Fingerprint Reading</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div>
-                   
-                 
-                <div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate swiper-slide-duplicate-active" data-wow-delay="0.5s" data-swiper-slide-index="0" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-11.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Our home camera systems have high resolution and remote monitoring features.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/home-security/"><p class="btnn2">Home Security</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate swiper-slide-duplicate-next" data-wow-delay="0.5s" data-swiper-slide-index="1" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-2.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/camera-systems/"><p class="btnn2">Camera Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="2" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="3" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
-                        Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div></div>
-                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
-                </div>      
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <section class="serviceb-alani wow animated fadeInUp animated" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="carousel-classes swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transform: translate3d(-1450px, 0px, 0px); transition-duration: 0ms;">
+                            <div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="2" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.</p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="3" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="4" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-5.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        We have left behind a quarter of a century in the Fire and Engineering Services industry.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Fire Systems</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate swiper-slide-prev" data-wow-delay="0.5s" data-swiper-slide-index="5" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-6.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        You can control the entrance and exit of your employees with fingerprint reader systems.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Fingerprint Reading</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft swiper-slide-active" data-wow-delay="0.5s" data-swiper-slide-index="0" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-11.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        Our home camera systems have high resolution and remote monitoring features.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/home-security/"><p class="btnn2">Home Security</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft swiper-slide-next" data-wow-delay="0.5s" data-swiper-slide-index="1" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-2.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/camera-systems/"><p class="btnn2">Camera Systems</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s" data-swiper-slide-index="2" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s" data-swiper-slide-index="3" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s" data-swiper-slide-index="4" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-5.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        We have left behind a quarter of a century in the Fire and Engineering Services industry.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Fire Systems</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                            <div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate-prev" data-wow-delay="0.5s" data-swiper-slide-index="5" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                                <div class="box-style2 box-primary-color2">
+                                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-6.jpg') }}" alt="">
+                                    <div class="bosluk333"></div>
+                                    <div class="descontent">
+                                        <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                                        You can control the entrance and exit of your employees with fingerprint reader systems.                        </p>
+                                        <div class="bosluk333"></div>
+                                        <div class="orserv">
+                                            <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/#"><p class="btnn2">Fingerprint Reading</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end swiper-slide -->
+                            </div>
+                    
+                    
+                    <div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate swiper-slide-duplicate-active" data-wow-delay="0.5s" data-swiper-slide-index="0" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="box-style2 box-primary-color2">
+                        <img class="efozel2" src="{{ asset('secutech/small-services-secutech-11.jpg') }}" alt="">
+                        <div class="bosluk333"></div>
+                        <div class="descontent">
+                            <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                            Our home camera systems have high resolution and remote monitoring features.                        </p>
+                            <div class="bosluk333"></div>
+                            <div class="orserv">
+                                <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/home-security/"><p class="btnn2">Home Security</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end swiper-slide -->
+                    </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate swiper-slide-duplicate-next" data-wow-delay="0.5s" data-swiper-slide-index="1" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="box-style2 box-primary-color2">
+                        <img class="efozel2" src="{{ asset('secutech/small-services-secutech-2.jpg') }}" alt="">
+                        <div class="bosluk333"></div>
+                        <div class="descontent">
+                            <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                            Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.                        </p>
+                            <div class="bosluk333"></div>
+                            <div class="orserv">
+                                <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/camera-systems/"><p class="btnn2">Camera Systems</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end swiper-slide -->
+                    </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="2" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="box-style2 box-primary-color2">
+                        <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
+                        <div class="bosluk333"></div>
+                        <div class="descontent">
+                            <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                            Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.                        </p>
+                            <div class="bosluk333"></div>
+                            <div class="orserv">
+                                <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end swiper-slide -->
+                    </div><div class="swiper-slide wow animated fadeInLeft swiper-slide-duplicate" data-wow-delay="0.5s" data-swiper-slide-index="3" style="width: 332.5px; margin-right: 30px; visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                    <div class="box-style2 box-primary-color2">
+                        <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
+                        <div class="bosluk333"></div>
+                        <div class="descontent">
+                            <p class="services-kutu2--wts3 wow fade animated" style="visibility: hidden; animation-name: none;">
+                            Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.                        </p>
+                            <div class="bosluk333"></div>
+                            <div class="orserv">
+                                <a class="btn-5" href="https://garantiwebdesign.com/wordpress/secutech/barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end swiper-slide -->
+                    </div></div>
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!--Videos-->
 <section class="videosc">

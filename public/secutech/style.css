@@ -12426,7 +12426,9 @@ button[type="submit"] {
       display: inline-block;
       color: #fff;
       text-align: center;
-      font-size: 13px; }
+      font-size: 13px; 
+      padding-top: 2px;
+      padding-left: 1px;}
       .side-widget .address a:hover {
         color: #fff;
         text-decoration: none; }

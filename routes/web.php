@@ -21,7 +21,7 @@ use App\Http\Controllers\PostController;
 */
 Route::get('/testing', function () {
     return view('layouts.testing.main');
-})->middleware('auth')->name('registrar');
+})->name('test');
 
 //pagina de inicio
 Route::get('/', [HomeController::class, 'index'])->name('index');

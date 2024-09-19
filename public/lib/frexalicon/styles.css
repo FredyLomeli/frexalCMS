@@ -119,3 +119,68 @@
 .fx-bars:before {
   content: "\70";
 }
+
+/* Ajuste de iconos */
+.center-icon {
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+.iconsv {background: #c2021b;}
+
+/* tamaño icon social*/
+.iconsocia {
+  font-size: 30px;
+}
+
+/* Variación de tamaño*/
+.fa-xs {
+  font-size: .75em;
+}
+
+.fa-sm {
+  font-size: .85em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+
