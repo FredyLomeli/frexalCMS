@@ -119,9 +119,15 @@
 .fx-bars:before {
   content: "\70";
 }
+.fx-youtube-play:before {
+  content: "\41";
+}
+.fx-chevron-up:before {
+  content: "\43";
+}
 
 /* Ajuste de iconos */
-.center-icon {
+.center-ico {
   vertical-align: middle;
   position: relative;
   top: -2px;
@@ -182,5 +188,3 @@
 .fa-10x {
   font-size: 10em;
 }
-
-
