@@ -325,8 +325,13 @@ border-radius: 5px;
     width: 100%;
     text-align: center;
 }
+/*Color difuminado slide*/
 .container.ff:before {
-    background: #c2021bd1;
+    /* Propuesta  */
+    background: #49b9ff6c;
+    /* Original */
+    /* background: #c2021bd1; */
+
 }
 /* Dep Finish */
 .box-style.box-primary-color::before {
@@ -1040,6 +1045,7 @@ p.businesss{font-family: Outfit; font-size:16px; color:#000000;text-align:center
 .dep:hover {
 
 }
+/*Categorias debajo de slide */
 .row.ff {
   background: #ffffff;
   border-radius: 5px;
@@ -1385,6 +1391,7 @@ ul.post-categories {color: #c2021b; font-family: Outfit; font-size: 16px;}
 .baslik-3white {font-family: Outfit; }
 .baslik-orta {font-size: 23px;color:#000000; font-family: Outfit;font-weight: 900; }
 .baslik-4 {color:#000000; font-family: Outfit; font-weight: 900; }
+/*Color de las letras del Slide */
 .slider .main-slider .swiper-slide .container h1 { font-family: Outfit;color:#fff; }
 .slider .main-slider .swiper-slide .container p { font-family: Outfit; color: #fff;}
 .slider .main-slider .swiper-slide .container a { font-family: Outfit;border-radius: 5px;border:none; }
