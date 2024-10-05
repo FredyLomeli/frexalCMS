@@ -98,9 +98,6 @@
 .fx-instagram-line:before {
   content: "\75";
 }
-.fx-facebook-square:before {
-  content: "\76";
-}
 .fx-twitter-square:before {
   content: "\77";
 }
@@ -124,6 +121,27 @@
 }
 .fx-chevron-up:before {
   content: "\43";
+}
+.fx-chevron-right:before {
+  content: "\44";
+}
+.fx-chevron-left:before {
+  content: "\45";
+}
+.fx-chevron-down:before {
+  content: "\46";
+}
+.fx-twitter:before {
+  content: "\47";
+}
+.fx-facebook-1:before {
+  content: "\48";
+}
+.fx-linkedin-1:before {
+  content: "\49";
+}
+.fx-x-twitter-solid:before {
+  content: "\76";
 }
 
 /* Ajuste de iconos */

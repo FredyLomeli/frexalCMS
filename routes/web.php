@@ -19,12 +19,36 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('layouts.main');
-})->name('index');
+Route::get('/about', function () {
+    return view('page.about');
+})->name('about');
+
+Route::get('/team', function () {
+    return view('page.team');
+})->name('team');
+
+Route::get('/faq', function () {
+    return view('page.faq');
+})->name('faq');
+
+Route::get('/services', function () {
+    return view('page.services');
+})->name('services');
+
+Route::get('/clients', function () {
+    return view('page.clients');
+})->name('clients');
+
+Route::get('/blog', function () {
+    return view('page.blog');
+})->name('blog');
+
+Route::get('/contact', function () {
+    return view('page.contacts');
+})->name('contact');
 
 //pagina de inicio
-//Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', [HomeController::class, 'index'])->name('index');
 //pagina de inicio
 Route::get('/nosotros', [HomeController::class, 'nosotros'])->name('nosotros');
 // Pagina que muestra todos los productos
