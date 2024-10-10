@@ -143,6 +143,9 @@
 .fx-x-twitter-solid:before {
   content: "\76";
 }
+.fx-whatsapp:before {
+  content: "\4a";
+}
 
 /* Ajuste de iconos */
 .center-ico {

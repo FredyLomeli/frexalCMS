@@ -25,6 +25,26 @@
                                 <small class="text-center text-danger">{{ $errors->first('nombre') }}</small>
                             @endif
                         </div>
+                        <label for="nombre_corto" class="col-sm-2 col-form-label">Nombre Corto:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="nombre_corto"
+                                value="{{ old('nombre_corto', $informacion['nombre_corto']) }}"
+                                id="nombre_corto" placeholder="Nombre corto" required>
+                            @if ($errors->has('nombre_corto'))
+                                <small class="text-center text-danger">{{ $errors->first('nombre_corto') }}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="descripcion_ubicacion" class="col-sm-2 col-form-label">Link Ubicación:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="descripcion_ubicacion"
+                                value="{{ old('descripcion_ubicacion', $informacion['descripcion_ubicacion']) }}"
+                                id="descripcion_ubicacion" placeholder="link google ubicación" required>
+                            @if ($errors->has('descripcion_ubicacion'))
+                                <small class="text-center text-danger">{{ $errors->first('descripcion_ubicacion') }}</small>
+                            @endif
+                        </div>
                         <label for="telefono" class="col-sm-2 col-form-label">Telefono Celular:</label>
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="telefono"
@@ -80,7 +100,7 @@
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="direccion"
                                 value="{{ old('direccion', $informacion['direccion']) }}"
-                                id="direccion" placeholder="Direccion" required>
+                                id="direccion" placeholder="Direccion">
                             @if ($errors->has('direccion'))
                                 <small class="text-center text-danger">{{ $errors->first('direccion') }}</small>
                             @endif
@@ -89,7 +109,7 @@
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="municipio"
                                 value="{{ old('municipio', $informacion['municipio']) }}"
-                                id="municipio" placeholder="Municipio" required>
+                                id="municipio" placeholder="Municipio">
                             @if ($errors->has('municipio'))
                                 <small class="text-center text-danger">{{ $errors->first('municipio') }}</small>
                             @endif
@@ -100,7 +120,7 @@
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="estado"
                                 value="{{ old('estado', $informacion['estado']) }}"
-                                id="estado" placeholder="Estado" required>
+                                id="estado" placeholder="Estado">
                             @if ($errors->has('estado'))
                                 <small class="text-center text-danger">{{ $errors->first('estado') }}</small>
                             @endif
@@ -109,7 +129,7 @@
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="linkedin"
                                 value="{{ old('linkedin', $informacion['linkedin']) }}"
-                                id="linkedin" placeholder="Dirección Linkedin" required>
+                                id="linkedin" placeholder="Dirección Linkedin">
                             @if ($errors->has('linkedin'))
                                 <small class="text-center text-danger">{{ $errors->first('linkedin') }}</small>
                             @endif
@@ -120,7 +140,7 @@
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="twitter"
                                 value="{{ old('twitter', $informacion['twitter']) }}"
-                                id="twitter" placeholder="Dirección twitter" required>
+                                id="twitter" placeholder="Dirección twitter">
                             @if ($errors->has('twitter'))
                                 <small class="text-center text-danger">{{ $errors->first('twitter') }}</small>
                             @endif
@@ -129,7 +149,7 @@
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="youtube"
                                 value="{{ old('youtube', $informacion['youtube']) }}"
-                                id="youtube" placeholder="Dirección youtube" required>
+                                id="youtube" placeholder="Dirección youtube">
                             @if ($errors->has('youtube'))
                                 <small class="text-center text-danger">{{ $errors->first('youtube') }}</small>
                             @endif
@@ -140,7 +160,7 @@
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="facebook"
                                 value="{{ old('facebook', $informacion['facebook']) }}"
-                                id="facebook" placeholder="Dirección Facebook" required>
+                                id="facebook" placeholder="Dirección Facebook">
                             @if ($errors->has('facebook'))
                                 <small class="text-center text-danger">{{ $errors->first('facebook') }}</small>
                             @endif
@@ -156,20 +176,20 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="descripcion_ubicacion" class="col-sm-2 col-form-label">Descripción Ubicación:</label>
+                        <label for="informacion_footer1" class="col-sm-2 col-form-label">Descripción footer 1:</label>
                         <div class="col-sm-4">
-                            <textarea class="form-control" name="descripcion_ubicacion" rows="4" cols="50" id="descripcion_ubicacion"
-                                 required>{{ old('descripcion_ubicacion', $informacion['descripcion_ubicacion']) }}</textarea>
-                            @if ($errors->has('descripcion_ubicacion'))
-                                <small class="text-center text-danger">{{ $errors->first('descripcion_ubicacion') }}</small>
+                            <textarea class="form-control" name="informacion_footer1" rows="4" cols="50" id="informacion_footer1"
+                                 required>{{ old('informacion_footer1', $informacion['informacion_footer1']) }}</textarea>
+                            @if ($errors->has('informacion_footer1'))
+                                <small class="text-center text-danger">{{ $errors->first('informacion_footer1') }}</small>
                             @endif
                         </div>
-                        <label for="informacion_footer" class="col-sm-2 col-form-label">Información:</label>
+                        <label for="informacion_footer2" class="col-sm-2 col-form-label">Descripción footer 2:</label>
                         <div class="col-sm-4">
-                            <textarea class="form-control" name="informacion_footer" rows="4" cols="50" id="informacion_footer"
-                                 required>{{ old('informacion_footer', $informacion['informacion_footer']) }}</textarea>
-                            @if ($errors->has('informacion_footer'))
-                                <small class="text-center text-danger">{{ $errors->first('informacion_footer') }}</small>
+                            <textarea class="form-control" name="informacion_footer2" rows="4" cols="50" id="informacion_footer2"
+                                 required>{{ old('informacion_footer2', $informacion['informacion_footer2']) }}</textarea>
+                            @if ($errors->has('informacion_footer2'))
+                                <small class="text-center text-danger">{{ $errors->first('informacion_footer2') }}</small>
                             @endif
                         </div>
                     </div>

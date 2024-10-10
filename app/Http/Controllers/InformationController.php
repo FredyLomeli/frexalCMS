@@ -10,6 +10,18 @@ use Illuminate\Support\Facades\Session;
 
 class InformationController extends Controller
 {
+    private $cInformation;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->cInformation = new Information();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,25 +29,7 @@ class InformationController extends Controller
      */
     public function index()
     {
-        $informacion = [
-            'nombre' => Information::where('name','nombre')->value('value'),
-            'telefono' => Information::where('name','telefono')->value('value'),
-            'horario' => Information::where('name','horario')->value('value'),
-            'email' => Information::where('name','email')->value('value'),
-            'direccion' => Information::where('name','direccion')->value('value'),
-            'municipio' => Information::where('name','municipio')->value('value'),
-            'estado' => Information::where('name','estado')->value('value'),
-            'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
-            'twitter' => Information::where('name','twitter')->value('value'),
-            'youtube' => Information::where('name','youtube')->value('value'),
-            'linkedin' => Information::where('name','linkedin')->value('value'),
-            'facebook' => Information::where('name','facebook')->value('value'),
-            'instagram' => Information::where('name','instagram')->value('value'),
-            'descripcion_ubicacion' => Information::where('name','descripcion_ubicacion')->value('value'),
-            'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
-            'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
-            'img_logo' => Information::where('name','img_logo')->value('value'),
-        ];
+        $informacion = $this->cInformation->takeInformation();
         return view('admin.informacion', compact('informacion'));
     }
 
@@ -74,20 +68,22 @@ class InformationController extends Controller
     {
         $data = request()->validate([
             'nombre' => 'required|string|between:1,499',
+            'nombre_corto' => 'required|string|between:1,499',
             'telefono' => 'required|string|between:1,499',
             'horario' => 'required|string|between:1,499',
             'email' => 'required|string|between:1,499',
-            'direccion' => 'required|string|between:1,499',
-            'municipio' => 'required|string|between:1,499',
-            'estado' => 'required|string|between:1,499',
-            'no_whatsapp' => 'required|string|between:1,499',
-            'facebook' => 'required|string|between:1,499',
-            'instagram' => 'required|string|between:1,499',
-            'twitter' => 'required|string|between:1,499',
-            'youtube' => 'required|string|between:1,499',
-            'linkedin' => 'required|string|between:1,499',
+            'direccion' => 'nullable|string|between:1,499',
+            'municipio' => 'nullable|string|between:1,499',
+            'estado' => 'nullable|string|between:1,499',
+            'no_whatsapp' => 'nullable|string|between:1,499',
+            'facebook' => 'nullable|string|between:1,499',
+            'instagram' => 'nullable|string|between:1,499',
+            'twitter' => 'nullable|string|between:1,499',
+            'youtube' => 'nullable|string|between:1,499',
+            'linkedin' => 'nullable|string|between:1,499',
             'descripcion_ubicacion' => 'required|string|between:1,499',
-            'informacion_footer' => 'required|string|between:1,499',
+            'informacion_footer1' => 'required|string|between:1,499',
+            'informacion_footer2' => 'required|string|between:1,499',
             'telefono_oficina' => 'required|string|between:1,499',
         ]);
         $informacion = new Information;
@@ -105,6 +101,7 @@ class InformationController extends Controller
             $informacion->actualizarInformacion('img_logo', $file_name);
         }
         $informacion->actualizarInformacion('nombre', $data['nombre']);
+        $informacion->actualizarInformacion('nombre_corto', $data['nombre_corto']);
         $informacion->actualizarInformacion('telefono', $data['telefono']);
         $informacion->actualizarInformacion('horario', $data['horario']);
         $informacion->actualizarInformacion('email', $data['email']);
@@ -118,7 +115,8 @@ class InformationController extends Controller
         $informacion->actualizarInformacion('youtube', $data['youtube']);
         $informacion->actualizarInformacion('linkedin', $data['linkedin']);
         $informacion->actualizarInformacion('descripcion_ubicacion', $data['descripcion_ubicacion']);
-        $informacion->actualizarInformacion('informacion_footer', $data['informacion_footer']);
+        $informacion->actualizarInformacion('informacion_footer1', $data['informacion_footer1']);
+        $informacion->actualizarInformacion('informacion_footer2', $data['informacion_footer2']);
         $informacion->actualizarInformacion('telefono_oficina', $data['telefono_oficina']);
         Session::flash('info', 'Se ha guardado la informacion con exito.');
         return redirect()->route('informacion');

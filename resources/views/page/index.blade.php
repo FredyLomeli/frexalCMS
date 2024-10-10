@@ -1,4 +1,5 @@
 @extends('layouts.front')
+@section('title', "Inicio - ")
 <!-- Slide -->
 @include('page.parts.slide')
 <!-- About -->

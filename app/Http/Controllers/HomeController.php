@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
+    private $cInformation;
+
     /**
      * Create a new controller instance.
      *
@@ -22,6 +24,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        $this->cInformation = new Information();
     }
 
     /**
@@ -35,22 +38,8 @@ class HomeController extends Controller
         //$categorys = Category::get();
         $productos = Products::with('category')->get();
         $asks = Ask::get();
-        $informacion = [
-            'nombre' => Information::where('name','nombre')->value('value'),
-            'telefono' => Information::where('name','telefono')->value('value'),
-            'horario' => Information::where('name','horario')->value('value'),
-            'email' => Information::where('name','email')->value('value'),
-            'direccion' => Information::where('name','direccion')->value('value'),
-            'municipio' => Information::where('name','municipio')->value('value'),
-            'estado' => Information::where('name','estado')->value('value'),
-            'no_whatsapp' => Information::where('name','no_whatsapp')->value('value'),
-            'facebook' => Information::where('name','facebook')->value('value'),
-            'instagram' => Information::where('name','instagram')->value('value'),
-            'twitter' => Information::where('name','twitter')->value('value'),
-            'youtube' => Information::where('name','youtube')->value('value'),
-            'linkedin' => Information::where('name','linkedin')->value('value'),
-            //'descripcion_ubicacion' => Information::where('name','descripcion_ubicacion')->value('value'),
-            'informacion_footer' => Information::where('name','informacion_footer')->value('value'),
+        $informacion = $this->cInformation->takeInformation();
+        $informacion['page'] = 'inicio';
             //'mision' => Information::where('name','mision')->value('value'),
             //'vision' => Information::where('name','vision')->value('value'),
             //'valores' => explode("°", Information::where('name','valores')->value('value')),
@@ -58,17 +47,15 @@ class HomeController extends Controller
             //'img_vision' => Information::where('name','img_vision')->value('value'),
             //'img_valores' => Information::where('name','img_valores')->value('value'),
             //'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
-            'welcome_title' => Information::where('name','welcome_title')->value('value'),
-            'welcome_description' => Information::where('name','welcome_description')->value('value'),
-            'welcome_link' => Information::where('name','welcome_link')->value('value'),
-            'welcome_boton' => Information::where('name','welcome_boton')->value('value'),
-            'img_welcome' => Information::where('name','img_welcome')->value('value'),
-            'nosotros' => Information::where('name','nosotros')->value('value'),
-            'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
-            'img_asks' => Information::where('name','img_asks')->value('value'),
-            'img_logo' => Information::where('name','img_logo')->value('value'),
-            'page' => 'inicio',
-        ];
+            //'welcome_title' => Information::where('name','welcome_title')->value('value'),
+            //'welcome_description' => Information::where('name','welcome_description')->value('value'),
+            //'welcome_link' => Information::where('name','welcome_link')->value('value'),
+            //'welcome_boton' => Information::where('name','welcome_boton')->value('value'),
+            //'img_welcome' => Information::where('name','img_welcome')->value('value'),
+            //'nosotros' => Information::where('name','nosotros')->value('value'),
+            //'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
+            //'img_asks' => Information::where('name','img_asks')->value('value'),
+            //'img_logo' => Information::where('name','img_logo')->value('value'),
         Meter::create([
             'tipo' => 'inicio',
             'products_id' => '0',
