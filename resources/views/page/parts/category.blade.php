@@ -1,243 +1,108 @@
 @section('content_category')
-<!--Services-->
-<section class="sectionbars">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10">
-                <h2 class="h2-baslik-anasayfa-wtbb wow fade">Check Out Our High Security Camera Systems Services</h2>
-                <p class="services-kutu2--wtbb wow fade animated">We produce professional solutions in camera systems.</p>
-            </div>
-            <div class="col-lg-2">
-                <a class="btn-5" href="#all-services/"><p class="btnn2">All Services</p></a>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="serviceb-alani wow animated fadeInUp animated" data-wow-delay="0.5s">
+<!-- What Do We Offer? -->
+<section class="why-us">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="carousel-classes swiper-container-horizontal">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide wow animated" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated">
-                                        Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.
-                                    </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated">
-                                        Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.
-                                    </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-5.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated">
-                                        We have left behind a quarter of a century in the Fire and Engineering Services industry.
-                                    </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#"><p class="btnn2">Fire Systems</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-6.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated">
-                                        You can control the entrance and exit of your employees with fingerprint reader systems.
-                                    </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#"><p class="btnn2">Fingerprint Reading</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-11.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated">
-                                        Our home camera systems have high resolution and remote monitoring features.
-                                    </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#home-security/"><p class="btnn2">Home Security</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-2.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated" >
-                                    Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.</p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#camera-systems/"><p class="btnn2">Camera Systems</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated" >
-                                    Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.                        </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated" >
-                                    Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.                        </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-5.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated" >
-                                    We have left behind a quarter of a century in the Fire and Engineering Services industry.                        </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#"><p class="btnn2">Fire Systems</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                        <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                            <div class="box-style2 box-primary-color2">
-                                <img class="efozel2" src="{{ asset('secutech/small-services-secutech-6.jpg') }}" alt="">
-                                <div class="bosluk333"></div>
-                                <div class="descontent">
-                                    <p class="services-kutu2--wts3 wow fade animated" >
-                                    You can control the entrance and exit of your employees with fingerprint reader systems.                        </p>
-                                    <div class="bosluk333"></div>
-                                    <div class="orserv">
-                                        <a class="btn-5" href="#"><p class="btnn2">Fingerprint Reading</p></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end swiper-slide -->
-                        </div>
-                
-                
-                <div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-11.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" >
-                        Our home camera systems have high resolution and remote monitoring features.</p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="#home-security/"><p class="btnn2">Home Security</p></a>
-                        </div>
-                    </div>
+                <div class="h-yazi-ortalama h-yazi-margin-orta-3">
+                    <h2 class="h2-baslik-hizmetler-21 wow fadeInLeft">¿Por qué elegirnos?</h2>
                 </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-2.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" >
-                        Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="#camera-systems/"><p class="btnn2">Camera Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-33.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" >
-                        Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="#alarm-systems/"><p class="btnn2">Alarm Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
-                </div><div class="swiper-slide wow animated fadeInLeft" data-wow-delay="0.5s">
-                <div class="box-style2 box-primary-color2">
-                    <img class="efozel2" src="{{ asset('secutech/small-services-secutech-4.jpg') }}" alt="">
-                    <div class="bosluk333"></div>
-                    <div class="descontent">
-                        <p class="services-kutu2--wts3 wow fade animated" >
-                        Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.                        </p>
-                        <div class="bosluk333"></div>
-                        <div class="orserv">
-                            <a class="btn-5" href="#barrier-systems/"><p class="btnn2">Barrier Systems</p></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end swiper-slide -->
+                <p class="h2-baslik-hizmetler-21__paragraf wow fadeInLeft">Consulte todos los servicios que ofrecemos.</p>
             </div>
         </div>
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-            <span class="swiper-pagination-bullet"></span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 ds wow zoomIn">
+                <div class="dep">
+                    <div class="or56">
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-seguridad-hogar"></i></p></div>
+                        <div class="bosluk333"></div>
+                        <h3 class="prongl2">Home Security</h3>
+                        <h4 class="infostext">Our home camera systems have high resolution and remote monitoring features.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 ds wow zoomIn">
+                <div class="dep">
+                    <div class="or56">
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-camara-domo"></i></p></div>
+                        <div class="bosluk333"></div>
+                        <h3 class="prongl2">Camera Systems</h3>
+                        <h4 class="infostext">Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.8s">
+                <div class="dep">
+                    <div class="or56">
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-alarma"></i></p></div>
+                        <div class="bosluk333"></div>
+                        <h3 class="prongl2">Alarm Systems</h3>
+                        <h4 class="infostext">Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.9s">
+                <div class="dep">
+                    <div class="or56">
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-pluma-alarma"></i></p></div>
+                        <div class="bosluk333"></div>
+                        <h3 class="prongl2">Barrier Systems</h3>
+                        <h4 class="infostext">Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="1s">
+                <div class="dep">
+                    <div class="or56">
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-incendio-sistema"></i></p></div>
+                        <div class="bosluk333"></div>
+                        <h3 class="prongl2">Fire Systems</h3>
+                        <h4 class="infostext">We have left behind a quarter of a century in the Fire and Engineering Services industry.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="1.1s">
+                <div class="dep">
+                    <div class="or56">
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-huella-acceso"></i></p></div>
+                        <div class="bosluk333"></div>
+                        <h3 class="prongl2">Fingerprint Reading</h3>
+                        <h4 class="infostext">You can control the entrance and exit of your employees with fingerprint reader systems.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="1.2s">
+                <div class="dep">
+                    <div class="or56">
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-torniquete-acceso"></i></p></div>
+                        <div class="bosluk333"></div>
+                        <h3 class="prongl2">Turnstile Systems</h3>
+                        <h4 class="infostext">Supervision of entrances and exits with turnstile control systems provides high security.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="1.3s">
+                <div class="dep">
+                    <div class="or56">
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-camara-grabacion"></i></p></div>
+                        <div class="bosluk333"></div>
+                        <h3 class="prongl2">Camera Record</h3>
+                        <h4 class="infostext">We install your camera systems by our meticulous and attentive field installation teams.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>      
+    </div>
 </section>
 @endsection

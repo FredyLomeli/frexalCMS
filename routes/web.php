@@ -19,6 +19,10 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/icons', function () {
+    return view('icons.index');
+})->middleware('auth')->name('icons');
+
 Route::get('/about', function () {
     return view('page.about');
 })->name('about');
@@ -124,6 +128,9 @@ Route::post('/admin/informacion/{branding}', [InformationController::class, 'sto
 // Edicion de welcome MH
 Route::get('/admin/welcome', [InformationController::class, 'editWelcome'])->middleware('auth')->name('edit.welcome');
 Route::post('/admin/welcome}', [InformationController::class, 'updateWelcome'])->middleware('auth')->name('update.welcome');
+// Edicion de video MH
+Route::get('/admin/video', [InformationController::class, 'editVideo'])->middleware('auth')->name('edit.video');
+Route::post('/admin/video', [InformationController::class, 'updateVideo'])->middleware('auth')->name('update.video');
 // Edicion de la imagen que se muestra en las preguntas frecuentes
 Route::get('/admin/preguntaImagen', [InformationController::class, 'editImgAsks'])->middleware('auth')->name('edit.imgasks');
 Route::post('/admin/preguntaImagen}', [InformationController::class, 'updateImgAsks'])->middleware('auth')->name('update.imgasks');

@@ -35,11 +35,13 @@ class HomeController extends Controller
     public function index()
     {
         $carouseles = carousel::orderBy('id', 'desc')->get();
-        //$categorys = Category::get();
+        $categorys = Category::take(4)->get();
         $productos = Products::with('category')->get();
         $asks = Ask::get();
+        $welcome = $this->cInformation->takeWelcome();
         $informacion = $this->cInformation->takeInformation();
-        $informacion['page'] = 'inicio';
+        $video = $this->cInformation->takeVideo();
+        $informacion['page'] = 'Inicio';
             //'mision' => Information::where('name','mision')->value('value'),
             //'vision' => Information::where('name','vision')->value('value'),
             //'valores' => explode("°", Information::where('name','valores')->value('value')),
@@ -47,11 +49,6 @@ class HomeController extends Controller
             //'img_vision' => Information::where('name','img_vision')->value('value'),
             //'img_valores' => Information::where('name','img_valores')->value('value'),
             //'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
-            //'welcome_title' => Information::where('name','welcome_title')->value('value'),
-            //'welcome_description' => Information::where('name','welcome_description')->value('value'),
-            //'welcome_link' => Information::where('name','welcome_link')->value('value'),
-            //'welcome_boton' => Information::where('name','welcome_boton')->value('value'),
-            //'img_welcome' => Information::where('name','img_welcome')->value('value'),
             //'nosotros' => Information::where('name','nosotros')->value('value'),
             //'img_nosotros' => Information::where('name','img_nosotros')->value('value'),
             //'img_asks' => Information::where('name','img_asks')->value('value'),
@@ -62,7 +59,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('index'),
         ]);
-        return view('page.index', compact('informacion','productos','asks','carouseles'));
+        return view('page.index', compact('informacion','productos','asks','carouseles','categorys','welcome', 'video'));
     }
 
         /**

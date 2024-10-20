@@ -101,6 +101,9 @@
     spaceBetween: 30,
     loop: 'true',
     draggable: 'true',
+    autoplay:{
+      delay:3000,
+    },
     navigation: {
       prevEl: '.button-prev1',
       nextEl: '.button-next1',

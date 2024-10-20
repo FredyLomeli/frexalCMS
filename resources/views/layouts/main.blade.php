@@ -77,15 +77,21 @@
             <li class="nav-item">
                 <a href="{{ route('informacion') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Informacion General</p>
+                <p>Información General</p>
                 </a>
             </li>
-            <!--<li class="nav-item">
+            <li class="nav-item">
                 <a href="{{ route('edit.welcome') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Mensaje Bienvenida</p>
                 </a>
-            </li>-->
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('edit.video') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Video descriptivo</p>
+                </a>
+            </li>
             <li class="nav-item">
                 <a href="{{ route('save.branding', ['branding' => 'nosotros']) }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -116,12 +122,12 @@
                 <p>Carrusel</p>
                 </a>
             </li>
-            <!--<li class="nav-item">
+            <li class="nav-item">
                 <a href="{{ route('category') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Categorias</p>
                 </a>
-            </li>-->
+            </li>
             <li class="nav-item">
                 <a href="{{ route('productos') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>

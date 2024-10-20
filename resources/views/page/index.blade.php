@@ -1,15 +1,15 @@
 @extends('layouts.front')
-@section('title', "Inicio - ")
+@section('title')
 <!-- Slide -->
 @include('page.parts.slide')
 <!-- About -->
 @include('page.parts.about')
-<!-- Category -->
-@include('page.parts.category')
+<!-- servicios -->
+@include('page.parts.services')
 <!-- Video -->
 @include('page.parts.video')
-<!-- Video -->
-@include('page.parts.services')
+<!-- Category -->
+@include('page.parts.category')
 <!-- contact -->
 @include('page.parts.contact')
 <!-- contact -->
@@ -23,9 +23,9 @@
 @section('content')
     @yield('content_slide')
     @yield('content_about')
-    @yield('content_category')
-    @yield('content_video')
     @yield('content_service')
+    @yield('content_video')
+    @yield('content_category')
     @yield('content_contact')
     @yield('content_clients')
 @endsection
@@ -33,5 +33,6 @@
 @section('script')
     @yield('script_slide')
     @yield('script_video')
+    @yield('script_category')
 @endsection
 

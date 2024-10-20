@@ -31,7 +31,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        $categorias = category::all();
+        $categorias = category::all('id','name');
         return view('products.new', compact('categorias'));
     }
 
@@ -44,9 +44,10 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         $data = request()->validate([
-            'name' => 'required|string|max:500',
+            'name' => 'required|string|max:255',
+            'descripcion_corta' => 'nullable|string|max:255',
             'descripcion' => 'required|string|max:500',
-            //'categoria' => 'required|integer',
+            'categoria' => 'required|integer',
         ]);
         // Si se eligio archivo
         if(isset($request->file_img)){
@@ -60,7 +61,9 @@ class ProductsController extends Controller
             $files->uploadFile('/products' . $file_name, $img);
             $products->img_name = $file_name;
             $products->update();
-        }
+        } else 
+            $products = products::create($data);
+
         Session::flash('info', 'Se ha guardado la informacion con exito.');
         return redirect()->route('products.edit', $products);
     }
@@ -167,7 +170,7 @@ class ProductsController extends Controller
      */
     public function edit(products $products)
     {
-        $categorias = category::all();
+        $categorias = category::all('id','name');
         return view('products.edit', compact('products','categorias'));
     }
 
@@ -180,12 +183,12 @@ class ProductsController extends Controller
      */
     public function update(Request $request, products $products)
     {
-        //dd($request->all());
         // validacion texto
         $data = request()->validate([
-            'name' => 'required|string|max:500',
+            'name' => 'required|string|max:255',
+            'descripcion_corta' => 'nullable|string|max:255',
             'descripcion' => 'required|string|max:500',
-            //'categoria' => 'required|integer',
+            'categoria' => 'required|integer',
         ]);
         // Si se eligio archivo
         if(isset($request->file_img)){
@@ -200,7 +203,7 @@ class ProductsController extends Controller
             $products->img_name = $file_name;
         }
         $products->update($data);
-        Session::flash('info', 'Se ha guardado la informacion con exito.');
+        Session::flash('info', 'Se ha guardado la información con éxito.');
         return redirect()->route('products.edit', $products);
     }
 
@@ -215,7 +218,7 @@ class ProductsController extends Controller
         $files = new Files;
         $files->destroyFile('/products' . $products->img_name);
         $products->delete();
-        Session::flash('info', 'Se ha eliminado con exito.');
+        Session::flash('info', 'Se ha eliminado con éxito.');
         return redirect()->route('products');
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-<h1>Listado de Servicios</h1>
+<h1>Listado de Servicios / Productos</h1>
 @endsection
 
 @section('links')

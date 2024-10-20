@@ -9,11 +9,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="h-yazi-ortalama h-yazi-margin-orta-3">
-                    <h2 class="h2-baslik-hizmetler-2 wow fadeInLeft" data-wow-delay="0.4s">
-                        Your Home and Workplace Are Safe 24/7</h2>
+                    <h2 class="h2-baslik-hizmetler-2 wow fadeInLeft">{{ $video['title'] }}</h2>
                 </div>
-                <p class="h2-baslik-hizmetler-2__paragraf wow fadeInLeft" data-wow-delay="0.5s">
-                    We install your camera systems with our expert staff.</p>
+                <p class="h2-baslik-hizmetler-2__paragraf wow fadeInLeft">{{ $video['title2'] }}</p>
             </div>
         </div>
     </div>
@@ -22,9 +20,14 @@
             <div class="col-lg-12">
                 <div class="live-video-img">
                     <div class="or">
+                    @if( isset($video['img_video']) )
+                        <img src="{{ asset('img/about' . $video['img_video']) }}" class="imgsg" alt="">
+                    @else
                         <img src="{{ asset('secutech/secutech-video-banner1.jpg') }}" class="imgsg" alt="">
+                    @endisset
+                        
                         <div class="ortd">
-                            <a href="https://www.youtube.com/watch?v=fyK2OKOC4NI" class="custom-button vbtn-fluid vp-a vp-yt-type">
+                            <a href="{{ $video['link'] }}" class="custom-button vbtn-fluid vp-a vp-yt-type">
                                 <i class="fx-youtube-play fa-6x"></i></a>
                         </div>
                     </div>

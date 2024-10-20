@@ -18,13 +18,11 @@
     <link rel="stylesheet" href="{{ asset('secutech/odometer.min.css') }}" media="all">
     <link rel="stylesheet" href="{{ asset('secutech/custom.css') }}" media="all">
     <link rel="stylesheet" href="{{ asset('secutech/app.css') }}" media="all">
-    <link rel="stylesheet" id="contact-form-7-css" href="{{ asset('lib/frexalicon/styles.css') }}" media="all">
-
-
-    
-    <title>@yield('title'){{$informacion['nombre']}}</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('img/secutech-favicion.png') }}">
     <!-- Frexal Icon -->
+    <link rel="stylesheet" href="{{ asset('lib/frexalicon/styles.css') }}" media="all">
+    
+    <title>@yield('title'){{$informacion['page'] . ' - '. $informacion['nombre']}}</title>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/secutech-favicion.png') }}">
 
     <meta name="description" content="Home, Office, Workplace, Store, Warehouse, Site, Shop camera and security systems.">
     <script src="{{ asset('secutech/wp-emoji-release.min.js') }}" defer=""></script>

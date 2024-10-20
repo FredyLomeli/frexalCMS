@@ -42,6 +42,7 @@ class CarouselController extends Controller
         //dd(request()->all());
         $data = request()->validate([
             'titulo' => 'required|string|max:500',
+            'titulo2' => 'required|string|max:500',
             'descripcion' => 'required|string|max:500',
             'video' => 'nullable|integer|between:0,1',
             'texto' => 'nullable|string|between:1,254',

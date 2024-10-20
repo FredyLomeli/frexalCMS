@@ -43,6 +43,7 @@ class CategoryController extends Controller
     {
         $data = request()->validate([
             'name' => 'required|string|max:254',
+            'icon' => 'required|string|max:254',
             'description' => 'required|string|max:254',
         ]);
         // Si se eligio archivo
@@ -57,8 +58,10 @@ class CategoryController extends Controller
             $files->uploadFile('/portfolio' . $file_name, $img);
             $category->img_name = $file_name;
             $category->update();
-        }
-        Session::flash('info', 'Se ha guardado la informacion con exito.');
+        } else
+            $category = Category::create($data);
+
+        Session::flash('info', 'Se ha guardado la información con éxito.');
         return redirect()->route('category.edit', $category);
     }
 
@@ -97,6 +100,7 @@ class CategoryController extends Controller
         // validacion texto
         $data = request()->validate([
             'name' => 'required|string|max:500',
+            'icon' => 'required|string|max:254',
             'description' => 'required|string|max:254',
         ]);
         // Si se eligio archivo

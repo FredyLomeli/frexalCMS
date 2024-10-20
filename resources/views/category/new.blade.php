@@ -17,13 +17,25 @@
                 <div class="card-body">
                     <div class="form-group row">
                         <label for="name" class="col-sm-2 col-form-label">Nombre:</label>
-                        <div class="col-sm-9">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="name"
                                 value="{{ old('name') }}" id="name"
                                 placeholder="Categoria" required>
                             @if ($errors->has('name'))
                                 <small class="text-center text-danger">{{ $errors->first('name') }}</small>
                             @endif
+                        </div>
+                        <label for="icon" class="col-sm-1 col-form-label">icono:</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="icon"
+                                value="{{ old('icon') }}" id="icon"
+                                placeholder="icono" required>
+                            @if ($errors->has('icon'))
+                                <small class="text-center text-danger">{{ $errors->first('icon') }}</small>
+                            @endif
+                        </div>
+                        <div class="col-sm-1">
+                            <a href="{{ route('icons') }}" target="_blank" class="btn btn-info"><i class="fa fa-icons"></i></a>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -36,7 +48,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <!--<div class="form-group row">
                         <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 800px x 640px)</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" name="file_img"
@@ -46,7 +58,7 @@
                                 <small class="text-center text-danger">{{ $errors->first('file_img') }}</small>
                             @endif
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Carousel extends Model
 {
     use HasFactory;
-    protected $fillable = ['titulo', 'descripcion', 'img_name', 'video', 'texto', 'link'];
+    protected $fillable = ['titulo', 'titulo2', 'descripcion', 'img_name', 'video', 'texto', 'link'];
 }

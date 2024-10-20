@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-<h1>Nuevo Servicio</h1>
+<h1>Nuevo Servicio / Producto</h1>
 @endsection
 
 @section('content')
@@ -17,17 +17,41 @@
                 <div class="card-body">
                     <div class="form-group row">
                         <label for="name" class="col-sm-2 col-form-label">Nombre:</label>
-                        <div class="col-sm-6">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="name"
                                 value="{{ old('name') }}" id="name"
                                 placeholder="Nombre producto" required>
-                            @if ($errors->has('name'))
-                                <small class="text-center text-danger">{{ $errors->first('name') }}</small>
+                            @if ($errors->has('categoria'))
+                                <small class="text-center text-danger">{{ $errors->first('categoria') }}</small>
+                            @endif
+                        </div>
+                        <label for="categoria" class="col-sm-2 col-form-label">Categoria:</label>
+                        <div class="col-sm-3">
+                            <select class="custom-select @error('categoria') is-invalid @enderror" id="categoria" name="categoria">
+                                <option value="0" {{ old('categoria') === '0' ? 'selected' : '' }}>Sin Categoria</option>
+                            @forelse ($categorias as $categoria)
+                                <option value="{{ $categoria['id'] }}" {{ old('categoria') === $categoria['id'] ? 'selected' : '' }}>{{ $categoria['name'] }}</option>
+                            @empty
+                            @endforelse
+                            </select>
+                            @if ($errors->has('categoria'))
+                                <small class="text-center text-danger">{{ $errors->first('categoria') }}</small>
                             @endif
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="descripcion" class="col-sm-2 col-form-label">Descripcion:</label>
+                        <label for="descripcion_corta" class="col-sm-2 col-form-label">Descripción corta:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="descripcion_corta"
+                                value="{{ old('descripcion_corta') }}" id="descripcion_corta"
+                                placeholder="Descripción Corta" required>
+                            @if ($errors->has('descripcion_corta'))
+                                <small class="text-center text-danger">{{ $errors->first('descripcion_corta') }}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="descripcion" class="col-sm-2 col-form-label">Descripción:</label>
                         <div class="col-sm-10">
                             <textarea class="form-control" name="descripcion" rows="4" cols="50" id="descripcion"
                                  required>{{ old('descripcion') }}</textarea>

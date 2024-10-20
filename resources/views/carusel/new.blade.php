@@ -16,13 +16,24 @@
                 {{csrf_field()}}
                 <div class="card-body">                    
                     <div class="form-group row">
-                        <label for="titulo" class="col-sm-2 col-form-label">Titulo:</label>
+                        <label for="titulo" class="col-sm-2 col-form-label">Titulo 1:</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" name="titulo"
                                 value="{{ old('titulo') }}" id="titulo"
-                                placeholder="Titulo" required>
+                                placeholder="Titulo 1" required>
                             @if ($errors->has('titulo'))
                                 <small class="text-center text-danger">{{ $errors->first('titulo') }}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="titulo2" class="col-sm-2 col-form-label">Titulo 2:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="titulo2"
+                                value="{{ old('titulo2') }}" id="titulo2"
+                                placeholder="Titulo 2" required>
+                            @if ($errors->has('titulo2'))
+                                <small class="text-center text-danger">{{ $errors->first('titulo2') }}</small>
                             @endif
                         </div>
                     </div>
@@ -36,7 +47,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row" v-if="video == 0">
                         <div class="col-sm-9 offset-md-2">
                             <input type="checkbox" name="video" value="1" v-model="video"/>
                             <label for="video">Video</label>
@@ -57,7 +68,7 @@
                         </div>
                     </div>
                     <div class="form-group row" v-if="video != 1">
-                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 1750px x 1000px)</label>
+                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 1920px x 1080px)</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" name="file_img"
                                 value="{{ old('file_img') }}" required

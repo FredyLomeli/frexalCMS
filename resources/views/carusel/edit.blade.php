@@ -36,7 +36,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row" v-if="video == 0">
                         <div class="col-sm-9 offset-md-3">
                             <input type="checkbox" name="video" value="1" v-model="video"/>
                             <label for="video">Video</label>
