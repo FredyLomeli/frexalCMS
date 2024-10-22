@@ -13,95 +13,31 @@
     </div>
     <div class="container">
         <div class="row">
+            @forelse ($categorys->sortByDesc('id') as $category)
             <div class="col-lg-3 ds wow zoomIn">
                 <div class="dep">
                     <div class="or56">
-                        <div class="iconwr or56"><p class="dzv"><i class="fx-seguridad-hogar"></i></p></div>
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-{{ $category->icon }}"></i></p></div>
                         <div class="bosluk333"></div>
-                        <h3 class="prongl2">Home Security</h3>
-                        <h4 class="infostext">Our home camera systems have high resolution and remote monitoring features.</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                        <h3 class="prongl2">{{ $category->name }}</h3>
+                        <h4 class="infostext">{{ $category->description }}</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Ver más</p></a>
                     </div>
                 </div>
             </div>
-
+            @empty
             <div class="col-lg-3 ds wow zoomIn">
                 <div class="dep">
                     <div class="or56">
-                        <div class="iconwr or56"><p class="dzv"><i class="fx-camara-domo"></i></p></div>
+                        <div class="iconwr or56"><p class="dzv"><i class="fx-alarma-cel"></i></p></div>
                         <div class="bosluk333"></div>
-                        <h3 class="prongl2">Camera Systems</h3>
-                        <h4 class="infostext">Thanks to our smart notification feature, the scenario you want is instantly on your smartphone.</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
+                        <h3 class="prongl2">Sin Categorias</h3>
+                        <h4 class="infostext">Este registro se muestra al no tener categorias capturadas.</h4>
+                        <a class="btn-3" href="#"><p class="btnn2">Ver más</p></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.8s">
-                <div class="dep">
-                    <div class="or56">
-                        <div class="iconwr or56"><p class="dzv"><i class="fx-alarma"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl2">Alarm Systems</h3>
-                        <h4 class="infostext">Thanks to our high security alarm system, it sends a signal to the alarm center in case of danger.</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.9s">
-                <div class="dep">
-                    <div class="or56">
-                        <div class="iconwr or56"><p class="dzv"><i class="fx-pluma-alarma"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl2">Barrier Systems</h3>
-                        <h4 class="infostext">Parking barrier systems are ideal for the controlled passage of vehicles entering and exiting.</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="1s">
-                <div class="dep">
-                    <div class="or56">
-                        <div class="iconwr or56"><p class="dzv"><i class="fx-incendio-sistema"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl2">Fire Systems</h3>
-                        <h4 class="infostext">We have left behind a quarter of a century in the Fire and Engineering Services industry.</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="1.1s">
-                <div class="dep">
-                    <div class="or56">
-                        <div class="iconwr or56"><p class="dzv"><i class="fx-huella-acceso"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl2">Fingerprint Reading</h3>
-                        <h4 class="infostext">You can control the entrance and exit of your employees with fingerprint reader systems.</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="1.2s">
-                <div class="dep">
-                    <div class="or56">
-                        <div class="iconwr or56"><p class="dzv"><i class="fx-torniquete-acceso"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl2">Turnstile Systems</h3>
-                        <h4 class="infostext">Supervision of entrances and exits with turnstile control systems provides high security.</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 ds wow zoomIn" data-wow-delay="1.3s">
-                <div class="dep">
-                    <div class="or56">
-                        <div class="iconwr or56"><p class="dzv"><i class="fx-camara-grabacion"></i></p></div>
-                        <div class="bosluk333"></div>
-                        <h3 class="prongl2">Camera Record</h3>
-                        <h4 class="infostext">We install your camera systems by our meticulous and attentive field installation teams.</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Learn more</p></a>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </section>

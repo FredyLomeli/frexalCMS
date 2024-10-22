@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AskController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ReferencesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -121,6 +122,14 @@ Route::post('/admin/post/store', [PostController::class, 'store'])->middleware('
 Route::get('/admin/post/editar/{post}', [PostController::class, 'edit'])->middleware('auth')->name('posts.edit');
 Route::put('/admin/post/update/{post}', [PostController::class, 'update'])->middleware('auth')->name('posts.update');
 Route::delete('/admin/post/delete/{post}', [PostController::class, 'destroy'])->middleware('auth')->name('posts.delete');
+
+// Listado de Referencias
+Route::get('/admin/referencias', [ReferencesController::class, 'index'])->middleware('auth')->name('referencias');
+Route::get('/admin/referencia/nuevo', [ReferencesController::class, 'create'])->middleware('auth')->name('referencia.create');
+Route::post('/admin/referencia/store', [ReferencesController::class, 'store'])->middleware('auth')->name('referencia.store');
+Route::get('/admin/referencia/editar/{referencia}', [ReferencesController::class, 'edit'])->middleware('auth')->name('referencia.edit');
+Route::put('/admin/referencia/update/{referencia}', [ReferencesController::class, 'update'])->middleware('auth')->name('referencia.update');
+Route::delete('/admin/referencia/delete/{referencia}', [ReferencesController::class, 'destroy'])->middleware('auth')->name('referencia.delete');
 // Edicion de mision vision y valores vista
 Route::get('/admin/informacion/{branding}', [InformationController::class, 'branding'])->middleware('auth')->name('branding');
 Route::post('/admin/informacion/{branding}', [InformationController::class, 'storeBranding'])->middleware('auth')->name('save.branding');
@@ -141,3 +150,4 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //Controller de inicio
 Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
 Route::post('/contactMail', [HomeController::class, 'contacMail'])->name('contact.mail');
+Route::get('/contactMailTest', [HomeController::class, 'contacMailTest'])->name('contact.mailtest');

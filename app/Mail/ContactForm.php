@@ -32,6 +32,6 @@ class ContactForm extends Mailable
     public function build()
     {
         return $this->markdown('mail.contact')
-            ->subject( $this->data['name'] . ' via mhglobalbsupport.com');
+            ->subject( $this->data['name'] . ' via issi.com.mx');
     }
 }

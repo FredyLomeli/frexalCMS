@@ -75,10 +75,42 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="{{ route('informacion') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Información General</p>
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-clipboard-list"></i>
+                    <p> Información General <i class="fas fa-angle-left right"></i></p>
                 </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('informacion') }}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>General</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('save.branding', ['branding' => 'nosotros']) }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Nosotros</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('save.branding', ['branding' => 'mision']) }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Misión</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('save.branding', ['branding' => 'vision']) }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Visión</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('save.branding', ['branding' => 'valores']) }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Valores</p>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a href="{{ route('edit.welcome') }}" class="nav-link">
@@ -90,30 +122,6 @@
                 <a href="{{ route('edit.video') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Video descriptivo</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('save.branding', ['branding' => 'nosotros']) }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Nosotros</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('save.branding', ['branding' => 'mision']) }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Misión</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('save.branding', ['branding' => 'vision']) }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Visión</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('save.branding', ['branding' => 'valores']) }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Valores</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -141,17 +149,23 @@
                 </a>
             </li>
             <li class="nav-item">
+              <a href="{{ route('posts') }}" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Noticias</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('referencias') }}" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Referecias</p>
+              </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route('registrar') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Registrar usuario</p>
                 </a>
             </li>
-            <li class="nav-item">
-              <a href="{{ route('posts') }}" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Noticias</p>
-              </a>
-          </li>
             <li class="nav-item">
                 <a href="{{ route('logout') }}" class="nav-link"
                     onclick="event.preventDefault();document.getElementById('logout-form').submit();">

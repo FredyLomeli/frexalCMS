@@ -68,12 +68,20 @@ class Information extends Model
     }
 
     public function takeVideo(){
-        return [
+        $data = [
             'title' => Information::where('name','video_title1')->value('value'),
             'title2' => Information::where('name','video_title2')->value('value'),
             'link' => Information::where('name','video_link')->value('value'),
             'img_video' => Information::where('name','video_img')->value('value'),
         ];
+
+        if(!isset($data['title'])){
+            $data['title'] = "Platilla bienvenida";
+            $data['title2'] = "No hay datos registrados";
+            $data['link'] = "https://www.youtube.com/ejemplo";
+            $data['img_video'] = null;
+        }
+        return $data;
     }
 
     public function takeWelcome(){

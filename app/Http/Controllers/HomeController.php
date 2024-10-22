@@ -10,6 +10,7 @@ use App\Models\Meter;
 use App\Models\Ask;
 use App\Mail\ContactForm;
 use App\Models\Products;
+use App\Models\References;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
@@ -35,8 +36,9 @@ class HomeController extends Controller
     public function index()
     {
         $carouseles = carousel::orderBy('id', 'desc')->get();
-        $categorys = Category::take(4)->get();
+        $categorys = Category::get();
         $productos = Products::with('category')->get();
+        $referencias = References::get();
         $asks = Ask::get();
         $welcome = $this->cInformation->takeWelcome();
         $informacion = $this->cInformation->takeInformation();
@@ -59,7 +61,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('index'),
         ]);
-        return view('page.index', compact('informacion','productos','asks','carouseles','categorys','welcome', 'video'));
+        return view('page.index', compact('informacion','productos','asks','carouseles','categorys','welcome', 'video' , 'referencias'));
     }
 
         /**
@@ -171,17 +173,40 @@ class HomeController extends Controller
     public function contacMail(Request $request)
     {
         $data = request()->validate([
-            'name' => 'required|string|max:500',
-            'telefono' => 'required|string|min:10',
-            'email' => 'required|string|max:254|email',
-            'asunto' => 'required|string|max:254',
-            'message' => 'required|string',
+            'tipo' => 'required|string|max:100',
+            'sistema' => 'required|string|max:100',
+            'tamano' => 'required|string|max:100',
+            'name' => 'required|string|max:254',
+            'correo' => 'required|string|max:254|email',
+            'telefono' => 'required|string|min:20',
         ]);
-        Mail::to(Information::where('name','email')->value('value'), 'contactos')
-        //Mail::to('ing.lomeli@gmail.com', 'contactos')
+        //Mail::to(Information::where('name','email')->value('value'), 'contactos')
+        Mail::to('ing.lomeli@gmail.com', 'contactos')
             ->send( new ContactForm($data));
-        Session::flash('info', 'Se ha enviado su solicitud con exito.');
-        return redirect()->route('contacto');
+        Session::flash('info', 'Se ha enviado su solicitud con éxito.');
+        return redirect()->back();
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function contacMailTest(Request $request)
+    {
+        $data = [
+            'tipo' => 'Este es el tipo del pedido',
+            'sistema' => 'Un sistema adecuado para mi',
+            'tamano' => 'parar 5 metros de distancioa',
+            'name' => 'Alfredo Lomeli',
+            'correo' => 'ing.lomeli@mio.com',
+            'telefono' => '312789455',
+        ];
+        Mail::to('ing.lomeli@gmail.com', 'contactos')
+            ->send( new ContactForm($data));
+        Session::flash('info', 'Se ha enviado su solicitud con éxito.');
+        return redirect()->back();
     }
 
     /**

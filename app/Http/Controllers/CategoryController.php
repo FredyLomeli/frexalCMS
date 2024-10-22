@@ -96,7 +96,6 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //dd($request->all());
         // validacion texto
         $data = request()->validate([
             'name' => 'required|string|max:500',
@@ -116,7 +115,7 @@ class CategoryController extends Controller
             $category->img_name = $file_name;
         }
         $category->update($data);
-        Session::flash('info', 'Se ha guardado la informacion con exito.');
+        Session::flash('info', 'Se ha guardado la información con éxito.');
         return redirect()->route('category.edit', $category);
     }
 

@@ -25,7 +25,6 @@
                     @else
                         <img src="{{ asset('secutech/secutech-video-banner1.jpg') }}" class="imgsg" alt="">
                     @endisset
-                        
                         <div class="ortd">
                             <a href="{{ $video['link'] }}" class="custom-button vbtn-fluid vp-a vp-yt-type">
                                 <i class="fx-youtube-play fa-6x"></i></a>

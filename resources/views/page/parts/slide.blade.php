@@ -45,7 +45,7 @@
     <div class="container">
         <div class="row ff">
 
-            @forelse ($categorys as $category)
+            @forelse ($categorys->take(4) as $category)
             <div class="col-lg-3 ds wow zoomIn" data-wow-delay="0.5s" >
                 <div class="dep align-center">
                     <div class="or56">
