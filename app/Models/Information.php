@@ -21,6 +21,7 @@ class Information extends Model
             'value' => information::where('name', $campo)->value('value'),
             'name' => '',
             'img' => information::where('name', 'img_' . $campo)->value('value'),
+            'see' => information::where('name', 'see_' . $campo)->value('value'),
         ];
 
         switch ($campo) {
@@ -101,7 +102,7 @@ class Information extends Model
         ];
 
         if(!isset($data['title'])){
-            $data['title'] = "Platilla bienvenida";
+            $data['title'] = "Plantilla bienvenida";
             $data['title2'] = "No hay datos registrados";
             $data['description'] = "No hay datos registrados";
             $data['link'] = url()->current();
@@ -155,5 +156,44 @@ class Information extends Model
         $this->actualizarInformacion('video_title1',$data ['title']);
         $this->actualizarInformacion('video_title2',$data ['title2']);
         $this->actualizarInformacion('video_link',$data ['link']);
+    }
+
+    public function takeMision(){
+        return [
+            'name' => Information::where('name','mision')->value('value'),
+            'img' => Information::where('name','img_mision')->value('value'),
+            'see' => Information::where('name','see_mision')->value('value'),
+        ];
+    }
+
+    public function takeVision(){
+        return [
+            'name' => Information::where('name','vision')->value('value'),
+            'img' => Information::where('name','img_vision')->value('value'),
+            'see' => Information::where('name','see_vision')->value('value'),
+        ];
+    }
+    
+    public function takeValores(){
+        return [
+            'name' => Information::where('name','valores')->value('value'),
+            'img' => Information::where('name','img_valores')->value('value'),
+            'see' => Information::where('name','see_valores')->value('value'),
+        ];
+    }
+
+    public function takeNosotros(){
+        return [
+            'name' => Information::where('name','nosotros')->value('value'),
+            'img' => Information::where('name','img_nosotros')->value('value'),
+            'see' => Information::where('name','see_nosotros')->value('value'),
+        ];
+    }
+
+    public function takeFaq(){
+        return [
+            'name' => Information::where('name','img_asks')->value('value'),
+            'img' => Information::where('name','img_logo')->value('value'),
+        ];
     }
 }

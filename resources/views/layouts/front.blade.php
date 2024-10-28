@@ -87,7 +87,7 @@
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown">
                                             <li  class="menu-item" style="opacity: 1;">
-                                                <a href="{{route('about')}}" class="dropdown-item">
+                                                <a href="{{route('nosotros')}}" class="dropdown-item">
                                                     <span>¿Quiénes somos?</span>
                                                 </a>
                                             </li>
@@ -136,17 +136,17 @@
                                         </ul>
                                     </li>
                                     <li class="menu-item" style="opacity: 1;">
-                                        <a href="{{route('clients')}}" class="nav-link">
+                                        <a href="{{route('clients_ref')}}" class="nav-link">
                                             <span >Referencias</span>
                                         </a>
                                     </li>
                                     <li class="menu-item" style="opacity: 1;">
-                                        <a href="{{route('blog')}}" class="nav-link">
+                                        <a href="{{route('show_news')}}" class="nav-link">
                                             <span >Blog</span>
                                         </a>
                                     </li>
                                     <li class="menu-item" style="opacity: 1;">
-                                        <a href="{{route('contact')}}" class="nav-link">
+                                        <a href="{{route('contacto')}}" class="nav-link">
                                             <span >Contactanos</span>
                                         </a>
                                     </li>
@@ -179,7 +179,7 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown">
                                         <li class="menu-item" style="opacity: 1;">
-                                            <a href="{{route('about')}}" class="dropdown-item">
+                                            <a href="{{route('nosotros')}}" class="dropdown-item">
                                                 <span>¿Quiénes somos?</span>
                                             </a>
                                         </li>
@@ -228,17 +228,17 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item" style="opacity: 1;">
-                                    <a href="{{route('clients')}}" class="nav-link">
+                                    <a href="{{route('clients_ref')}}" class="nav-link">
                                         <span >Referencias</span>
                                     </a>
                                 </li>
                                 <li class="menu-item" style="opacity: 1;">
-                                    <a href="{{route('blog')}}" class="nav-link">
+                                    <a href="{{route('show_news')}}" class="nav-link">
                                         <span >Blog</span>
                                     </a>
                                 </li>
                                 <li class="menu-item" style="opacity: 1;">
-                                    <a href="{{route('contact')}}" class="nav-link">
+                                    <a href="{{route('contacto')}}" class="nav-link">
                                         <span >Contactanos</span>
                                     </a>
                                 </li>
@@ -248,7 +248,7 @@
                 </div>
                 <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
                 <div class="navbar-button"> 
-                    <div class="btn-1" onclick="location.href=&#39;#get-a-quote/&#39;;" style="cursor:pointer;">
+                    <div class="btn-1" onclick="location.href='{{route('contacto')}}';" style="cursor:pointer;">
                         <i class="fx-camara-domo iconp"></i><p class="asdas">Contactanos →</p>
                     </div>
                 </div>
@@ -345,10 +345,14 @@
                     <div class="footer-menu cce">
                         <div class="menu-services-container">
                             <ul id="menu-services" class="menu">
-                                <li class="menu-item"><a href="{{route('services')}}">Hogar seguro</a></li>
-                                <li class="menu-item"><a href="{{route('services')}}">CCTV</a></li>
-                                <li class="menu-item"><a href="{{route('services')}}">Sistema de Alarma</a></li>
-                                <li class="menu-item"><a href="{{route('services')}}">Control de acceso</a></li>
+                            @forelse ($categorys->take(4) as $category)
+                                <li class="menu-item"><a href="{{route('services')}}">{{ $category->name }}</a></li>
+                            @empty
+                                <li class="menu-item"><a href="{{route('services')}}">Sin registro</a></li>
+                                <li class="menu-item"><a href="{{route('services')}}">Sin registro</a></li>
+                                <li class="menu-item"><a href="{{route('services')}}">Sin registro</a></li>
+                                <li class="menu-item"><a href="{{route('services')}}">Sin registro</a></li>
+                            @endforelse
                             </ul>
                         </div>
                     </div>
@@ -359,10 +363,11 @@
                     <div class="footer-menu cce">
                         <div class="menu-quick-links-container">
                             <ul id="menu-quick-links" class="menu">
-                                <li class="menu-item"><a href="{{route('contact')}}">Cotizar</a></li>
+
+                                <li class="menu-item"><a href="{{route('contacto')}}">Cotizar</a></li>
                                 <li class="menu-item"><a href="{{route('services')}}">Servicios</a></li>
-                                <li class="menu-item"><a href="{{route('clients')}}">Referencias</a></li>
-                                <li class="menu-item"><a href="{{route('contact')}}">Contacto</a></li>
+                                <li class="menu-item"><a href="{{route('clients_ref')}}">Referencias</a></li>
+                                <li class="menu-item"><a href="{{route('contacto')}}">Contacto</a></li>
                             </ul>
                         </div>
                     </div>
@@ -373,7 +378,7 @@
                         <span style="color: #ffffff;">{{ $informacion['informacion_footer2'] }}</span>
                     </p>
                     <div class="or">
-                        <a class="btn-3" href="#%3E"><p class="btnn2">Mas Información →</p></a>
+                        <a class="btn-3" href="{{route('contacto')}}"><p class="btnn2">Mas Información →</p></a>
                     </div>        
                     <!-- end row --> 
                 </div>

@@ -1,3 +1,8 @@
+@section('style_slide')
+<link rel="stylesheet" href="{{ asset('secutech/swiper.min.css') }}" media="all">
+@endsection
+
+
 @section('content_service')
 <!--Services-->
 <section class="sectionbars">
@@ -59,4 +64,9 @@
 @endsection
 
 @section('script_service')
+@endsection
+
+
+@section('script_slide')
+<script src="{{ asset('secutech/swiper.min.js') }}" id="swiper-js"></script>
 @endsection

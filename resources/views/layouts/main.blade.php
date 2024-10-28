@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Boxed Layout</title>
+  <title>ISSI| Admin CMS</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{{ asset('img/favicon.png') }}" rel="icon">
@@ -54,7 +54,7 @@
       <img src="{{ asset('img/AdminLTELogo.png') }}"
            class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin MH</span>
+      <span class="brand-text font-weight-light">Admin ISSI</span>
     </a>
 
     <!-- Sidebar -->
@@ -104,12 +104,12 @@
                         <p>Visión</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a href="{{ route('save.branding', ['branding' => 'valores']) }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Valores</p>
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
             </li>
             <li class="nav-item">
@@ -210,7 +210,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; MH</a>.</strong> Todos los derechos reservados.
+    <strong>Copyright &copy; ISSI</a>.</strong> Todos los derechos reservados.
   </footer>
 
   <!-- Control Sidebar -->

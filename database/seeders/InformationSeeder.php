@@ -14,6 +14,7 @@ class InformationSeeder extends Seeder
      */
     public function run()
     {
+        // All for first page
         Information::create(['name' => 'nombre',]);
         Information::create(['name' => 'nombre_corto',]);
         Information::create(['name' => 'telefono',]);
@@ -33,7 +34,7 @@ class InformationSeeder extends Seeder
         Information::create(['name' => 'informacion_footer2',]);
         Information::create(['name' => 'telefono_oficina',]);
         Information::create(['name' => 'img_logo',]);
-
+        // Only use for Welcome component
         Information::create(['name' => 'welcome_title',]);
         Information::create(['name' => 'welcome_title2',]);
         Information::create(['name' => 'welcome_description',]);
@@ -46,10 +47,29 @@ class InformationSeeder extends Seeder
         Information::create(['name' => 'welcome_message2',]);
         Information::create(['name' => 'welcome_icon2',]);
         Information::create(['name' => 'welcome_description2',]);
-
+        // Only form video componente
         Information::create(['name' => 'video_title1',]);
         Information::create(['name' => 'video_title2',]);
         Information::create(['name' => 'video_link',]);
         Information::create(['name' => 'video_img',]);
+        // Misión
+        Information::create(['name' => 'mision',]);
+        Information::create(['name' => 'img_mision',]);
+        Information::create(['name' => 'see_mision','value' => '1',]);
+        // Visión
+        Information::create(['name' => 'vision',]);
+        Information::create(['name' => 'img_vision',]);
+        Information::create(['name' => 'see_vision','value' => '1',]);
+        // Valores
+        Information::create(['name' => 'valores',]);
+        Information::create(['name' => 'img_valores',]);
+        Information::create(['name' => 'see_valores','value' => '1',]);
+        //Nosotros
+        Information::create(['name' => 'nosotros',]);
+        Information::create(['name' => 'img_nosotros',]);
+        Information::create(['name' => 'see_nosotros', 'value' => '1',]);
+        // use for frecuently ask users.
+        Information::create(['name' => 'img_asks',]);
+        Information::create(['name' => 'img_logo',]);
     }
 }

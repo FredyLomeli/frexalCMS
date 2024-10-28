@@ -7,8 +7,10 @@ use App\Http\Controllers\InformationController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AskController;
+use App\Http\Controllers\GenerateQRController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReferencesController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,40 +26,19 @@ Route::get('/icons', function () {
     return view('icons.index');
 })->middleware('auth')->name('icons');
 
-Route::get('/about', function () {
-    return view('page.about');
-})->name('about');
-
-Route::get('/team', function () {
-    return view('page.team');
-})->name('team');
-
-Route::get('/faq', function () {
-    return view('page.faq');
-})->name('faq');
-
-Route::get('/services', function () {
-    return view('page.services');
-})->name('services');
-
-Route::get('/clients', function () {
-    return view('page.clients');
-})->name('clients');
-
-Route::get('/blog', function () {
-    return view('page.blog');
-})->name('blog');
-
-Route::get('/contact', function () {
-    return view('page.contacts');
-})->name('contact');
-
+//pagina de prueba QR
+Route::get('/qrtesting', [GenerateQRController::class, 'index'])->name('QRtest');
+Route::get('/qrtestingview', [GenerateQRController::class, 'indexTesting'])->name('QRtestView');
 //pagina de inicio
 Route::get('/', [HomeController::class, 'index'])->name('index');
 //pagina de inicio
 Route::get('/nosotros', [HomeController::class, 'nosotros'])->name('nosotros');
+//pagina de inicio
+Route::get('/equipo', [HomeController::class, 'ourTeam'])->name('team');
+//pagina de inicio
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 // Pagina que muestra todos los productos
-Route::get('/servicios', [HomeController::class, 'products_all'])->name('show_all.products');
+Route::get('/servicios', [HomeController::class, 'portfolio'])->name('services');
 // Verifica que tipo de productos mostrara
 Route::post('/products', [HomeController::class, 'products_route'])->name('products_route');
 // Muesta los articulos por filtro de nombre
@@ -69,9 +50,12 @@ Route::get('/categoria/{category}/articulos', [ProductsController::class, 'produ
 // Muesta el listado General de categorias
 Route::get('/categorias', [CategoryController::class, 'show_all'])->name('show_categorys');
 // Muesta el listado de noticias
-Route::get('/noticias', [PostController::class, 'show_all'])->name('show_news');
+Route::get('/blog', [HomeController::class, 'noticias'])->name('show_news');
 // Muesta la noticia seleccionada
 Route::get('/noticia/{post:slug}', [PostController::class, 'show'])->name('show_new');
+
+//pagina de inicio
+Route::get('/referencias', [HomeController::class, 'referencias'])->name('clients_ref');
 
 Route::get('/admin', [HomeController::class, 'index_admin'])->middleware('auth')->name('adminIndex');
 

@@ -4,6 +4,12 @@
 <h1>Editando registro en carrusel ID: {{ $carousel->id }}</h1>
 @endsection
 
+@section('links')
+<li class="nav-item d-none d-sm-inline-block">
+    <a href="{{ route('carrusel.create') }}" class="nav-link">Nuevo</a>
+</li>
+@endsection
+
 @section('content')
 @include('messages.info')
 @include('messages.warning')

@@ -11,10 +11,16 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <form class="form-horizontal" method="post" enctype="multipart/form-data"
-                action="{{ route('save.branding', ['branding' => $branding['field']]) }}">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ route('save.branding', ['branding' => $branding['field']]) }}">
                 @csrf
                 <div class="card-body">
+                    <div class="form-group row">
+                        <label for="file_img" class="col-sm-3 col-form-label">Mostrar el apartado {{ $branding['field'] }} en la pagina:</label>
+                        <div class="col-sm-2">
+                            <input class="form-check-input" type="checkbox" id="see" name="see" value="1" @if ($branding['see'] === "1") checked  @endif>
+                            <label class="form-check-label" for="see" >Mostrar</label>
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <label for="branding" class="col-sm-2 col-form-label">{{($branding['name'] === 'Valores' ? '°' : '')}}{{$branding['name']}}:</label>
                         <div class="col-sm-10">

@@ -21,7 +21,7 @@
                         <div class="bosluk333"></div>
                         <h3 class="prongl2">{{ $category->name }}</h3>
                         <h4 class="infostext">{{ $category->description }}</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Ver más</p></a>
+                        <a class="btn-3" href="{{ route('services') }}"><p class="btnn2">Ver más</p></a>
                     </div>
                 </div>
             </div>

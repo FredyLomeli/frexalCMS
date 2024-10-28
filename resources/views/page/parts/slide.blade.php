@@ -53,7 +53,7 @@
                         <div class="bosluk333"></div>
                         <h3 class="prongl">{{ $category->name }}</h3>
                         <h4 class="infostextgl">{{ $category->description }}</h4>
-                        <a class="btn-3" href="#"><p class="btnn2">Ver mas</p></a>
+                        <a class="btn-3" href="{{ route('services') }}"><p class="btnn2">Ver mas</p></a>
                     </div>
                 </div>
             </div>

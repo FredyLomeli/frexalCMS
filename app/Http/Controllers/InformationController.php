@@ -42,8 +42,7 @@ class InformationController extends Controller
     {
         if($branding_tipe === 'mision' || $branding_tipe === 'vision' ||
             $branding_tipe === 'valores' || $branding_tipe === 'nosotros'){
-            $informacion = new Information;
-            $branding = $informacion->consultarBranding($branding_tipe);
+            $branding = $this->cInformation->consultarBranding($branding_tipe);
             return view('admin.branding', compact('branding'));
         }else abort(404);
     }
@@ -116,7 +115,10 @@ class InformationController extends Controller
         $data = request()->validate([
             'ban' => 'required|string|in:mision,vision,valores,nosotros',
             'branding' => 'required|string|max:1000',
+            'see' => 'nullable|string|in:0,1',
         ]);
+        if(!isset($data['see']))
+            $data['see'] = "0";
         // Si se eligio archivo
         if(isset($request->file_img)){
             $img = $request->file_img;
@@ -132,6 +134,7 @@ class InformationController extends Controller
         }
         // Guarda el texto
         $this->cInformation->actualizarInformacion($data['ban'], $data['branding']);
+        $this->cInformation->actualizarInformacion("see_".$data['ban'], $data['see']);
         Session::flash('info', 'Se ha guardado la informacion con exito.');
         return redirect()->route('branding',['branding' => $data['ban']]);
     }

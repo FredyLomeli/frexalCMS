@@ -53,11 +53,11 @@
                                                 <div class="form__grup wow fadeInUp">
                                                     <span class="wpcf7-form-control-wrap">
                                                         <select class="wpcf7-form-control" name="tamano" id="tamano">
-                                                            <option value="0">Tamaño del sistema</option>
-                                                            <option value="1">Paqueño (1-3 Ubicaciones)</option>
-                                                            <option value="2">Mediano (4-8 Ubicaciones)</option>
-                                                            <option value="3">Grande (9-15 Ubicaciones)</option>
-                                                            <option value="4">Otros</option>
+                                                            <option value="Tamaño del sistema">Tamaño del sistema</option>
+                                                            <option value="Pequeño (1-3 Ubicaciones)">Pequeño (1-3 Ubicaciones)</option>
+                                                            <option value="Mediano (4-8 Ubicaciones)">Mediano (4-8 Ubicaciones)</option>
+                                                            <option value="Grande (9-15 Ubicaciones)">Grande (9-15 Ubicaciones)</option>
+                                                            <option value="Otros">Otros</option>
                                                         </select>
                                                     </span>
                                                 </div>
