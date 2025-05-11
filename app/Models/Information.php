@@ -44,6 +44,33 @@ class Information extends Model
         return $branding;
     }
 
+    public function takeContacts($ourTeam){
+        $ourTeam->empresa =  Information::where('name','nombre')->value('value');
+        $ourTeam->empresa_telefono =  Information::where('name','telefono')->value('value');
+        $ourTeam->empresa_email =  Information::where('name','email')->value('value');
+        $ourTeam->direccion =  Information::where('name','direccion')->value('value');
+        $direccion = explode("#", $ourTeam->direccion);
+        if(count($direccion) > 1){
+            $ourTeam->direccion = $direccion[0];
+            $ourTeam->number = $direccion[1];
+        }
+        $ourTeam->municipio =  Information::where('name','municipio')->value('value');
+        $ourTeam->estado =  Information::where('name','estado')->value('value');
+        if(isset($ourTeam->twitter))
+            $ourTeam->twitter =  Information::where('name','twitter')->value('value');
+        if(isset($ourTeam->youtube))
+            $ourTeam->youtube =  Information::where('name','youtube')->value('value');
+        if(isset($ourTeam->linkedin))
+            $ourTeam->linkedin =  Information::where('name','linkedin')->value('value');
+        if(isset($ourTeam->facefook))
+            $ourTeam->facebook =  Information::where('name','facebook')->value('value');
+        if(isset($ourTeam->instagram))
+            $ourTeam->instagram =  Information::where('name','instagram')->value('value');
+        $ourTeam->telefono_oficina =  Information::where('name','telefono_oficina')->value('value');
+        $ourTeam->img_logo =  Information::where('name','img_logo')->value('value');
+        return $ourTeam;
+    }
+
     public function takeInformation(){
         return [
             'nombre' => Information::where('name','nombre')->value('value'),

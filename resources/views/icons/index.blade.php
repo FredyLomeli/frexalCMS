@@ -15,7 +15,7 @@
       <h1>ISSI.com.mx</h1>
       <!--<p class="small">This font was created with<a href="http://fontastic.me/">Fontastic</a></p>-->
       <h2>CSS mapping</h2>
-      <ul class="glyphs css-mapping">
+<ul class="glyphs css-mapping">
         <li>
           <div class="icon fx-24-horas"></div>
           <input type="text" readonly="readonly" value="24-horas">
@@ -159,6 +159,30 @@
         <li>
           <div class="icon fx-whatsapp"></div>
           <input type="text" readonly="readonly" value="whatsapp">
+        </li>
+        <li>
+          <div class="icon fx-qrcode"></div>
+          <input type="text" readonly="readonly" value="qrcode">
+        </li>
+        <li>
+          <div class="icon fx-monitoreo"></div>
+          <input type="text" readonly="readonly" value="monitoreo">
+        </li>
+        <li>
+          <div class="icon fx-ojo-candado"></div>
+          <input type="text" readonly="readonly" value="ojo-candado">
+        </li>
+        <li>
+          <div class="icon fx-app-alarma"></div>
+          <input type="text" readonly="readonly" value="app-alarma">
+        </li>
+        <li>
+          <div class="icon fx-sirena"></div>
+          <input type="text" readonly="readonly" value="sirena">
+        </li>
+        <li>
+          <div class="icon fx-web"></div>
+          <input type="text" readonly="readonly" value="web">
         </li>
       </ul>
       <h2>Character mapping</h2>
@@ -306,6 +330,30 @@
         <li>
           <div data-icon="J" class="icon"></div>
           <input type="text" readonly="readonly" value="J">
+        </li>
+        <li>
+          <div data-icon="K" class="icon"></div>
+          <input type="text" readonly="readonly" value="K">
+        </li>
+        <li>
+          <div data-icon="L" class="icon"></div>
+          <input type="text" readonly="readonly" value="L">
+        </li>
+        <li>
+          <div data-icon="M" class="icon"></div>
+          <input type="text" readonly="readonly" value="M">
+        </li>
+        <li>
+          <div data-icon="N" class="icon"></div>
+          <input type="text" readonly="readonly" value="N">
+        </li>
+        <li>
+          <div data-icon="O" class="icon"></div>
+          <input type="text" readonly="readonly" value="O">
+        </li>
+        <li>
+          <div data-icon="P" class="icon"></div>
+          <input type="text" readonly="readonly" value="P">
         </li>
       </ul>
     </div>

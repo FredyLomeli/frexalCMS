@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 550px x 340px)</label>
+                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 674px x 553px)</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" name="file_img"
                                 value="{{ old('file_img') }}"

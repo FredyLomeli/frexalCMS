@@ -146,6 +146,24 @@
 .fx-whatsapp:before {
   content: "\4a";
 }
+.fx-qrcode:before {
+  content: "\4b";
+}
+.fx-monitoreo:before {
+  content: "\4c";
+}
+.fx-ojo-candado:before {
+  content: "\4d";
+}
+.fx-app-alarma:before {
+  content: "\4e";
+}
+.fx-sirena:before {
+  content: "\4f";
+}
+.fx-web:before {
+  content: "\50";
+}
 
 /* Ajuste de iconos */
 .center-ico {

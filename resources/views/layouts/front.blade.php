@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('lib/frexalicon/styles.css') }}" media="all">
     
     <title>@yield('title'){{$informacion['page'] . ' - '. $informacion['nombre']}}</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('img/secutech-favicion.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/logoico.png') }}">
 
     <meta name="description" content="Home, Office, Workplace, Store, Warehouse, Site, Shop camera and security systems.">
     <script src="{{ asset('secutech/wp-emoji-release.min.js') }}" defer=""></script>

@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AskController;
 use App\Http\Controllers\GenerateQRController;
+use App\Http\Controllers\OurTeamController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReferencesController;
 use Illuminate\Support\Facades\Auth;
@@ -135,3 +136,13 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
 Route::post('/contactMail', [HomeController::class, 'contacMail'])->name('contact.mail');
 Route::get('/contactMailTest', [HomeController::class, 'contacMailTest'])->name('contact.mailtest');
+// Listado de OurTeam
+Route::get('/admin/team', [OurTeamController::class, 'index'])->middleware('auth')->name('ourTeams');
+Route::get('/admin/team/nuevo', [OurTeamController::class, 'create'])->middleware('auth')->name('ourTeam.create');
+Route::post('/admin/team/store', [OurTeamController::class, 'store'])->middleware('auth')->name('ourTeam.store');
+Route::get('/admin/team/editar/{ourTeam}', [OurTeamController::class, 'edit'])->middleware('auth')->name('ourTeam.edit');
+Route::put('/admin/team/update/{ourTeam}', [OurTeamController::class, 'update'])->middleware('auth')->name('ourTeam.update');
+Route::delete('/admin/team/delete/{ourTeam}', [OurTeamController::class, 'destroy'])->middleware('auth')->name('ourTeam.delete');
+// Ruta consulta vista vcard teams 
+Route::get('/equipo/{ourTeamC}', [OurTeamController::class, 'show'])->name('ourTeam.show');
+Route::get('/equipo/vcard/{ourTeamC}', [OurTeamController::class, 'downloadVCard'])->name('ourTeam.vcard');

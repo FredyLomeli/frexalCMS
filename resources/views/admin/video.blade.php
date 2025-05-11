@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-<h1>Editar Video Descriptivo.</h1>
+<h1>Editar video descriptivo.</h1>
 @endsection
 
 @section('styles')
@@ -15,8 +15,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <form class="form-horizontal" method="post" enctype="multipart/form-data"
-                action="{{ route('update.video') }}">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ route('update.video') }}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group row">
@@ -54,7 +53,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 550px x 340px)</label>
+                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 778px x 446px)</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" name="file_img"
                                 value="{{ old('file_img') }}"

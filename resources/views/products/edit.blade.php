@@ -79,7 +79,7 @@
                     </div>
                     <div class="form-group row">
                         <label for="file_img" class="col-sm-3 col-form-label">Imagen actual:</label>
-                        <img src="{{ asset('img/products/' . $products->img_name) }}" style="width: 50%; height: 50% ;" >
+                        <img src="{{ asset('img/products/' . $products->img_name) }}" style="width: 20%; height: 20% ;" >
                     </div>
                 </div>
                 <!-- /.card-body -->

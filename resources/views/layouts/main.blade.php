@@ -88,93 +88,98 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('save.branding', ['branding' => 'nosotros']) }}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Nosotros</p>
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Nosotros</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('save.branding', ['branding' => 'mision']) }}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Misión</p>
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Misión</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('save.branding', ['branding' => 'vision']) }}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Visión</p>
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Visión</p>
                         </a>
                     </li>
                     <!--<li class="nav-item">
                         <a href="{{ route('save.branding', ['branding' => 'valores']) }}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Valores</p>
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Valores</p>
                         </a>
                     </li>-->
                 </ul>
             </li>
             <li class="nav-item">
                 <a href="{{ route('edit.welcome') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Mensaje Bienvenida</p>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Mensaje Bienvenida</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('edit.video') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Video descriptivo</p>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Video descriptivo</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('carrusel') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Carrusel</p>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Carrusel</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('category') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Categorias</p>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Categorias</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('productos') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Servicios</p>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Servicios</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('asks') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Preguntas Frecuentes</p>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Preguntas Frecuentes</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('ourTeams') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Equipo</p>
                 </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('posts') }}" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Noticias</p>
+                <i class="far fa-circle nav-icon"></i>
+                <p>Noticias</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('referencias') }}" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Referecias</p>
+                <i class="far fa-circle nav-icon"></i>
+                <p>Referecias</p>
               </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('registrar') }}" class="nav-link">
+              <a href="{{ route('registrar') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Registrar usuario</p>
-                </a>
+              </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('logout') }}" class="nav-link"
-                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+              <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Cerrar Sesion</p>
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                </form>
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  {{ csrf_field() }}
+              </form>
             </li>
         </ul>
       </nav>

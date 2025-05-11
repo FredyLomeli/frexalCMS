@@ -44,7 +44,7 @@ class CarouselController extends Controller
             'titulo' => 'required|string|max:500',
             'titulo2' => 'required|string|max:500',
             'descripcion' => 'required|string|max:500',
-            'video' => 'nullable|integer|between:0,1',
+            //'video' => 'nullable|integer|between:0,1',
             'texto' => 'nullable|string|between:1,254',
             'link' => 'nullable|string|between:1,254',
         ]);
@@ -68,7 +68,7 @@ class CarouselController extends Controller
             $data['img_name'] = $youtube_code;
             $carousel = carousel::create($data);
         }
-        Session::flash('info', 'Se ha guardado la informacion con exito.');
+        Session::flash('info', 'Se ha guardado la información con éxito.');
         return redirect()->route('carrusel.edit', $carousel);
     }
 
@@ -103,12 +103,12 @@ class CarouselController extends Controller
      */
     public function update(Request $request, carousel $carousel)
     {
-        //dd($request->all());
         // validacion texto
         $data = request()->validate([
             'titulo' => 'required|string|max:500',
+            'titulo2' => 'required|string|max:500',
             'descripcion' => 'required|string|max:500',
-            'video' => 'nullable|integer|between:0,1',
+            //'video' => 'nullable|integer|between:0,1',
             'texto' => 'nullable|string|between:1,254',
             'link' => 'nullable|string|between:1,254',
         ]);
@@ -134,7 +134,7 @@ class CarouselController extends Controller
             $carousel->img_name = $request->file_img;
         }
         $carousel->update($data);
-        Session::flash('info', 'Se ha guardado la informacion con exito.');
+        Session::flash('info', 'Se ha guardado la información con éxito.');
         return redirect()->route('carrusel.edit', $carousel);
     }
 

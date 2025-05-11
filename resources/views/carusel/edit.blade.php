@@ -22,19 +22,30 @@
                 {{ method_field('PUT') }} {{csrf_field()}}
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="titulo" class="col-sm-3 col-form-label">Titulo:</label>
+                        <label for="titulo" class="col-sm-2 col-form-label">Titulo 1:</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" name="titulo"
-                                value="{{ old('titulo',$carousel->titulo) }}" id="titulo"
-                                placeholder="Titulo" required>
+                                value="{{ old('titulo', $carousel->titulo) }}" id="titulo"
+                                placeholder="Titulo 1" required>
                             @if ($errors->has('titulo'))
                                 <small class="text-center text-danger">{{ $errors->first('titulo') }}</small>
                             @endif
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="descripcion" class="col-sm-3 col-form-label">Descripcion:</label>
-                        <div class="col-sm-9">
+                        <label for="titulo2" class="col-sm-2 col-form-label">Titulo 2:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="titulo2"
+                                value="{{ old('titulo2', $carousel->titulo2) }}" id="titulo2"
+                                placeholder="Titulo 2" required>
+                            @if ($errors->has('titulo2'))
+                                <small class="text-center text-danger">{{ $errors->first('titulo2') }}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="descripcion" class="col-sm-2 col-form-label">Descripcion:</label>
+                        <div class="col-sm-10">
                             <textarea class="form-control" name="descripcion" rows="4" cols="50" id="descripcion"
                                  required>{{ old('descripcion',$carousel->descripcion) }}</textarea>
                             @if ($errors->has('descripcion'))
@@ -52,8 +63,8 @@
                         </div>
                     </div>
                     <div class="form-group row" v-if="video == 1">
-                        <label for="file_img" class="col-sm-3 col-form-label">Video:</label>
-                        <div class="col-sm-6">
+                        <label for="file_img" class="col-sm-2 col-form-label">Video:</label>
+                        <div class="col-sm-10">
                             <input type="text" class="form-control" name="file_img"
                                 value="{{ old('file_img') }}" id="file_img"
                                 placeholder="Link de Youtube" required>
@@ -63,33 +74,32 @@
                         </div>
                     </div>
                     <div class="form-group row" v-if="video != 1">
-                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 1750px x 1000px)</label>
+                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 1920px x 1080px)</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" name="file_img"
-                                value="{{ old('file_img') }}" required
-                                id="file_img" placeholder="Selecciona una imagen">
+                                value="{{ old('file_img') }}" id="file_img" placeholder="Selecciona una imagen">
                             @if ($errors->has('file_img'))
                                 <small class="text-center text-danger">{{ $errors->first('file_img') }}</small>
                             @endif
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="texto" class="col-sm-3 col-form-label">Boton:</label>
-                        <div class="col-sm-6">
+                        <label for="texto" class="col-sm-2 col-form-label">Boton:</label>
+                        <div class="col-sm-10">
                             <input type="text" class="form-control" name="texto"
                                 value="{{ old('texto',$carousel->texto) }}" id="texto"
-                                placeholder="Texto del boton">
+                                placeholder="Texto del boton" required>
                             @if ($errors->has('texto'))
                                 <small class="text-center text-danger">{{ $errors->first('texto') }}</small>
                             @endif
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="link" class="col-sm-3 col-form-label">link:</label>
-                        <div class="col-sm-6">
+                        <label for="link" class="col-sm-2 col-form-label">link:</label>
+                        <div class="col-sm-10">
                             <input type="text" class="form-control" name="link"
                                 value="{{ old('link',$carousel->link) }}" id="link"
-                                placeholder="Enlace de la publicación">
+                                placeholder="Enlace de la publicación" required>
                             @if ($errors->has('link'))
                                 <small class="text-center text-danger">{{ $errors->first('link') }}</small>
                             @endif

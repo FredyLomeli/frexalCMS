@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Meter;
 use App\Models\Ask;
 use App\Mail\ContactForm;
+use App\Models\OurTeam;
 use App\Models\Products;
 use App\Models\References;
 use Illuminate\Support\Facades\Mail;
@@ -117,6 +118,7 @@ class HomeController extends Controller
      */
     public function ourTeam()
     {
+        $ourTeams = OurTeam::get();
         $informacion = $this->cInformation->takeInformation();
         $categorys = Category::get();
         $informacion['page'] = 'Contacto';
@@ -126,7 +128,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('index'),
         ]);
-        return view('page.team', compact('informacion', 'categorys'));
+        return view('page.team', compact('informacion', 'categorys', 'ourTeams'));
     }
 
     /**

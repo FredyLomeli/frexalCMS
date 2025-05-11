@@ -16,19 +16,22 @@ class CreateOurTeamsTable extends Migration
         Schema::create('our_teams', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('apellidos');
             $table->string('puesto');
-            $table->string('foto');
-            $table->string('celular');
-            $table->string('email');
-            $table->string('descripcion');
-            $table->string('web');
-            $table->string('facebook');
-            $table->string('twitter');
-            $table->string('instagram');
-            $table->string('adicional1');
-            $table->string('adicional2');
-            $table->string('adicional3');
-            $table->string('adicional4');
+            $table->string('foto')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('celular')->nullable();
+            $table->string('email')->nullable();
+            $table->string('descripcion')->nullable();
+            $table->string('web')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('adicional1')->nullable();
+            $table->string('adicional2')->nullable();
+            $table->string('adicional3')->nullable();
+            $table->string('adicional4')->nullable();
             $table->timestamps();
         });
     }

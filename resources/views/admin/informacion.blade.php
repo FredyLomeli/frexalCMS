@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('header')
-<h1>INFORMACION GENERAL</h1>
+<h1>Información General</h1>
 @endsection
 
 @section('content')
@@ -194,7 +194,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="file_img" class="col-sm-3 col-form-label">Seleciona el logo: (Se recomienda 550px x 340px)</label>
+                        <label for="file_img" class="col-sm-3 col-form-label">Seleciona el logo: (Se recomienda 450px x 270px)</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" name="file_img"
                                 value="{{ old('file_img') }}"
