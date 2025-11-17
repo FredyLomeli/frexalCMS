@@ -21,7 +21,13 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b> WEB</a>
+    <a href="#">
+      @if (isset($infoLogo))
+        <img src="{{ asset('img/'.$infoLogo) }}" alt="Image" style="max-width: 40%;">
+      @else
+        <a href="#"><b>Admin</b> WEB</a>
+      @endif
+    </a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

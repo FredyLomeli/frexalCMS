@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Validator;
 
 class Files
 {
-    private $upload_path = 'imgperfil';
-    //private $upload_path = 'imgserverperfil';
+    //private $upload_path = 'imgperfil';
+    private $upload_path = 'imgserverperfil';
     // Carga el archivo indicado a la ruta indicada
     public function uploadFile($paht_file, $file){
         Storage::disk($this->upload_path)->put($paht_file, File::get($file));

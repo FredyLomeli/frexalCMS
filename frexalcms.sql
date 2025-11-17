@@ -11,7 +11,7 @@
  Target Server Version : 100432
  File Encoding         : 65001
 
- Date: 10/10/2024 08:44:53
+ Date: 10/05/2025 20:06:22
 */
 
 SET NAMES utf8mb4;
@@ -41,6 +41,7 @@ DROP TABLE IF EXISTS `carousels`;
 CREATE TABLE `carousels`  (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `titulo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `titulo2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `img_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -64,6 +65,7 @@ CREATE TABLE `categories`  (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `img_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
@@ -126,30 +128,60 @@ CREATE TABLE `information`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 50 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of information
 -- ----------------------------
-INSERT INTO `information` VALUES (1, 'nombre', 'ISSI Ingeniería en Sistemas de Seguridad Inteligente', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (2, 'nombre_corto', 'ISSI', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (3, 'telefono', '33 85 84 66 98', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (4, 'horario', '9am a 2pm y 4pm a 7pm', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (5, 'email', '00091819@red.unid.mx', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (6, 'direccion', 'Colon # 132,', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (7, 'municipio', 'Tepatilán', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (8, 'estado', NULL, '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (9, 'no_whatsapp', '3781272691', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (10, 'twitter', 'https://www.twitter.com/fredyLomeli', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (11, 'linkedin', 'https://www.inkedin.com/fredyLomeli', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (12, 'facebook', 'https://www.facebook.com/fredyLomeli', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (13, 'instagram', 'https://www.instagram.com/fredyLomeli', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (14, 'youtube', 'https://www.youtube.com/fredyLomeli', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (15, 'descripcion_ubicacion', 'https://maps.app.goo.gl/1gZHEcwhVom7ij4H8', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (16, 'informacion_footer1', 'Nos unimos a nuestro personal experto y ayudamos a que su mundo sea más seguro.', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (17, 'informacion_footer2', 'Nuestra historia comenzó hace un cuarto de siglo; Hoy en día, somos el líder mundial de la industria, con cientos de miles de guardias de seguridad en todos los continentes.', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (18, 'telefono_oficina', '378 148 33 92', '2024-10-09 18:56:38', '2024-10-09 20:13:18');
-INSERT INTO `information` VALUES (19, 'img_logo', '/logo_a8VufXgU.png', '2024-10-09 18:56:38', '2024-10-09 19:24:27');
+INSERT INTO `information` VALUES (1, 'nombre', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (2, 'nombre_corto', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (3, 'telefono', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (4, 'horario', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (5, 'email', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (6, 'direccion', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (7, 'municipio', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (8, 'estado', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (9, 'no_whatsapp', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (10, 'twitter', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (11, 'linkedin', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (12, 'facebook', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (13, 'instagram', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (14, 'youtube', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (15, 'descripcion_ubicacion', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (16, 'informacion_footer1', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (17, 'informacion_footer2', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (18, 'telefono_oficina', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (19, 'img_logo', 'logo_M7e8G9x8.png', '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (20, 'welcome_title', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (21, 'welcome_title2', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (22, 'welcome_description', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (23, 'welcome_link', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (24, 'welcome_boton', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (25, 'img_welcome', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (26, 'welcome_message1', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (27, 'welcome_icon1', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (28, 'welcome_description1', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (29, 'welcome_message2', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (30, 'welcome_icon2', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (31, 'welcome_description2', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (32, 'video_title1', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (33, 'video_title2', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (34, 'video_link', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (35, 'video_img', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (36, 'mision', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (37, 'img_mision', NULL, '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (38, 'see_mision', '1', '2025-05-10 18:51:12', '2025-05-10 18:51:12');
+INSERT INTO `information` VALUES (39, 'vision', NULL, '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (40, 'img_vision', NULL, '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (41, 'see_vision', '1', '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (42, 'valores', NULL, '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (43, 'img_valores', NULL, '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (44, 'see_valores', '1', '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (45, 'nosotros', NULL, '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (46, 'img_nosotros', NULL, '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (47, 'see_nosotros', '1', '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (48, 'img_asks', NULL, '2025-05-10 18:51:13', '2025-05-10 18:51:13');
+INSERT INTO `information` VALUES (49, 'img_logo', NULL, '2025-05-10 18:51:13', '2025-05-10 18:51:13');
 
 -- ----------------------------
 -- Table structure for meters
@@ -164,55 +196,19 @@ CREATE TABLE `meters`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 45 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of meters
 -- ----------------------------
-INSERT INTO `meters` VALUES (1, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 18:56:43', '2024-10-09 18:56:43');
-INSERT INTO `meters` VALUES (2, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:05:54', '2024-10-09 19:05:54');
-INSERT INTO `meters` VALUES (3, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:06:48', '2024-10-09 19:06:48');
-INSERT INTO `meters` VALUES (4, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:17:18', '2024-10-09 19:17:18');
-INSERT INTO `meters` VALUES (5, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:17:19', '2024-10-09 19:17:19');
-INSERT INTO `meters` VALUES (6, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:18:20', '2024-10-09 19:18:20');
-INSERT INTO `meters` VALUES (7, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:24:39', '2024-10-09 19:24:39');
-INSERT INTO `meters` VALUES (8, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:25:34', '2024-10-09 19:25:34');
-INSERT INTO `meters` VALUES (9, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:26:33', '2024-10-09 19:26:33');
-INSERT INTO `meters` VALUES (10, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:27:40', '2024-10-09 19:27:40');
-INSERT INTO `meters` VALUES (11, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:30:39', '2024-10-09 19:30:39');
-INSERT INTO `meters` VALUES (12, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:30:50', '2024-10-09 19:30:50');
-INSERT INTO `meters` VALUES (13, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:33:37', '2024-10-09 19:33:37');
-INSERT INTO `meters` VALUES (14, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:35:02', '2024-10-09 19:35:02');
-INSERT INTO `meters` VALUES (15, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:35:40', '2024-10-09 19:35:40');
-INSERT INTO `meters` VALUES (16, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:36:00', '2024-10-09 19:36:00');
-INSERT INTO `meters` VALUES (17, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:38:04', '2024-10-09 19:38:04');
-INSERT INTO `meters` VALUES (18, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:38:41', '2024-10-09 19:38:41');
-INSERT INTO `meters` VALUES (19, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:38:46', '2024-10-09 19:38:46');
-INSERT INTO `meters` VALUES (20, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:38:53', '2024-10-09 19:38:53');
-INSERT INTO `meters` VALUES (21, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:39:46', '2024-10-09 19:39:46');
-INSERT INTO `meters` VALUES (22, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:40:13', '2024-10-09 19:40:13');
-INSERT INTO `meters` VALUES (23, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:40:19', '2024-10-09 19:40:19');
-INSERT INTO `meters` VALUES (24, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:43:08', '2024-10-09 19:43:08');
-INSERT INTO `meters` VALUES (25, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:54:30', '2024-10-09 19:54:30');
-INSERT INTO `meters` VALUES (26, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:54:46', '2024-10-09 19:54:46');
-INSERT INTO `meters` VALUES (27, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 19:59:48', '2024-10-09 19:59:48');
-INSERT INTO `meters` VALUES (28, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:00:01', '2024-10-09 20:00:01');
-INSERT INTO `meters` VALUES (29, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:00:35', '2024-10-09 20:00:35');
-INSERT INTO `meters` VALUES (30, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:00:58', '2024-10-09 20:00:58');
-INSERT INTO `meters` VALUES (31, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:01:10', '2024-10-09 20:01:10');
-INSERT INTO `meters` VALUES (32, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:02:52', '2024-10-09 20:02:52');
-INSERT INTO `meters` VALUES (33, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:03:18', '2024-10-09 20:03:18');
-INSERT INTO `meters` VALUES (34, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:04:34', '2024-10-09 20:04:34');
-INSERT INTO `meters` VALUES (35, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:06:53', '2024-10-09 20:06:53');
-INSERT INTO `meters` VALUES (36, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:07:27', '2024-10-09 20:07:27');
-INSERT INTO `meters` VALUES (37, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:08:01', '2024-10-09 20:08:01');
-INSERT INTO `meters` VALUES (38, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:08:13', '2024-10-09 20:08:13');
-INSERT INTO `meters` VALUES (39, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:08:51', '2024-10-09 20:08:51');
-INSERT INTO `meters` VALUES (40, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:12:37', '2024-10-09 20:12:37');
-INSERT INTO `meters` VALUES (41, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:12:50', '2024-10-09 20:12:50');
-INSERT INTO `meters` VALUES (42, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:13:25', '2024-10-09 20:13:25');
-INSERT INTO `meters` VALUES (43, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:15:29', '2024-10-09 20:15:29');
-INSERT INTO `meters` VALUES (44, 'inicio', '0', '0', 'http://frexalcms.local', '2024-10-09 20:28:16', '2024-10-09 20:28:16');
+INSERT INTO `meters` VALUES (1, 'inicio', '0', '0', 'http://frexalcms.local', '2025-05-10 18:51:20', '2025-05-10 18:51:20');
+INSERT INTO `meters` VALUES (2, 'inicio', '0', '0', 'http://frexalcms.local', '2025-05-10 19:09:54', '2025-05-10 19:09:54');
+INSERT INTO `meters` VALUES (3, 'inicio', '0', '0', 'http://frexalcms.local', '2025-05-10 19:29:34', '2025-05-10 19:29:34');
+INSERT INTO `meters` VALUES (4, 'inicio', '0', '0', 'http://frexalcms.local', '2025-05-10 19:32:37', '2025-05-10 19:32:37');
+INSERT INTO `meters` VALUES (5, 'inicio', '0', '0', 'http://frexalcms.local', '2025-05-10 19:56:07', '2025-05-10 19:56:07');
+INSERT INTO `meters` VALUES (6, 'inicio', '0', '0', 'http://frexalcms.local', '2025-05-10 19:56:17', '2025-05-10 19:56:17');
+INSERT INTO `meters` VALUES (7, 'inicio', '0', '0', 'http://frexalcms.local', '2025-05-10 19:56:37', '2025-05-10 19:56:37');
+INSERT INTO `meters` VALUES (8, 'inicio', '0', '0', 'http://frexalcms.local', '2025-05-10 19:57:28', '2025-05-10 19:57:28');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -223,7 +219,7 @@ CREATE TABLE `migrations`  (
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of migrations
@@ -239,6 +235,40 @@ INSERT INTO `migrations` VALUES (8, '2021_04_13_033356_create_products_table', 1
 INSERT INTO `migrations` VALUES (9, '2021_04_16_045733_create_asks_table', 1);
 INSERT INTO `migrations` VALUES (10, '2021_04_27_030850_create_posts_table', 1);
 INSERT INTO `migrations` VALUES (11, '2021_05_16_235312_create_clients_table', 1);
+INSERT INTO `migrations` VALUES (12, '2024_10_21_173511_create_references_table', 1);
+INSERT INTO `migrations` VALUES (13, '2024_10_21_173555_create_our_teams_table', 1);
+
+-- ----------------------------
+-- Table structure for our_teams
+-- ----------------------------
+DROP TABLE IF EXISTS `our_teams`;
+CREATE TABLE `our_teams`  (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `apellidos` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `puesto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `telefono` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `celular` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `descripcion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `web` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `facebook` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `twitter` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `instagram` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `linkedin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `adicional1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `adicional2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `adicional3` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `adicional4` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT NULL,
+  `updated_at` timestamp(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of our_teams
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for password_resets
@@ -282,7 +312,9 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products`  (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `descripcion_corta` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `categoria` int(11) NULL DEFAULT NULL,
   `img_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
@@ -291,6 +323,23 @@ CREATE TABLE `products`  (
 
 -- ----------------------------
 -- Records of products
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for references
+-- ----------------------------
+DROP TABLE IF EXISTS `references`;
+CREATE TABLE `references`  (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp(0) NULL DEFAULT NULL,
+  `updated_at` timestamp(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of references
 -- ----------------------------
 
 -- ----------------------------
@@ -313,6 +362,6 @@ CREATE TABLE `users`  (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, 'Admin', 'ing.lomeli@gmail.com', '2024-10-09 18:56:38', '$2y$10$Lf.WEWLXrXxjeqUOTHBJS.Ss.6qpcIUce3CyWtDopjxMY9aOPZV1m', 'taAfRo9o1v', '2024-10-09 18:56:38', '2024-10-09 18:56:38');
+INSERT INTO `users` VALUES (1, 'Admin', 'contacto@issi.com.mx', '2025-05-10 18:51:12', '$2y$10$CeEwaHUPFXd9m7wItGrZO.kCiWYpvgyDYbA6MVnzXwO4wJRKZdbGa', 'zsjLtG1MEIJqNCUShw266MceSG8yfvuXTVTwwG0eq7cnDo2WFnMXz0pW6ULp', '2025-05-10 18:51:12', '2025-05-10 19:56:06');
 
 SET FOREIGN_KEY_CHECKS = 1;

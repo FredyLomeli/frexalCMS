@@ -10,6 +10,10 @@ class Information extends Model
 {
     use HasFactory;
 
+    public function getInformation($campo){
+        return Information::where('name', $campo)->value('value');
+    }
+
     public function actualizarInformacion($campo, $valor){
         information::where('name', $campo)
             ->update(['value' => $valor]);
