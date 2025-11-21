@@ -10,6 +10,8 @@ use App\Models\Category;
 use App\Models\Meter;
 use App\Models\Ask;
 use App\Mail\ContactForm;
+use App\Mail\ContactFormSimple;
+use App\Models\Interesados;
 use App\Models\OurTeam;
 use App\Models\Products;
 use App\Models\References;
@@ -173,13 +175,48 @@ class HomeController extends Controller
         // If validation fails, redirect to the settings page and send the errors
         if ($validator->fails())
             return redirect()->route('contacto')->withErrors($validator)->withInput();
-        
         $data = $validator->validated();
-        //Mail::to(Information::where('name','email')->value('value'), 'contactos')
-        Mail::to('ing.lomeli@gmail.com', 'contactos')
-            ->send( new ContactForm($data));
+        // Registo de la solicitud del interesado
+        $data['detalles'] = 'Interesado en ser Contactado lo antes posible.';
+        Interesados::create([
+            'nombre' => $data['name'],
+            'email' => $data['correo'],
+            'telefono' => $data['telefono'],
+            'detalles' => "Tipo de sistema: ".$data['tipo'].", Sistema: ".$data['sistema'].", Tamaño o lugar: ".$data['tamano']
+        ]);
+        $emails = Information::where('name','emails_contacto')->value('value');
+        $rawArray = explode(',', $emails);
+        $trimmedArray = array_map('trim', $rawArray);
+        $destinatarios = array_filter($trimmedArray);
+        Mail::to($destinatarios,"Contacto")->send( new ContactForm($data));
         Session::flash('info', 'Se ha enviado su solicitud con éxito.');
         return redirect()->route('contacto');
+    }
+
+    public function contacMailSimple(Request $request)
+    {
+        $validator = Validator::make(
+            $request->all(),
+            array(
+                'nombre' => 'required|string|max:254',
+                'email' => 'required|string|max:254|email',
+                'telefono' => 'required|string|min:10',
+            )
+        );
+        // If validation fails, redirect to the settings page and send the errors
+        if ($validator->fails())
+            return redirect()->route('services')->withErrors($validator)->withInput();
+        $data = $validator->validated();
+        // Registo de la solicitud del interesado
+        $data['detalles'] = 'Interesado en ser Contactado lo antes posible.';
+        Interesados::create($data);
+        $emails = Information::where('name','emails_contacto')->value('value');
+        $rawArray = explode(',', $emails);
+        $trimmedArray = array_map('trim', $rawArray);
+        $destinatarios = array_filter($trimmedArray);
+        Mail::to($destinatarios,"Concacto")->send( new ContactFormSimple($data));
+        Session::flash('info', 'Se ha enviado su solicitud con éxito.');
+        return redirect()->route('services');
     }
 
     /**
@@ -248,19 +285,47 @@ class HomeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function portfolio()
+    public function portfolio($slug = null)
     {
         $informacion = $this->cInformation->takeInformation();
         $informacion['page'] = 'Nuestros servicios';
         $categorys = Category::get();
         $productos = Products::with('category')->get();
+        $sCategory = Category::where('slug', $slug)->first();
+        if($sCategory == null)
+            $sCategory = $categorys->first();
         Meter::create([
             'tipo' => 'Todos los productos',
             'products_id' => '0',
             'category_id' => '0',
             'url' => route('services'),
         ]);
-        return view('page.portfolio', compact('informacion','productos', 'categorys'));
+        return view('page.portfolio', compact('informacion','productos', 'categorys', 'sCategory'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function portfolioService($slug)
+    {
+        $informacion = $this->cInformation->takeInformation();
+        $informacion['page'] = 'Nuestros servicios';
+        $categorys = Category::get();
+        $productos = Products::with('category')->get();
+        $sProducto = Products::where('slug', $slug)->first();
+        $sCategory = $sProducto->category;
+        if($sCategory == null)
+            $sCategory = $categorys->first();
+        Meter::create([
+            'tipo' => 'Todos los productos',
+            'products_id' => '0',
+            'category_id' => '0',
+            'url' => route('services'),
+        ]);
+        return view('page.portfolioService', compact('informacion','productos', 'categorys', 'sCategory', 'sProducto'));
     }
 
     /**

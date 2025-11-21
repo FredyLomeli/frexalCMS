@@ -13,7 +13,7 @@
                 <p class="services-kutu2--wtbb wow fade animated">Producimos soluciones profesionales en sistemas de seguridad y cámaras de vigilancia.</p>
             </div>
             <div class="col-lg-2">
-                <a class="btn-5" href="#all-services/"><p class="btnn2">Ver todos</p></a>
+                <a class="btn-5" href="{{route('services')}}"><p class="btnn2">Ver todos</p></a>
             </div>
         </div>
     </div>

@@ -59,7 +59,7 @@ return [
 
         'imgserverperfil' => [
             'driver' => 'local',
-            'root' => public_path().'../../public_html/img',
+            'root' => public_path().'/../../public_html/img',
         ],
 
     ],

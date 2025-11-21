@@ -167,6 +167,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="{{ route('interesados') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Interesados</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="{{ route('registrar') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Registrar usuario</p>

@@ -45,7 +45,9 @@ class CategoryController extends Controller
             'name' => 'required|string|max:254',
             'icon' => 'required|string|max:254',
             'description' => 'required|string|max:254',
+            'description2' => 'required|string|max:254',
         ]);
+        $data['slug'] = Str::slug($data['name'], '-');
         // Si se eligio archivo
         if(isset($request->file_img)){
             $img = $request->file_img;
@@ -55,7 +57,7 @@ class CategoryController extends Controller
             $files->validatorImgFile($img, $extension)->validate();
             $category = Category::create($data);
             $file_name = '/'. $category->id .'_' . Str::random(8) . '.' . $extension;
-            $files->uploadFile('/portfolio' . $file_name, $img);
+            $files->uploadFile('/services' . $file_name, $img);
             $category->img_name = $file_name;
             $category->update();
         } else
@@ -101,7 +103,9 @@ class CategoryController extends Controller
             'name' => 'required|string|max:500',
             'icon' => 'required|string|max:254',
             'description' => 'required|string|max:254',
+            'description2' => 'required|string|max:254',
         ]);
+        $data['slug'] = Str::slug($data['name'], '-');
         // Si se eligio archivo
         if(isset($request->file_img)){
             $img = $request->file_img;
@@ -110,8 +114,8 @@ class CategoryController extends Controller
             // Validacion Imagen
             $files->validatorImgFile($img, $extension)->validate();
             $file_name = '/'. $category->id .'_' . Str::random(8) . '.' . $extension;
-            $files->uploadFile('/portfolio' . $file_name, $img);
-            $files->destroyFile('/portfolio' . $category->img_name);
+            $files->uploadFile('/services' . $file_name, $img);
+            $files->destroyFile('/services' . $category->img_name);
             $category->img_name = $file_name;
         }
         $category->update($data);

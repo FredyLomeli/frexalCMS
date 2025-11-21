@@ -6,6 +6,8 @@
 <!-- contact -->
 @include('page.parts.contactanos')
 
+@include('page.parts.maps')
+
 @section('styles')
 @endsection
 
@@ -15,7 +17,7 @@
     @include('messages.warning')
     @include('messages.list_errors')
     @yield('content_contact')
-    @yield('content_contacto')
+    @yield('content_maps')
 @endsection
 
 @section('script')

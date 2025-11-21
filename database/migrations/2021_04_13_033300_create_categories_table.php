@@ -17,8 +17,10 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->text('description2');
             $table->string('icon');
             $table->string('img_name')->nullable();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

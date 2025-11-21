@@ -107,7 +107,15 @@
                                         <a href="#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link">
                                             <span>Servicios</span>
                                         </a>
+                                        <!-- listado de opciones en relación a las categorias  registradas -->
                                         <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown">
+                                        @forelse ( $categorys as $category )
+                                            <li class="menu-item" style="opacity: 1;">
+                                                <a href="{{ route('show_categorys', $category->slug) }}" class="dropdown-item">
+                                                    <span>{{ $category->name }}</span>
+                                                </a>
+                                            </li>
+                                        @empty
                                             <li class="menu-item" style="opacity: 1;">
                                                 <a href="{{route('services')}}" class="dropdown-item">
                                                     <span >Hogar seguro</span>
@@ -133,6 +141,7 @@
                                                     <span>Nuestro servicios</span>
                                                 </a>
                                             </li>
+                                        @endforelse
                                         </ul>
                                     </li>
                                     <li class="menu-item" style="opacity: 1;">
@@ -200,31 +209,40 @@
                                         <span>Servicios</span>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown">
-                                        <li class="menu-item" style="opacity: 1;">
-                                            <a href="{{route('services')}}" class="dropdown-item">
-                                                <span>Hogar seguro</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" style="opacity: 1;">
-                                            <a href="#" class="dropdown-item">
-                                                <span>CCTV</span>
-                                            </a>
-                                        </li>
-                                        <li  class="menu-item" style="opacity: 1;">
-                                            <a href="#" class="dropdown-item">
-                                                <span>Sistema de alarma</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" style="opacity: 1;">
-                                            <a href="#" class="dropdown-item">
-                                                <span>Control de acceso</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" style="opacity: 1;">
-                                            <a href="#" class="dropdown-item">
-                                                <span>Nuestro servicios</span>
-                                            </a>
-                                        </li>
+                                    <!-- listado de opciones en relación a las categorias  registradas -->
+                                    @forelse ( $categorys as $category )
+                                    <li class="menu-item" style="opacity: 1;">
+                                        <a href="{{ route('show_categorys', $category->slug) }}" class="dropdown-item">
+                                            <span>{{ $category->name }}</span>
+                                        </a>
+                                    </li>
+                                    @empty
+                                    <li class="menu-item" style="opacity: 1;">
+                                        <a href="{{route('services')}}" class="dropdown-item">
+                                            <span>Hogar seguro</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item" style="opacity: 1;">
+                                        <a href="#" class="dropdown-item">
+                                            <span>CCTV</span>
+                                        </a>
+                                    </li>
+                                    <li  class="menu-item" style="opacity: 1;">
+                                        <a href="#" class="dropdown-item">
+                                            <span>Sistema de alarma</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item" style="opacity: 1;">
+                                        <a href="#" class="dropdown-item">
+                                            <span>Control de acceso</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item" style="opacity: 1;">
+                                        <a href="#" class="dropdown-item">
+                                            <span>Nuestro servicios</span>
+                                        </a>
+                                    </li>
+                                    @endforelse
                                     </ul>
                                 </li>
                                 <li class="menu-item" style="opacity: 1;">

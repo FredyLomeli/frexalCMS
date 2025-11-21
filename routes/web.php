@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AskController;
 use App\Http\Controllers\GenerateQRController;
+use App\Http\Controllers\InteresadosController;
 use App\Http\Controllers\OurTeamController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReferencesController;
@@ -40,6 +41,8 @@ Route::get('/equipo', [HomeController::class, 'ourTeam'])->name('team');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 // Pagina que muestra todos los productos
 Route::get('/servicios', [HomeController::class, 'portfolio'])->name('services');
+// Pagina que muestra todos los productos
+Route::get('/servicios/{slug}', [HomeController::class, 'portfolioService'])->name('services_category');
 // Verifica que tipo de productos mostrara
 Route::post('/products', [HomeController::class, 'products_route'])->name('products_route');
 // Muesta los articulos por filtro de nombre
@@ -49,7 +52,9 @@ Route::get('/servicio/{product}', [ProductsController::class, 'show'])->name('sh
 // Muesta el listado de productos por categoria
 Route::get('/categoria/{category}/articulos', [ProductsController::class, 'products_category'])->name('show.products_by_category');
 // Muesta el listado General de categorias
-Route::get('/categorias', [CategoryController::class, 'show_all'])->name('show_categorys');
+Route::get('/categorias/{slug}', [HomeController::class, 'portfolio'])->name('show_categorys');
+// Muesta la categoria seleccionada
+Route::get('/categoria/{category}', [CategoryController::class, 'show'])->name('show_category');
 // Muesta el listado de noticias
 Route::get('/blog', [HomeController::class, 'noticias'])->name('show_news');
 // Muesta la noticia seleccionada
@@ -135,6 +140,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //Controller de inicio
 Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
 Route::post('/contactMail', [HomeController::class, 'contacMail'])->name('contact.mail');
+Route::post('/contactMailSimple', [HomeController::class, 'contacMailSimple'])->name('contact.mailSimple');
 Route::get('/contactMailTest', [HomeController::class, 'contacMailTest'])->name('contact.mailtest');
 // Listado de OurTeam
 Route::get('/admin/team', [OurTeamController::class, 'index'])->middleware('auth')->name('ourTeams');
@@ -146,3 +152,10 @@ Route::delete('/admin/team/delete/{ourTeam}', [OurTeamController::class, 'destro
 // Ruta consulta vista vcard teams 
 Route::get('/equipo/{ourTeamC}', [OurTeamController::class, 'show'])->name('ourTeam.show');
 Route::get('/equipo/vcard/{ourTeamC}', [OurTeamController::class, 'downloadVCard'])->name('ourTeam.vcard');
+
+// Listado de interesados
+Route::get('/admin/interesados', [InteresadosController::class, 'index'])->middleware('auth')->name('interesados');
+Route::get('/admin/interesados/detalle/{interesado}', [InteresadosController::class, 'show'])->middleware('auth')->name('interesados.show');
+Route::get('/admin/email/editar/', [InteresadosController::class, 'edit'])->middleware('auth')->name('email.edit');
+Route::put('/admin/email/update/', [InteresadosController::class, 'update'])->middleware('auth')->name('email.update');
+

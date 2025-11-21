@@ -37,7 +37,7 @@
                         <td>{{ $team->name }}</td>
                         <td>{{ $team->puesto }}</td>
                         <td>
-                            <a href="{{ route('ourTeam.show', $team->id) }}"> <i class="fas fa-eye"></i></a>
+                            <a href="{{ route('ourTeam.show', base64_encode($team->id)) }}" target="_blank"> <i class="fas fa-eye"></i></a>
                             <a href="{{ route('ourTeam.edit', $team) }}"><i class="fas fa-edit"></i></a>
                             <a href="{{ route('ourTeam.delete', $team) }}"
                                 onclick="event.preventDefault();document.getElementById('delete_{{ $team->id }}').submit();">

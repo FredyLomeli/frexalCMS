@@ -67,6 +67,25 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label for="descripcion" class="col-sm-5 col-form-label">Icono para vista de producto o servicios por categorias:</label>
+                        <div class="input-group col-sm-2">
+                            <input type="text" class="form-control" name="icon"
+                                value="{{ old('icon', $products->icon) }}" id="icon"
+                                placeholder="icono" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fx-{{ $products->icon }}"></i>
+                                </span>
+                            </div>
+                            @if ($errors->has('icon'))
+                                <small class="text-center text-danger">{{ $errors->first('icon') }}</small>
+                            @endif
+                        </div>
+                        <div class="col-sm-1">
+                            <a href="{{ route('icons') }}" target="_blank" class="btn btn-info"><i class="fa fa-icons"></i></a>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 800px x 640px)</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" name="file_img"
@@ -76,6 +95,7 @@
                                 <small class="text-center text-danger">{{ $errors->first('file_img') }}</small>
                             @endif
                         </div>
+
                     </div>
                     <div class="form-group row">
                         <label for="file_img" class="col-sm-3 col-form-label">Imagen actual:</label>

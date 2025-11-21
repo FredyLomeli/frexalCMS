@@ -1,0 +1,4 @@
+@section('content_maps')
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.5957477417355!2d-103.37660172402992!3d20.64532810083628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428adec3b021085%3A0xbb784635cdf965b5!2sIngenier%C3%ADa%20en%20Sistemas%20de%20Seguridad%20Inteligente!5e0!3m2!1ses!2smx!4v1728108643911!5m2!1ses!2smx"  width="100%" height="450px" allowfullscreen="allowfullscreen" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+<!--<iframe style="border: 0;" src="Contact%20-%20Secutech%20-%20Home%20Automation%20&amp;%20Camera%20Security%20Systems%20WordPress%20Theme_files/embed.htm" width="100%" height="450px" allowfullscreen="allowfullscreen"></iframe>-->
+@endsection

@@ -45,10 +45,12 @@ class ProductsController extends Controller
     {
         $data = request()->validate([
             'name' => 'required|string|max:255',
+            'icon' => 'required|string|max:254',
             'descripcion_corta' => 'nullable|string|max:255',
             'descripcion' => 'required|string|max:500',
             'categoria' => 'required|integer',
         ]);
+        $data['slug'] = Str::slug($data['name'], '-');
         // Si se eligio archivo
         if(isset($request->file_img)){
             $img = $request->file_img;
@@ -186,10 +188,12 @@ class ProductsController extends Controller
         // validacion texto
         $data = request()->validate([
             'name' => 'required|string|max:255',
+            'icon' => 'required|string|max:254',
             'descripcion_corta' => 'nullable|string|max:255',
             'descripcion' => 'required|string|max:500',
             'categoria' => 'required|integer',
         ]);
+        $data['slug'] = Str::slug($data['name'], '-');
         // Si se eligio archivo
         if(isset($request->file_img)){
             $img = $request->file_img;

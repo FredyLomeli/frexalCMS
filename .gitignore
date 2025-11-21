@@ -4,7 +4,7 @@
 /storage/*.key
 /vendor
 .env
-.env_serv
+.env_server
 .env_ISSI
 .env.backup
 .phpunit.result.cache

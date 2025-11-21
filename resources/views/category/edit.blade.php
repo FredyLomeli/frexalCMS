@@ -63,8 +63,21 @@
                             @endif
                         </div>
                     </div>
-                    <!--<div class="form-group row">
-                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 800px x 640px)</label>
+                    <div class="form-group row">
+                        <label for="Vista de servicios" class="col-sm-2 col-form-label">Vista de servicios</label>
+                    </div>
+                    <div class="form-group row">
+                        <label for="description2" class="col-sm-2 col-form-label">Descripción2:</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="description2" rows="4" cols="50" id="description2"
+                                 required>{{ old('description2', $category->description2) }}</textarea>
+                            @if ($errors->has('description2'))
+                                <small class="text-center text-danger">{{ $errors->first('description2') }}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="file_img" class="col-sm-3 col-form-label">Selecciona una imagen: (Se recomienda 964px x 600px)</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" name="file_img"
                                 value="{{ old('file_img') }}"
@@ -76,8 +89,8 @@
                     </div>
                     <div class="form-group row">
                         <label for="file_img" class="col-sm-3 col-form-label">Imagen actual:</label>
-                        <img src="{{ asset('img/portfolio/' . $category->img_name) }}" style="width: 50%; height: 50% ;" >
-                    </div>-->
+                        <img src="{{ asset('img/services' . $category->img_name) }}" style="width: 50%; height: 50% ;" >
+                    </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
