@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriesTable extends Migration
+class CreateDetailsFormsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('details_forms', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description');
-            $table->text('description2');
-            $table->string('icon');
-            $table->string('img_name')->nullable();
-            $table->string('slug')->unique();
+            $table->string('name');             // La etiqueta (ej: "Teléfono")
+            $table->string('type');             // "text" o "select"
+            $table->text('values')->nullable(); // Opciones separadas por coma (solo para select)
+            $table->boolean('visible')->default(true);
             $table->integer('order')->default(0);
             $table->timestamps();
         });
@@ -33,6 +31,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('details_forms');
     }
 }

@@ -71,5 +71,9 @@ class InformationSeeder extends Seeder
         // use for frecuently ask users.
         Information::create(['name' => 'img_asks',]);
         Information::create(['name' => 'img_logo',]);
+        // use for contact component
+        Information::create(['name' => 'emails_contacto', 'value' => 'ing.lomeli@gmail.com',]);
+        // use for cotizacion component
+        Information::create(['name' => 'img_cotizar',]);
     }
 }

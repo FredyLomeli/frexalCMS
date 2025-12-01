@@ -60,7 +60,7 @@
         {{ method_field('PUT') }} {{csrf_field()}}
         <div class="card-body">
             <div class="form-group row">
-                <label for="email" class="col-sm-7 col-form-label">Emails que reciben las notificaciones (separa cada email con un punto y coma ";"):</label>
+                <label for="email" class="col-sm-7 col-form-label">Emails que reciben las notificaciones (separa cada email con coma ","):</label>
             </div>
             <div class="form-group row">
                 <div class="col-sm-10">

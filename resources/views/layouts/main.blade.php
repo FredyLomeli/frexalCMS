@@ -173,6 +173,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="{{ route('cotizar') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Cotizar</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="{{ route('registrar') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Registrar usuario</p>

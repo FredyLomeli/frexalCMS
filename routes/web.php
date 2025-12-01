@@ -7,6 +7,7 @@ use App\Http\Controllers\InformationController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AskController;
+use App\Http\Controllers\DetailsFormsController;
 use App\Http\Controllers\GenerateQRController;
 use App\Http\Controllers\InteresadosController;
 use App\Http\Controllers\OurTeamController;
@@ -159,3 +160,15 @@ Route::get('/admin/interesados/detalle/{interesado}', [InteresadosController::cl
 Route::get('/admin/email/editar/', [InteresadosController::class, 'edit'])->middleware('auth')->name('email.edit');
 Route::put('/admin/email/update/', [InteresadosController::class, 'update'])->middleware('auth')->name('email.update');
 
+//Listado de cotizaciones
+Route::get('/admin/cotizar', [DetailsFormsController::class, 'index'])->name('cotizar')->middleware('auth');
+Route::put('/admin/cotizar', [DetailsFormsController::class, 'updateImg'])->name('cotizar.img')->middleware('auth');
+Route::get('/admin/cotizar/crear', [DetailsFormsController::class, 'create'])->name('cotizar.create')->middleware('auth');
+Route::post('/admin/cotizar/store', [DetailsFormsController::class, 'store'])->name('cotizar.store')->middleware('auth');
+Route::get('/admin/cotizar/editar/{detailsForms}', [DetailsFormsController::class, 'edit'])->name('cotizar.edit')->middleware('auth');
+Route::put('/admin/cotizar/update/{detailsForms}', [DetailsFormsController::class, 'update'])->name('cotizar.update')->middleware('auth');
+Route::delete('/admin/cotizar/delete/{detailsForms}', [DetailsFormsController::class, 'destroy'])->name('cotizar.delete')->middleware('auth');
+
+// Rutas para reordenar elementos con drag and drop
+Route::post('/category/reorder', [CategoryController::class, 'reorder'])->name('category.reorder')->middleware('auth'); 
+Route::post('/admin/cotizar/reorder', [DetailsFormsController::class, 'reorder'])->name('cotizar.reorder')->middleware('auth'); 

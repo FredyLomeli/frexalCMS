@@ -15,6 +15,7 @@ use App\Models\Interesados;
 use App\Models\OurTeam;
 use App\Models\Products;
 use App\Models\References;
+use App\Models\DetailsForms;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
@@ -39,8 +40,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $campos = DetailsForms::OrderBy('orden','asc')->get();
         $carouseles = carousel::orderBy('id', 'desc')->get();
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         $productos = Products::with('category')->get();
         $referencias = References::get();
         $asks = Ask::get();
@@ -65,7 +67,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('index'),
         ]);
-        return view('page.index', compact('informacion','productos','asks','carouseles','categorys','welcome', 'video' , 'referencias'));
+        return view('page.index', compact('campos','informacion','productos','asks','carouseles','categorys','welcome', 'video' , 'referencias'));
     }
 
     /**
@@ -75,8 +77,9 @@ class HomeController extends Controller
      */
     public function contacto()
     {
+        $campos = DetailsForms::OrderBy('orden','asc')->get();
         $informacion = $this->cInformation->takeInformation();
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         $informacion['page'] = 'Contacto';
         Meter::create([
             'tipo' => 'contacto',
@@ -84,7 +87,7 @@ class HomeController extends Controller
             'category_id' => '0',
             'url' => route('index'),
         ]);
-        return view('page.contacts', compact('informacion', 'categorys'));
+        return view('page.contacts', compact('campos','informacion', 'categorys'));
     }
 
         /**
@@ -95,7 +98,7 @@ class HomeController extends Controller
     public function nosotros()
     {
         $informacion = $this->cInformation->takeInformation();
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         $welcome = $this->cInformation->takeWelcome();
         $video = $this->cInformation->takeVideo();
         $referencias = References::get();
@@ -122,7 +125,7 @@ class HomeController extends Controller
     {
         $ourTeams = OurTeam::get();
         $informacion = $this->cInformation->takeInformation();
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         $informacion['page'] = 'Contacto';
         Meter::create([
             'tipo' => 'Nuestro Equipo',
@@ -141,7 +144,7 @@ class HomeController extends Controller
     public function faq()
     {
         $informacion = $this->cInformation->takeInformation();
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         $faqs = Ask::get();
         $informacion['page'] = 'Preguntas Frecuentes';
         Meter::create([
@@ -248,7 +251,7 @@ class HomeController extends Controller
     {
         $productos = Products::where('name','like','%'.$busqueda.'%')->paginate(9);
         //$carouseles = carousel::all();
-        $categorys = Category::withCount('products')->get();
+        $categorys = Category::OrderBy('orden','asc')->withCount('products')->get();
         $informacion = [
             'nombre' => Information::where('name','nombre')->value('value'),
             'telefono' => Information::where('name','telefono')->value('value'),
@@ -289,7 +292,7 @@ class HomeController extends Controller
     {
         $informacion = $this->cInformation->takeInformation();
         $informacion['page'] = 'Nuestros servicios';
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         $productos = Products::with('category')->get();
         $sCategory = Category::where('slug', $slug)->first();
         if($sCategory == null)
@@ -313,7 +316,7 @@ class HomeController extends Controller
     {
         $informacion = $this->cInformation->takeInformation();
         $informacion['page'] = 'Nuestros servicios';
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         $productos = Products::with('category')->get();
         $sProducto = Products::where('slug', $slug)->first();
         $sCategory = $sProducto->category;
@@ -338,7 +341,7 @@ class HomeController extends Controller
     {
         $informacion = $this->cInformation->takeInformation();
         $informacion['page'] = 'Referencias';
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         $referencias = References::get();
         Meter::create([
             'tipo' => 'Todos los productos',
@@ -359,7 +362,7 @@ class HomeController extends Controller
     {
         $informacion = $this->cInformation->takeInformation();
         $informacion['page'] = 'Blog';
-        $categorys = Category::get();
+        $categorys = Category::OrderBy('orden','asc')->get();
         Meter::create([
             'tipo' => 'Todos los productos',
             'products_id' => '0',

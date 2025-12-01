@@ -96,6 +96,7 @@ class Information extends Model
             'informacion_footer2' => Information::where('name','informacion_footer2')->value('value'),
             'telefono_oficina' => Information::where('name','telefono_oficina')->value('value'),
             'img_logo' => Information::where('name','img_logo')->value('value'),
+            'img_cotizar' => Information::where('name','img_cotizar')->value('value'),
         ];
     }
 

@@ -19,7 +19,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categorys = Category::withCount('meter')->get();
+        $categorys = Category::withCount('meter')->OrderBy('orden','asc')->get();
         return view('category.list', compact('categorys'));
     }
 
@@ -190,5 +190,18 @@ class CategoryController extends Controller
             'url' => route('show_categorys'),
         ]);
         return view('page.services', compact('informacion','categorys'));
+    }
+
+    // Reordenar categorias
+    public function reorder(Request $request)
+    {
+        $orden = $request->input('orden');
+        // Validar que venga data
+        if ($orden) {
+            foreach ($orden as $indice => $id) {
+                Category::where('id', $id)->update(['orden' => $indice + 1]);
+            }
+        }
+        return response()->json(['success' => true]);
     }
 }
